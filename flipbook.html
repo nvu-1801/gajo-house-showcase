@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAJO'S HOUSE | 3D Room Catalogue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Lora:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+    <style>
+:root{
+    --bg-cream:#F9F6EE;--bg-paper:#FAF8F3;--bg-dark:#1A1816;--bg-darker:#12100E;
+    --text-charcoal:#1E1B18;--text-muted:#7A746D;--text-light:#F9F6EE;
+    --gold:#C9A96E;--gold-l:#E8D5A3;--wood:#8B7355;--sage:#6B8F7A;
+    --border-gold:rgba(201,169,110,.28);--border-light:rgba(30,27,24,.08);
+    --font-h:'Playfair Display',Georgia,serif;
+    --font-b:'Montserrat',sans-serif;
+    --font-a:'Lora',serif;
+    --shadow:0 32px 64px -12px rgba(0,0,0,.65),0 0 24px rgba(0,0,0,.35);
+    --ease:all .35s cubic-bezier(.16,1,.3,1);
+    --rice:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDAiIGhlaWdodD0iMTQwIj4KPGcgZmlsbD0iIzhCNzM1NSI+CiA8ZWxsaXBzZSBjeD0iMjIiIGN5PSIxOCIgcng9IjIuOCIgcnk9IjciIHRyYW5zZm9ybT0icm90YXRlKDI4IDIyIDE4KSIgb3BhY2l0eT0iMC40NSIvPgogPGVsbGlwc2UgY3g9Ijc1IiBjeT0iMjgiIHJ4PSIyLjIiIHJ5PSI2IiB0cmFuc2Zvcm09InJvdGF0ZSgtMTggNzUgMjgpIiBvcGFjaXR5PSIwLjM1Ii8+CiA8ZWxsaXBzZSBjeD0iNDIiIGN5PSI2MiIgcng9IjIuNiIgcnk9IjYuOCIgdHJhbnNmb3JtPSJyb3RhdGUoMzggNDIgNjIpIiBvcGFjaXR5PSIwLjQiLz4KIDxlbGxpcHNlIGN4PSIxMDgiIGN5PSI1NSIgcng9IjIiIHJ5PSI1LjUiIHRyYW5zZm9ybT0icm90YXRlKC0xMiAxMDggNTUpIiBvcGFjaXR5PSIwLjMiLz4KIDxlbGxpcHNlIGN4PSIxNCIgY3k9IjkwIiByeD0iMi4yIiByeT0iNS44IiB0cmFuc2Zvcm09InJvdGF0ZSg0OCAxNCA5MCkiIG9wYWNpdHk9IjAuMjgiLz4KIDxlbGxpcHNlIGN4PSI2NSIgY3k9IjEwMCIgcng9IjIuNSIgcnk9IjYuNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTM4IDY1IDEwMCkiIG9wYWNpdHk9IjAuMzgiLz4KIDxlbGxpcHNlIGN4PSIxMTAiIGN5PSIxMDgiIHJ4PSIyIiByeT0iNS4yIiB0cmFuc2Zvcm09InJvdGF0ZSgyMiAxMTAgMTA4KSIgb3BhY2l0eT0iMC4zMiIvPgogPGVsbGlwc2UgY3g9IjkwIiBjeT0iMzgiIHJ4PSIyLjIiIHJ5PSI1LjUiIHRyYW5zZm9ybT0icm90YXRlKDU4IDkwIDM4KSIgb3BhY2l0eT0iMC4yOCIvPgogPGVsbGlwc2UgY3g9IjMyIiBjeT0iMTE4IiByeD0iMiIgcnk9IjUuNCIgdHJhbnNmb3JtPSJyb3RhdGUoLTE2IDMyIDExOCkiIG9wYWNpdHk9IjAuMyIvPgogPGVsbGlwc2UgY3g9IjEyNSIgY3k9IjgyIiByeD0iMS44IiByeT0iNC44IiB0cmFuc2Zvcm09InJvdGF0ZSgzMiAxMjUgODIpIiBvcGFjaXR5PSIwLjIyIi8+CiA8ZWxsaXBzZSBjeD0iNTUiIGN5PSIzOCIgcng9IjIiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNDIgNTUgMzgpIiBvcGFjaXR5PSIwLjMiLz4KIDxlbGxpcHNlIGN4PSI5NSIgY3k9IjEyMCIgcng9IjIuMiIgcnk9IjUuOCIgdHJhbnNmb3JtPSJyb3RhdGUoMTUgOTUgMTIwKSIgb3BhY2l0eT0iMC4zNSIvPgo8L2c+Cjwvc3ZnPg==');
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}
+html,body{width:100%;height:100%;overflow:hidden;background:#0C0B09;font-family:var(--font-b);color:var(--text-charcoal);user-select:none;}
+
+/* ── HEADER ── */
+.app-header{position:fixed;top:0;left:0;width:100%;height:54px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;z-index:100;background:linear-gradient(180deg,rgba(12,11,9,.95) 0%,transparent 100%);backdrop-filter:blur(12px);}
+.brand-logo-link{display:flex;align-items:center;gap:8px;text-decoration:none;}
+.brand-logo-text{font-family:var(--font-h);font-size:.85rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold-l);font-weight:400;}
+.header-actions{display:flex;align-items:center;gap:7px;}
+.btn-icon-header{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.13);color:var(--bg-cream);padding:5px 11px;border-radius:20px;font-size:.72rem;font-family:var(--font-b);cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:var(--ease);text-decoration:none;}
+.btn-icon-header:hover,.btn-icon-header.active-btn{background:var(--gold);border-color:var(--gold);color:#1A1816;}
+
+/* ── STAGE ── */
+.stage-wrapper{width:100%;height:calc(100vh - 118px);margin-top:54px;margin-bottom:64px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;z-index:10;padding:6px;}
+.flipbook-container{position:relative;max-height:100%;z-index:10;}
+.flipbook-container > .page-sheet{display:none;}
+
+/* ── STF OVERRIDES ── */
+.stf__parent{position:relative;display:block;margin:0 auto;box-shadow:var(--shadow);border-radius:3px;}
+.stf__wrapper{position:relative;}
+.stf__block{overflow:hidden;border-radius:2px;}
+.stf__item{overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+.stf__item > .page-sheet{display:flex;width:100%;height:100%;}
+
+/* ── PAGE BASE ── */
+.page-sheet{background:var(--bg-paper);width:100%;height:100%;overflow:hidden;position:relative;display:flex;flex-direction:column;box-sizing:border-box;}
+.page-sheet.dark-page{background:var(--bg-dark);color:var(--text-light);}
+.page-sheet:not(.dark-page):not(.hard-cover)::before{
+    content:'';position:absolute;inset:0;
+    background-image:var(--rice);background-size:140px 140px;
+    opacity:.04;pointer-events:none;z-index:0;
+}
+
+/* ── HARD COVERS ── */
+.page-sheet.hard-cover{background:var(--bg-darker);overflow:hidden;}
+.cover-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42;filter:saturate(.6) brightness(.42);}
+.cover-grad{position:absolute;inset:0;background:linear-gradient(135deg,rgba(12,11,9,.9) 0%,rgba(26,24,22,.55) 55%,rgba(201,169,110,.1) 100%);}
+.cover-content{position:relative;z-index:2;width:100%;height:100%;padding:26px 22px;display:flex;flex-direction:column;justify-content:space-between;}
+.cover-eyebrow{font-size:.56rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.cover-title{font-family:var(--font-h);font-size:2.7rem;font-weight:400;line-height:1.0;color:#FFF;letter-spacing:4px;text-transform:uppercase;margin-top:10px;}
+.cover-sub{font-family:var(--font-h);font-size:.95rem;color:var(--gold-l);font-style:italic;margin-top:5px;letter-spacing:1px;}
+.cover-divider{width:34px;height:2px;background:var(--gold);margin:12px 0;}
+.cover-tagline{font-family:var(--font-a);font-size:.78rem;font-style:italic;color:rgba(249,246,238,.65);line-height:1.65;max-width:230px;}
+.cover-bottom{display:flex;flex-direction:column;gap:4px;}
+.cover-location{font-size:.58rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);}
+.cover-edition{font-size:.56rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.32);}
+.cover-corner{position:absolute;bottom:22px;right:22px;z-index:2;width:50px;height:50px;border:1px solid rgba(201,169,110,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.cover-corner span{font-family:var(--font-h);font-size:1.25rem;color:var(--gold);}
+
+/* Back Cover */
+.back-inner{position:relative;z-index:2;width:100%;height:100%;padding:26px 22px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;}
+.back-eyebrow{font-size:.58rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);}
+.back-title{font-family:var(--font-h);font-size:1.55rem;color:#FFF;letter-spacing:3px;margin-top:6px;}
+.back-sub{font-family:var(--font-a);font-style:italic;font-size:.76rem;color:rgba(249,246,238,.6);margin-top:4px;}
+.back-qr-box{background:rgba(255,255,255,.05);border:1px solid rgba(201,169,110,.22);border-radius:6px;padding:14px 18px;width:100%;}
+.back-qr-frame{width:88px;height:88px;margin:0 auto 8px;border:2px solid rgba(201,169,110,.38);border-radius:4px;background:#FFF;padding:3px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.back-qr-frame img{width:100%;height:100%;object-fit:contain;}
+.back-qr-title{font-family:var(--font-h);color:var(--gold-l);font-size:.78rem;margin-bottom:4px;}
+.back-qr-desc{font-size:.66rem;color:rgba(255,255,255,.58);line-height:1.4;margin-bottom:10px;}
+.back-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
+.btn-back{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.1);border:1px solid rgba(201,169,110,.28);color:#FFF;padding:5px 11px;border-radius:20px;font-size:.68rem;text-decoration:none;transition:var(--ease);}
+.btn-back:hover,.btn-back.primary{background:var(--gold);border-color:var(--gold);color:#1A1816;}
+.back-footer{font-size:.56rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.28);}
+
+/* ── PAGE HEADER & FOOTER ── */
+.ph{padding:7px 15px 5px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border-light);flex-shrink:0;position:relative;z-index:1;}
+.dark-page .ph{border-bottom-color:rgba(201,169,110,.12);}
+.ph-tag{font-family:var(--font-b);font-size:.52rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.ph-num{font-family:var(--font-h);font-size:.72rem;color:var(--text-muted);}
+.dark-page .ph-num{color:rgba(249,246,238,.35);}
+.pc{padding:0;flex:1;overflow:hidden;position:relative;display:flex;flex-direction:column;}
+.pf{padding:5px 15px 7px;text-align:center;font-size:.5rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted);border-top:1px solid var(--border-light);flex-shrink:0;position:relative;z-index:1;}
+.dark-page .pf{border-top-color:rgba(201,169,110,.1);color:rgba(249,246,238,.25);}
+
+/* ── RIGHT PAGE: CHÚ THÍCH & THÔNG TIN CHI TIẾT (Cream page) ── */
+.dp-right{
+    position:relative;width:100%;height:100%;overflow:hidden;
+    display:flex;flex-direction:column;padding:14px 18px 12px;gap:8px;
+}
+.dp-ghost{
+    position:absolute;bottom:-14px;right:-6px;
+    font-family:var(--font-h);font-size:4.6rem;font-weight:700;
+    color:rgba(30,27,24,.038);letter-spacing:8px;text-transform:uppercase;
+    pointer-events:none;z-index:0;line-height:1;white-space:nowrap;
+}
+.dp-header{position:relative;z-index:1;margin-bottom:2px;}
+.dp-badges{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;}
+.dp-type-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(201,169,110,.1);border:1px solid rgba(201,169,110,.28);color:var(--wood);padding:2px 8px;border-radius:20px;font-size:.6rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.dp-price{font-family:var(--font-h);font-size:.92rem;font-weight:600;color:var(--gold);letter-spacing:.5px;}
+.dp-price small{font-size:.58rem;font-weight:400;color:var(--text-muted);font-family:var(--font-b);}
+.dp-room-name{font-family:var(--font-h);font-size:1.85rem;font-weight:400;color:var(--text-charcoal);letter-spacing:3px;text-transform:uppercase;line-height:1.0;margin-bottom:3px;}
+.dp-room-tagline{font-family:var(--font-a);font-size:.74rem;font-style:italic;color:var(--sage);}
+.dp-divider{width:100%;height:1px;background:linear-gradient(90deg,var(--gold) 0%,transparent 100%);margin:6px 0;opacity:.35;}
+
+.specs-row{display:flex;gap:0;background:#F2EEE4;border-radius:4px;overflow:hidden;margin-bottom:4px;position:relative;z-index:1;flex-shrink:0;}
+.spec-cell{flex:1;padding:6px 8px;border-right:1px solid rgba(201,169,110,.18);text-align:center;}
+.spec-cell:last-child{border-right:none;}
+.sc-lbl{display:block;font-size:.5rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:1px;}
+.sc-val{font-size:.76rem;color:var(--text-charcoal);font-weight:600;font-family:var(--font-h);}
+
+/* Amenity section — 2 column categorized */
+.amenity-section{
+    display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;
+    position:relative;z-index:1;flex:1;overflow:hidden;
+}
+.am-col{display:flex;flex-direction:column;gap:5px;}
+.am-cat{display:flex;flex-direction:column;gap:3px;}
+.am-cat-h{
+    font-size:.52rem;letter-spacing:2px;text-transform:uppercase;
+    font-weight:700;color:var(--text-charcoal);
+    display:flex;align-items:center;gap:4px;
+    padding-bottom:2px;border-bottom:1px solid rgba(201,169,110,.2);
+    margin-bottom:1px;
+}
+.am-cat-h .am-icon{font-size:.68rem;}
+.am-pills{display:flex;flex-wrap:wrap;gap:2px 3px;}
+.ap{
+    font-size:.58rem;color:var(--text-muted);
+    background:#FFF;border:1px solid rgba(201,169,110,.18);
+    padding:1px 6px;border-radius:10px;
+    white-space:nowrap;
+    display:inline-flex;align-items:center;gap:3px;
+    line-height:1.5;
+}
+.ap i{font-size:.55rem;color:var(--gold);}
+
+.vip-extras{
+    display:flex;flex-wrap:wrap;gap:3px;
+    margin-top:4px;
+    position:relative;z-index:1;
+}
+.vip-pill{
+    font-size:.6rem;color:#8B6914;
+    background:rgba(201,169,110,.15);border:1px solid rgba(201,169,110,.35);
+    padding:2px 8px;border-radius:10px;
+    display:inline-flex;align-items:center;gap:3px;font-weight:600;
+}
+.vip-pill i{font-size:.65rem;color:var(--gold);}
+
+/* ── LEFT PAGE: FULL 1 ÁNH TRÀN TRANG NHƯ BÌA + TÊN & SUBTITLE OVERLAY ── */
+.rf-page{
+    position:relative;width:100%;height:100%;overflow:hidden;
+    background:var(--bg-darker);
+}
+.rf-img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;display:block;
+    filter:brightness(.82) contrast(1.05);
+}
+.rf-grad{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(12,11,9,.65) 0%, rgba(12,11,9,0) 35%, rgba(12,11,9,.88) 100%);
+    z-index:1;
+}
+.rf-placeholder{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+    background:linear-gradient(135deg, #1A1816 0%, #12100E 100%);
+}
+.rf-placeholder::before{
+    content:'';position:absolute;inset:0;
+    background-image:var(--rice);background-size:140px 140px;
+    opacity:.08;pointer-events:none;
+}
+.rf-ph-icon{font-size:2.2rem;color:rgba(201,169,110,.3);}
+.rf-ph-code{font-family:var(--font-h);font-size:4.5rem;color:rgba(201,169,110,.12);letter-spacing:10px;text-transform:uppercase;line-height:1;}
+.rf-ph-status{font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:rgba(201,169,110,.5);font-weight:600;}
+
+/* Overlay content on left image */
+.rf-overlay{
+    position:relative;z-index:2;
+    width:100%;height:100%;
+    padding:24px 20px;
+    display:flex;flex-direction:column;justify-content:space-between;
+}
+.rf-top-tag{
+    font-size:.56rem;letter-spacing:4px;text-transform:uppercase;
+    color:var(--gold);font-weight:600;
+}
+.rf-bottom-box{
+    display:flex;flex-direction:column;gap:4px;
+}
+.rf-room-num{
+    font-size:.55rem;letter-spacing:4px;text-transform:uppercase;
+    color:var(--gold-l);font-weight:600;
+}
+.rf-title{
+    font-family:var(--font-h);font-size:2.5rem;font-weight:400;
+    color:#FFFFFF;letter-spacing:3px;line-height:1.0;
+    text-transform:uppercase;margin-top:2px;
+}
+.rf-sub{
+    font-family:var(--font-a);font-size:.82rem;font-style:italic;
+    color:rgba(249,246,238,.85);margin-top:4px;
+    max-width:280px;line-height:1.4;
+}
+.rf-badge-price{
+    display:inline-flex;align-items:center;gap:6px;
+    background:rgba(201,169,110,.25);border:1px solid rgba(201,169,110,.5);
+    color:var(--gold-l);padding:4px 12px;border-radius:20px;
+    font-size:.68rem;font-weight:600;letter-spacing:1px;
+    align-self:flex-start;margin-top:8px;
+    backdrop-filter:blur(4px);
+}
+
+/* Welcome & BBQ Visuals */
+.intro-vis{position:relative;width:100%;height:100%;background:var(--bg-dark);overflow:hidden;}
+.intro-vis .iv-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3;filter:brightness(.5);}
+.intro-vis .iv-grad{position:absolute;inset:0;background:linear-gradient(155deg,rgba(12,11,9,.65) 0%,rgba(26,24,22,.92) 100%);}
+.intro-vis .iv-content{position:relative;z-index:2;padding:22px 18px;height:100%;display:flex;flex-direction:column;justify-content:center;gap:11px;}
+.iv-eyebrow{font-size:.55rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.iv-heading{font-family:var(--font-h);font-size:1.7rem;font-weight:400;color:#FFF;line-height:1.2;}
+.iv-divider{width:28px;height:1px;background:var(--gold);}
+.iv-body{font-size:.73rem;color:rgba(249,246,238,.65);line-height:1.65;}
+.iv-list{display:flex;flex-direction:column;gap:6px;}
+.iv-item{display:flex;align-items:center;gap:8px;font-size:.72rem;color:rgba(249,246,238,.8);}
+.iv-item i{color:var(--gold);width:13px;flex-shrink:0;}
+
+.sdg{display:grid;grid-template-columns:1fr;gap:5px;position:relative;z-index:1;}
+.sdg-item{background:#FFF;border:1px solid rgba(201,169,110,.15);border-radius:4px;padding:7px 10px;display:flex;align-items:center;gap:9px;}
+.sdg-item i{color:var(--gold);font-size:1rem;width:18px;flex-shrink:0;}
+.sdg-label{font-size:.7rem;color:var(--text-charcoal);}
+.sdg-label strong{display:block;font-size:.62rem;font-weight:700;color:var(--wood);margin-bottom:1px;}
+
+.rules-wrap{position:relative;width:100%;height:100%;overflow:hidden;display:flex;flex-direction:column;padding:12px 16px 10px;gap:7px;}
+.rule-item{display:flex;align-items:flex-start;gap:8px;padding:6px 9px;background:#FFF;border:1px solid var(--border-light);border-radius:4px;position:relative;z-index:1;}
+.rule-item i{color:var(--gold);width:13px;flex-shrink:0;margin-top:1px;}
+.rule-item span{font-size:.7rem;color:var(--text-charcoal);}
+.info-box{background:rgba(201,169,110,.08);border:1px solid rgba(201,169,110,.22);border-radius:4px;padding:8px 11px;font-size:.7rem;position:relative;z-index:1;}
+.info-box strong{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:3px;}
+.checkout-box{display:flex;flex-direction:column;gap:4px;background:rgba(107,143,122,.08);border:1px solid rgba(107,143,122,.2);border-radius:4px;padding:8px 11px;position:relative;z-index:1;}
+.checkout-box h4{font-family:var(--font-h);font-size:.76rem;color:#3E5A4E;margin-bottom:4px;}
+.checkout-box li{font-size:.7rem;color:var(--text-charcoal);list-style:none;}
+
+/* ── BOTTOM TOOLBAR ── */
+.bottom-toolbar{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:11px;background:rgba(18,16,14,.92);backdrop-filter:blur(16px);padding:5px 15px;border-radius:40px;border:1px solid rgba(201,169,110,.18);z-index:100;box-shadow:0 10px 30px rgba(0,0,0,.55);}
+.btn-tool{background:transparent;border:none;color:var(--gold-l);font-size:.88rem;width:30px;height:30px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--ease);}
+.btn-tool:hover{background:rgba(201,169,110,.18);color:#FFF;}
+.pg-txt{color:var(--gold-l);font-family:var(--font-b);font-size:.7rem;letter-spacing:1px;min-width:78px;text-align:center;}
+
+/* ── TOAST & TOC ── */
+.toast{position:fixed;top:65px;left:50%;transform:translateX(-50%) translateY(-18px);background:var(--gold);color:var(--bg-dark);padding:5px 15px;border-radius:20px;font-size:.7rem;opacity:0;pointer-events:none;transition:all .3s;z-index:200;font-weight:600;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toc-modal{position:fixed;inset:0;background:rgba(12,11,9,.88);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;z-index:300;opacity:0;pointer-events:none;transition:opacity .3s;}
+.toc-modal.active{opacity:1;pointer-events:auto;}
+.toc-card{background:var(--bg-paper);border:1px solid var(--border-gold);width:90%;max-width:460px;border-radius:7px;padding:22px;position:relative;box-shadow:var(--shadow);}
+.toc-close{position:absolute;top:11px;right:11px;background:transparent;border:none;font-size:.95rem;color:var(--text-muted);cursor:pointer;}
+.toc-title{font-family:var(--font-h);font-size:1.1rem;text-align:center;color:var(--text-charcoal);margin-bottom:11px;padding-bottom:6px;border-bottom:1px solid var(--border-light);}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:2px;max-height:56vh;overflow-y:auto;}
+.toc-item{display:flex;justify-content:space-between;align-items:center;padding:5px 9px;border-radius:4px;cursor:pointer;font-size:.75rem;transition:var(--ease);}
+.toc-item:hover{background:rgba(201,169,110,.1);color:var(--gold);}
+
+img{max-width:100%;height:auto;}
+@media(max-width:768px){.dp-room-name{font-size:1.4rem;}.rf-title{font-size:1.8rem;}.cover-title{font-size:2rem;}}
+</style>
+</head>
+<body>
+<div class="toast" id="toastNotify">Âm thanh: Đã bật</div>
+<header class="app-header">
+    <a class="brand-logo-link" href="#">
+        <span class="brand-logo-text">GAJO'S HOUSE — 3D CATALOGUE</span>
+    </a>
+    <div class="header-actions">
+        <button class="btn-icon-header" id="btnSoundToggle"><i class="fa-solid fa-volume-high" id="soundIcon"></i><span id="soundLabel">Âm thanh</span></button>
+        <button class="btn-icon-header" id="btnTocToggle"><i class="fa-solid fa-list"></i><span>Mục lục</span></button>
+    </div>
+</header>
+<main class="stage-wrapper">
+<div id="flipbookStage" class="flipbook-container">
+
+            <!-- TRANG 1: FRONT COVER -->
+            <div class="page-sheet hard-cover" data-density="hard">
+                <img class="cover-bg" src="images/general/gajo-interior.jpg" alt="Cover">
+                <div class="cover-grad"></div>
+                <div class="cover-content">
+                    <div>
+                        <div class="cover-eyebrow">Boutique Homestay • Gia Lai</div>
+                        <div class="cover-title">GAJO'S<br>HOUSE</div>
+                        <div class="cover-sub">Room Catalogue 2026</div>
+                        <div class="cover-divider"></div>
+                        <div class="cover-tagline">
+                            "Một trạm dừng cho những người đang đi.<br>
+                            Trốn một chút, rồi lạc vào bình yên."
+                        </div>
+                    </div>
+                    <div class="cover-bottom">
+                        <div class="cover-location">Hoài Nhơn Đông • Gia Lai</div>
+                        <div class="cover-edition">2026 Edition — 9 Hạng Phòng Boutique</div>
+                    </div>
+                </div>
+                <div class="cover-corner"><span>G</span></div>
+            </div>
+
+            <!-- TRANG 2: WELCOME VISUAL -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    <img class="rf-img" src="images/general/gajo-interior.jpg" alt="Welcome GAJO's HOUSE">
+                    <div class="rf-grad"></div>
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">01 • WELCOME TO GAJO'S HOUSE</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">BOUTIQUE HOMESTAY • GIA LAI</div>
+                            <div class="rf-title">GAJO'S<br>HOUSE</div>
+                            <div class="rf-sub">"Một trạm dừng cho những người đang đi. Trốn một chút, rồi lạc vào bình yên."</div>
+                            <div class="rf-badge-price"><i class="fa-solid fa-location-dot"></i> Hoài Nhơn Đông, Gia Lai</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 3: WELCOME CHÚ THÍCH -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph"><span class="ph-tag">01 • OUR PHILOSOPHY</span><span class="ph-num">03</span></div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">GAJO</div>
+                        <div class="dp-header">
+                            <div class="dp-badges">
+                                <span class="dp-type-badge"><i class="fa-solid fa-sparkles"></i> Kinfolk &amp; Japandi</span>
+                            </div>
+                            <div class="dp-room-name" style="font-size:1.35rem">Bình Yên Tối Giản</div>
+                            <div class="dp-room-tagline">Chốn dừng chân cho những tâm hồn mỏi mệt</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="spec-cell"><span class="sc-lbl">Phòng</span><span class="sc-val">9</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Tiêu chuẩn</span><span class="sc-val">Boutique</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Năm</span><span class="sc-val">2026</span></div>
+                        </div>
+                        <div class="amenity-section">
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🌿</span> Triết Lý Thiết Kế</div>
+                                    <div class="am-pills">
+                                        <span class="ap"><i class="fa-solid fa-leaf"></i>Tối giản Japandi</span>
+                                        <span class="ap"><i class="fa-solid fa-sun"></i>Ánh sáng tự nhiên</span>
+                                        <span class="ap"><i class="fa-solid fa-tree"></i>Vật liệu gỗ mộc</span>
+                                    </div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">✨</span> Tiêu Chuẩn Vệ Sinh</div>
+                                    <div class="am-pills">
+                                        <span class="ap"><i class="fa-solid fa-droplet"></i>Spotless Clean 100%</span>
+                                        <span class="ap"><i class="fa-solid fa-spray-can"></i>Khử khuẩn phòng</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🔒</span> An Ninh &amp; Tiện Nghi</div>
+                                    <div class="am-pills">
+                                        <span class="ap"><i class="fa-solid fa-wifi"></i>Wi-Fi 6 siêu tốc</span>
+                                        <span class="ap"><i class="fa-solid fa-camera"></i>Camera 24/7</span>
+                                        <span class="ap"><i class="fa-solid fa-car"></i>Bãi xe ô tô riêng</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • KINFOLK CONCEPT</div>
+            </div>
+
+            <!-- TRANG 4 FULL IMAGE (LEFT PAGE) -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    
+            <img class="rf-img" src="images/ga-an/Ph%C3%B2ng%20GA-AN%201.png" alt="GA-AN" loading="lazy">
+            <div class="rf-grad"></div>
+
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">02 • GA-AN VISUAL SPREAD</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">ROOM 2 — TRANQUILITY</div>
+                            <div class="rf-title">GA-AN</div>
+                            <div class="rf-sub">An Yên — "Dừng lại để tìm sự bình yên."</div>
+                            <div class="rf-badge-price">
+                                <i class="fa-solid fa-bed"></i> Single Room &bull; 400.000 VNĐ/đêm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 5 CHÚ THÍCH (RIGHT PAGE) -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph">
+                    <span class="ph-tag">02 • GA-AN DETAILS</span>
+                    <span class="ph-num">5</span>
+                </div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">GA-AN</div>
+                        <div class="dp-header">
+                            <div class="dp-badges">
+                                <span class="dp-type-badge"><i class="fa-solid fa-bed"></i> Single Room</span>
+                                <span class="dp-price">400.000<small> VNĐ/đêm</small></span>
+                            </div>
+                            <div class="dp-room-name">GA-AN</div>
+                            <div class="dp-room-tagline">An Yên — "Dừng lại để tìm sự bình yên."</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="spec-cell"><span class="sc-lbl">Diện tích</span><span class="sc-val">22 m²</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Giường</span><span class="sc-val">1 Đơn</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Sức chứa</span><span class="sc-val">1 Người</span></div>
+                        </div>
+                        
+                        <div class="amenity-section">
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🛏️</span> Trong Phòng</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-wifi"></i>Wi-Fi</span><span class="ap"><i class="fa-thin fa-snowflake"></i>Máy lạnh</span><span class="ap"><i class="fa-thin fa-fan"></i>Quạt</span><span class="ap"><i class="fa-thin fa-tv"></i>Tivi</span><span class="ap"><i class="fa-thin fa-box"></i>Tủ lạnh</span><span class="ap"><i class="fa-thin fa-bottle-water"></i>Nước uống</span><span class="ap"><i class="fa-thin fa-mug-hot"></i>Trà & cà phê</span><span class="ap"><i class="fa-thin fa-chair"></i>Bàn & ghế</span><span class="ap"><i class="fa-thin fa-box-open"></i>Tủ để đồ</span><span class="ap"><i class="fa-thin fa-table-cells"></i>Rèm 2 lớp</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🚿</span> Phòng Tắm</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-shower"></i>Phòng tắm riêng</span><span class="ap"><i class="fa-thin fa-temperature-high"></i>Nước nóng</span><span class="ap"><i class="fa-thin fa-soap"></i>Khăn tắm</span><span class="ap"><i class="fa-thin fa-pump-soap"></i>Dầu gội</span><span class="ap"><i class="fa-thin fa-tooth"></i>Bàn chải</span><span class="ap"><i class="fa-thin fa-wind"></i>Máy sấy tóc</span></div>
+                                </div>
+                            </div>
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🧺</span> Dịch Vụ</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-broom"></i>Dọn phòng</span><span class="ap"><i class="fa-thin fa-shirt"></i>Thay khăn</span><span class="ap"><i class="fa-thin fa-rotate"></i>Giặt & sấy</span><span class="ap"><i class="fa-thin fa-motorcycle"></i>Thuê xe máy</span><span class="ap"><i class="fa-thin fa-taxi"></i>Hỗ trợ taxi</span><span class="ap"><i class="fa-thin fa-map-location-dot"></i>Tư vấn du lịch</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🌿</span> Tiện Ích Chung</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-car"></i>Chỗ để xe</span><span class="ap"><i class="fa-thin fa-couch"></i>Khu sinh hoạt</span><span class="ap"><i class="fa-thin fa-tree"></i>Sân & vườn</span><span class="ap"><i class="fa-thin fa-clothes-hanger"></i>Khu phơi đồ</span><span class="ap"><i class="fa-thin fa-camera"></i>Camera an ninh</span></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • GA-AN DETAILS</div>
+            </div>
+
+            <!-- TRANG 6 FULL IMAGE (LEFT PAGE) -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    
+            <img class="rf-img" src="images/ga-mo/Ph%C3%B2ng%20GA-MO%201.png" alt="GA-MO" loading="lazy">
+            <div class="rf-grad"></div>
+
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">03 • GA-MO VISUAL SPREAD</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">ROOM 3 — MODERN</div>
+                            <div class="rf-title">GA-MO</div>
+                            <div class="rf-sub">Hiện Đại — "Một điểm dừng hiện đại, trẻ trung."</div>
+                            <div class="rf-badge-price">
+                                <i class="fa-solid fa-sun"></i> Modern Room &bull; 400.000 VNĐ/đêm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 7 CHÚ THÍCH (RIGHT PAGE) -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph">
+                    <span class="ph-tag">03 • GA-MO DETAILS</span>
+                    <span class="ph-num">7</span>
+                </div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">GA-MO</div>
+                        <div class="dp-header">
+                            <div class="dp-badges">
+                                <span class="dp-type-badge"><i class="fa-solid fa-sun"></i> Modern Room</span>
+                                <span class="dp-price">400.000<small> VNĐ/đêm</small></span>
+                            </div>
+                            <div class="dp-room-name">GA-MO</div>
+                            <div class="dp-room-tagline">Hiện Đại — "Một điểm dừng hiện đại, trẻ trung."</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="spec-cell"><span class="sc-lbl">Diện tích</span><span class="sc-val">25 m²</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Giường</span><span class="sc-val">1 Đơn</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Sức chứa</span><span class="sc-val">1-2 Người</span></div>
+                        </div>
+                        
+                        <div class="amenity-section">
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🛏️</span> Trong Phòng</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-wifi"></i>Wi-Fi</span><span class="ap"><i class="fa-thin fa-snowflake"></i>Máy lạnh</span><span class="ap"><i class="fa-thin fa-fan"></i>Quạt</span><span class="ap"><i class="fa-thin fa-tv"></i>Tivi</span><span class="ap"><i class="fa-thin fa-box"></i>Tủ lạnh</span><span class="ap"><i class="fa-thin fa-bottle-water"></i>Nước uống</span><span class="ap"><i class="fa-thin fa-mug-hot"></i>Trà & cà phê</span><span class="ap"><i class="fa-thin fa-chair"></i>Bàn & ghế</span><span class="ap"><i class="fa-thin fa-box-open"></i>Tủ để đồ</span><span class="ap"><i class="fa-thin fa-table-cells"></i>Rèm 2 lớp</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🚿</span> Phòng Tắm</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-shower"></i>Phòng tắm riêng</span><span class="ap"><i class="fa-thin fa-temperature-high"></i>Nước nóng</span><span class="ap"><i class="fa-thin fa-soap"></i>Khăn tắm</span><span class="ap"><i class="fa-thin fa-pump-soap"></i>Dầu gội</span><span class="ap"><i class="fa-thin fa-tooth"></i>Bàn chải</span><span class="ap"><i class="fa-thin fa-wind"></i>Máy sấy tóc</span></div>
+                                </div>
+                            </div>
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🧺</span> Dịch Vụ</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-broom"></i>Dọn phòng</span><span class="ap"><i class="fa-thin fa-shirt"></i>Thay khăn</span><span class="ap"><i class="fa-thin fa-rotate"></i>Giặt & sấy</span><span class="ap"><i class="fa-thin fa-motorcycle"></i>Thuê xe máy</span><span class="ap"><i class="fa-thin fa-taxi"></i>Hỗ trợ taxi</span><span class="ap"><i class="fa-thin fa-map-location-dot"></i>Tư vấn du lịch</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🌿</span> Tiện Ích Chung</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-car"></i>Chỗ để xe</span><span class="ap"><i class="fa-thin fa-couch"></i>Khu sinh hoạt</span><span class="ap"><i class="fa-thin fa-tree"></i>Sân & vườn</span><span class="ap"><i class="fa-thin fa-clothes-hanger"></i>Khu phơi đồ</span><span class="ap"><i class="fa-thin fa-camera"></i>Camera an ninh</span></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • GA-MO DETAILS</div>
+            </div>
+
+            <!-- TRANG 8 FULL IMAGE (LEFT PAGE) -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    
+            <div class="rf-placeholder">
+                <i class="fa-solid fa-camera-retro rf-ph-icon"></i>
+                <div class="rf-ph-code">GA-GIO</div>
+                <div class="rf-ph-status">HÌNH ẢNH CHỜ CẬP NHẬT</div>
+            </div>
+            <div class="rf-grad"></div>
+
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">04 • GA-GIO VISUAL SPREAD</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">ROOM 4 — BREEZE</div>
+                            <div class="rf-title">GA-GIO</div>
+                            <div class="rf-sub">Gió — "Đón gió biển, cảm nhận sự tự do."</div>
+                            <div class="rf-badge-price">
+                                <i class="fa-solid fa-wind"></i> Breeze Double &bull; 500.000 VNĐ/đêm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 9 CHÚ THÍCH (RIGHT PAGE) -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph">
+                    <span class="ph-tag">04 • GA-GIO DETAILS</span>
+                    <span class="ph-num">9</span>
+                </div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">GA-GIO</div>
+                        <div class="dp-header">
+                            <div class="dp-badges">
+                                <span class="dp-type-badge"><i class="fa-solid fa-wind"></i> Breeze Double</span>
+                                <span class="dp-price">500.000<small> VNĐ/đêm</small></span>
+                            </div>
+                            <div class="dp-room-name">GA-GIO</div>
+                            <div class="dp-room-tagline">Gió — "Đón gió biển, cảm nhận sự tự do."</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="spec-cell"><span class="sc-lbl">Diện tích</span><span class="sc-val">28 m²</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Giường</span><span class="sc-val">Đôi</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Sức chứa</span><span class="sc-val">2 Người</span></div>
+                        </div>
+                        
+                        <div class="amenity-section">
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🛏️</span> Trong Phòng</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-wifi"></i>Wi-Fi</span><span class="ap"><i class="fa-thin fa-snowflake"></i>Máy lạnh</span><span class="ap"><i class="fa-thin fa-fan"></i>Quạt</span><span class="ap"><i class="fa-thin fa-tv"></i>Tivi</span><span class="ap"><i class="fa-thin fa-box"></i>Tủ lạnh</span><span class="ap"><i class="fa-thin fa-bottle-water"></i>Nước uống</span><span class="ap"><i class="fa-thin fa-mug-hot"></i>Trà & cà phê</span><span class="ap"><i class="fa-thin fa-chair"></i>Bàn & ghế</span><span class="ap"><i class="fa-thin fa-box-open"></i>Tủ để đồ</span><span class="ap"><i class="fa-thin fa-table-cells"></i>Rèm 2 lớp</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🚿</span> Phòng Tắm</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-shower"></i>Phòng tắm riêng</span><span class="ap"><i class="fa-thin fa-temperature-high"></i>Nước nóng</span><span class="ap"><i class="fa-thin fa-soap"></i>Khăn tắm</span><span class="ap"><i class="fa-thin fa-pump-soap"></i>Dầu gội</span><span class="ap"><i class="fa-thin fa-tooth"></i>Bàn chải</span><span class="ap"><i class="fa-thin fa-wind"></i>Máy sấy tóc</span></div>
+                                </div>
+                            </div>
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🧺</span> Dịch Vụ</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-broom"></i>Dọn phòng</span><span class="ap"><i class="fa-thin fa-shirt"></i>Thay khăn</span><span class="ap"><i class="fa-thin fa-rotate"></i>Giặt & sấy</span><span class="ap"><i class="fa-thin fa-motorcycle"></i>Thuê xe máy</span><span class="ap"><i class="fa-thin fa-taxi"></i>Hỗ trợ taxi</span><span class="ap"><i class="fa-thin fa-map-location-dot"></i>Tư vấn du lịch</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🌿</span> Tiện Ích Chung</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-car"></i>Chỗ để xe</span><span class="ap"><i class="fa-thin fa-couch"></i>Khu sinh hoạt</span><span class="ap"><i class="fa-thin fa-tree"></i>Sân & vườn</span><span class="ap"><i class="fa-thin fa-clothes-hanger"></i>Khu phơi đồ</span><span class="ap"><i class="fa-thin fa-camera"></i>Camera an ninh</span></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • GA-GIO DETAILS</div>
+            </div>
+
+            <!-- TRANG 10 FULL IMAGE (LEFT PAGE) -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    
+            <div class="rf-placeholder">
+                <i class="fa-solid fa-camera-retro rf-ph-icon"></i>
+                <div class="rf-ph-code">GA-MAY</div>
+                <div class="rf-ph-status">HÌNH ẢNH CHỜ CẬP NHẬT</div>
+            </div>
+            <div class="rf-grad"></div>
+
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">05 • GA-MAY VISUAL SPREAD</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">ROOM 5 — CLOUD</div>
+                            <div class="rf-title">GA-MAY</div>
+                            <div class="rf-sub">Mây — "Nhẹ nhàng, chậm rãi, thư thái."</div>
+                            <div class="rf-badge-price">
+                                <i class="fa-solid fa-cloud"></i> Cloud Suite &bull; 500.000 VNĐ/đêm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 11 CHÚ THÍCH (RIGHT PAGE) -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph">
+                    <span class="ph-tag">05 • GA-MAY DETAILS</span>
+                    <span class="ph-num">11</span>
+                </div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">GA-MAY</div>
+                        <div class="dp-header">
+                            <div class="dp-badges">
+                                <span class="dp-type-badge"><i class="fa-solid fa-cloud"></i> Cloud Suite</span>
+                                <span class="dp-price">500.000<small> VNĐ/đêm</small></span>
+                            </div>
+                            <div class="dp-room-name">GA-MAY</div>
+                            <div class="dp-room-tagline">Mây — "Nhẹ nhàng, chậm rãi, thư thái."</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="spec-cell"><span class="sc-lbl">Diện tích</span><span class="sc-val">28 m²</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Giường</span><span class="sc-val">Queen</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Sức chứa</span><span class="sc-val">2 Người</span></div>
+                        </div>
+                        
+                        <div class="amenity-section">
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🛏️</span> Trong Phòng</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-wifi"></i>Wi-Fi</span><span class="ap"><i class="fa-thin fa-snowflake"></i>Máy lạnh</span><span class="ap"><i class="fa-thin fa-fan"></i>Quạt</span><span class="ap"><i class="fa-thin fa-tv"></i>Tivi</span><span class="ap"><i class="fa-thin fa-box"></i>Tủ lạnh</span><span class="ap"><i class="fa-thin fa-bottle-water"></i>Nước uống</span><span class="ap"><i class="fa-thin fa-mug-hot"></i>Trà & cà phê</span><span class="ap"><i class="fa-thin fa-chair"></i>Bàn & ghế</span><span class="ap"><i class="fa-thin fa-box-open"></i>Tủ để đồ</span><span class="ap"><i class="fa-thin fa-table-cells"></i>Rèm 2 lớp</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🚿</span> Phòng Tắm</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-shower"></i>Phòng tắm riêng</span><span class="ap"><i class="fa-thin fa-temperature-high"></i>Nước nóng</span><span class="ap"><i class="fa-thin fa-soap"></i>Khăn tắm</span><span class="ap"><i class="fa-thin fa-pump-soap"></i>Dầu gội</span><span class="ap"><i class="fa-thin fa-tooth"></i>Bàn chải</span><span class="ap"><i class="fa-thin fa-wind"></i>Máy sấy tóc</span></div>
+                                </div>
+                            </div>
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🧺</span> Dịch Vụ</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-broom"></i>Dọn phòng</span><span class="ap"><i class="fa-thin fa-shirt"></i>Thay khăn</span><span class="ap"><i class="fa-thin fa-rotate"></i>Giặt & sấy</span><span class="ap"><i class="fa-thin fa-motorcycle"></i>Thuê xe máy</span><span class="ap"><i class="fa-thin fa-taxi"></i>Hỗ trợ taxi</span><span class="ap"><i class="fa-thin fa-map-location-dot"></i>Tư vấn du lịch</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🌿</span> Tiện Ích Chung</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-car"></i>Chỗ để xe</span><span class="ap"><i class="fa-thin fa-couch"></i>Khu sinh hoạt</span><span class="ap"><i class="fa-thin fa-tree"></i>Sân & vườn</span><span class="ap"><i class="fa-thin fa-clothes-hanger"></i>Khu phơi đồ</span><span class="ap"><i class="fa-thin fa-camera"></i>Camera an ninh</span></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • GA-MAY DETAILS</div>
+            </div>
+
+            <!-- TRANG 12 FULL IMAGE (LEFT PAGE) -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    
+            <div class="rf-placeholder">
+                <i class="fa-solid fa-camera-retro rf-ph-icon"></i>
+                <div class="rf-ph-code">GA-NANG</div>
+                <div class="rf-ph-status">HÌNH ẢNH CHỜ CẬP NHẬT</div>
+            </div>
+            <div class="rf-grad"></div>
+
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">06 • GA-NANG VISUAL SPREAD</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">ROOM 6 — SUNSHINE</div>
+                            <div class="rf-title">GA-NANG</div>
+                            <div class="rf-sub">Nắng — "Ấm áp, đầy năng lượng."</div>
+                            <div class="rf-badge-price">
+                                <i class="fa-solid fa-sun"></i> Sunshine Suite &bull; 500.000 VNĐ/đêm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 13 CHÚ THÍCH (RIGHT PAGE) -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph">
+                    <span class="ph-tag">06 • GA-NANG DETAILS</span>
+                    <span class="ph-num">13</span>
+                </div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">GA-NANG</div>
+                        <div class="dp-header">
+                            <div class="dp-badges">
+                                <span class="dp-type-badge"><i class="fa-solid fa-sun"></i> Sunshine Suite</span>
+                                <span class="dp-price">500.000<small> VNĐ/đêm</small></span>
+                            </div>
+                            <div class="dp-room-name">GA-NANG</div>
+                            <div class="dp-room-tagline">Nắng — "Ấm áp, đầy năng lượng."</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="spec-cell"><span class="sc-lbl">Diện tích</span><span class="sc-val">30 m²</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Giường</span><span class="sc-val">King</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Sức chứa</span><span class="sc-val">2 Người</span></div>
+                        </div>
+                        
+                        <div class="amenity-section">
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🛏️</span> Trong Phòng</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-wifi"></i>Wi-Fi</span><span class="ap"><i class="fa-thin fa-snowflake"></i>Máy lạnh</span><span class="ap"><i class="fa-thin fa-fan"></i>Quạt</span><span class="ap"><i class="fa-thin fa-tv"></i>Tivi</span><span class="ap"><i class="fa-thin fa-box"></i>Tủ lạnh</span><span class="ap"><i class="fa-thin fa-bottle-water"></i>Nước uống</span><span class="ap"><i class="fa-thin fa-mug-hot"></i>Trà & cà phê</span><span class="ap"><i class="fa-thin fa-chair"></i>Bàn & ghế</span><span class="ap"><i class="fa-thin fa-box-open"></i>Tủ để đồ</span><span class="ap"><i class="fa-thin fa-table-cells"></i>Rèm 2 lớp</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🚿</span> Phòng Tắm</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-shower"></i>Phòng tắm riêng</span><span class="ap"><i class="fa-thin fa-temperature-high"></i>Nước nóng</span><span class="ap"><i class="fa-thin fa-soap"></i>Khăn tắm</span><span class="ap"><i class="fa-thin fa-pump-soap"></i>Dầu gội</span><span class="ap"><i class="fa-thin fa-tooth"></i>Bàn chải</span><span class="ap"><i class="fa-thin fa-wind"></i>Máy sấy tóc</span></div>
+                                </div>
+                            </div>
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🧺</span> Dịch Vụ</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-broom"></i>Dọn phòng</span><span class="ap"><i class="fa-thin fa-shirt"></i>Thay khăn</span><span class="ap"><i class="fa-thin fa-rotate"></i>Giặt & sấy</span><span class="ap"><i class="fa-thin fa-motorcycle"></i>Thuê xe máy</span><span class="ap"><i class="fa-thin fa-taxi"></i>Hỗ trợ taxi</span><span class="ap"><i class="fa-thin fa-map-location-dot"></i>Tư vấn du lịch</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🌿</span> Tiện Ích Chung</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-car"></i>Chỗ để xe</span><span class="ap"><i class="fa-thin fa-couch"></i>Khu sinh hoạt</span><span class="ap"><i class="fa-thin fa-tree"></i>Sân & vườn</span><span class="ap"><i class="fa-thin fa-clothes-hanger"></i>Khu phơi đồ</span><span class="ap"><i class="fa-thin fa-camera"></i>Camera an ninh</span></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • GA-NANG DETAILS</div>
+            </div>
+
+            <!-- TRANG 14 FULL IMAGE (LEFT PAGE) -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    
+            <img class="rf-img" src="images/general/gajo-interior.jpg" alt="GA-MOC" loading="lazy">
+            <div class="rf-grad"></div>
+
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag" style="color:var(--gold);">07 • GA-MOC VISUAL SPREAD</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">ROOM 7 — NATURE</div>
+                            <div class="rf-title">GA-MOC</div>
+                            <div class="rf-sub">Mộc — "Gần gũi thiên nhiên, giản dị."</div>
+                            <div class="rf-badge-price">
+                                <i class="fa-solid fa-crown"></i> VIP Signature &bull; 1.000.000 VNĐ/đêm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 15 CHÚ THÍCH (RIGHT PAGE) -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph">
+                    <span class="ph-tag" style="color:var(--gold);">07 • GA-MOC DETAILS</span>
+                    <span class="ph-num">15</span>
+                </div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">GA-MOC</div>
+                        <div class="dp-header">
+                            <div class="dp-badges">
+                                <span class="dp-type-badge"><i class="fa-solid fa-crown"></i> VIP Signature</span>
+                                <span class="dp-price">1.000.000<small> VNĐ/đêm</small></span>
+                            </div>
+                            <div class="dp-room-name">GA-MOC</div>
+                            <div class="dp-room-tagline">Mộc — "Gần gũi thiên nhiên, giản dị."</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="spec-cell"><span class="sc-lbl">Diện tích</span><span class="sc-val">45 m²</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Giường</span><span class="sc-val">King + Sofa</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Sức chứa</span><span class="sc-val">2-3 Người</span></div>
+                        </div>
+                        
+                        <div class="amenity-section">
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🛏️</span> Trong Phòng</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-wifi"></i>Wi-Fi</span><span class="ap"><i class="fa-thin fa-snowflake"></i>Máy lạnh</span><span class="ap"><i class="fa-thin fa-fan"></i>Quạt</span><span class="ap"><i class="fa-thin fa-tv"></i>Tivi</span><span class="ap"><i class="fa-thin fa-box"></i>Tủ lạnh</span><span class="ap"><i class="fa-thin fa-bottle-water"></i>Nước uống</span><span class="ap"><i class="fa-thin fa-mug-hot"></i>Trà & cà phê</span><span class="ap"><i class="fa-thin fa-chair"></i>Bàn & ghế</span><span class="ap"><i class="fa-thin fa-box-open"></i>Tủ để đồ</span><span class="ap"><i class="fa-thin fa-table-cells"></i>Rèm 2 lớp</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🚿</span> Phòng Tắm</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-shower"></i>Phòng tắm riêng</span><span class="ap"><i class="fa-thin fa-temperature-high"></i>Nước nóng</span><span class="ap"><i class="fa-thin fa-soap"></i>Khăn tắm</span><span class="ap"><i class="fa-thin fa-pump-soap"></i>Dầu gội</span><span class="ap"><i class="fa-thin fa-tooth"></i>Bàn chải</span><span class="ap"><i class="fa-thin fa-wind"></i>Máy sấy tóc</span></div>
+                                </div>
+                            </div>
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🧺</span> Dịch Vụ</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-broom"></i>Dọn phòng</span><span class="ap"><i class="fa-thin fa-shirt"></i>Thay khăn</span><span class="ap"><i class="fa-thin fa-rotate"></i>Giặt & sấy</span><span class="ap"><i class="fa-thin fa-motorcycle"></i>Thuê xe máy</span><span class="ap"><i class="fa-thin fa-taxi"></i>Hỗ trợ taxi</span><span class="ap"><i class="fa-thin fa-map-location-dot"></i>Tư vấn du lịch</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🌿</span> Tiện Ích Chung</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-car"></i>Chỗ để xe</span><span class="ap"><i class="fa-thin fa-couch"></i>Khu sinh hoạt</span><span class="ap"><i class="fa-thin fa-tree"></i>Sân & vườn</span><span class="ap"><i class="fa-thin fa-clothes-hanger"></i>Khu phơi đồ</span><span class="ap"><i class="fa-thin fa-camera"></i>Camera an ninh</span></div>
+                                </div>
+                                <div class="vip-extras"><span class="vip-pill"><i class="fa-thin fa-couch"></i>Sofa Bed</span><span class="vip-pill"><i class="fa-thin fa-bath"></i>Bồn tắm thảo mộc</span><span class="vip-pill"><i class="fa-thin fa-video"></i>Máy chiếu HD</span><span class="vip-pill"><i class="fa-thin fa-sun"></i>Giếng trời ngắm sao</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • VIP SIGNATURE DETAILS</div>
+            </div>
+
+            <!-- TRANG 16 FULL IMAGE (LEFT PAGE) -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    
+            <div class="rf-placeholder">
+                <i class="fa-solid fa-camera-retro rf-ph-icon"></i>
+                <div class="rf-ph-code">GA-TRON</div>
+                <div class="rf-ph-status">HÌNH ẢNH CHỜ CẬP NHẬT</div>
+            </div>
+            <div class="rf-grad"></div>
+
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">08 • GA-TRON VISUAL SPREAD</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">ROOM 8 — HIDEAWAY</div>
+                            <div class="rf-title">GA-TRON</div>
+                            <div class="rf-sub">Trốn — "Trốn khỏi những bộn bề, áp lực thường ngày."</div>
+                            <div class="rf-badge-price">
+                                <i class="fa-solid fa-volume-xmark"></i> Hideaway Room &bull; 450.000 VNĐ/đêm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 17 CHÚ THÍCH (RIGHT PAGE) -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph">
+                    <span class="ph-tag">08 • GA-TRON DETAILS</span>
+                    <span class="ph-num">17</span>
+                </div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">GA-TRON</div>
+                        <div class="dp-header">
+                            <div class="dp-badges">
+                                <span class="dp-type-badge"><i class="fa-solid fa-volume-xmark"></i> Hideaway Room</span>
+                                <span class="dp-price">450.000<small> VNĐ/đêm</small></span>
+                            </div>
+                            <div class="dp-room-name">GA-TRON</div>
+                            <div class="dp-room-tagline">Trốn — "Trốn khỏi những bộn bề, áp lực thường ngày."</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="spec-cell"><span class="sc-lbl">Diện tích</span><span class="sc-val">24 m²</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Giường</span><span class="sc-val">Đôi</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Sức chứa</span><span class="sc-val">2 Người</span></div>
+                        </div>
+                        
+                        <div class="amenity-section">
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🛏️</span> Trong Phòng</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-wifi"></i>Wi-Fi</span><span class="ap"><i class="fa-thin fa-snowflake"></i>Máy lạnh</span><span class="ap"><i class="fa-thin fa-fan"></i>Quạt</span><span class="ap"><i class="fa-thin fa-tv"></i>Tivi</span><span class="ap"><i class="fa-thin fa-box"></i>Tủ lạnh</span><span class="ap"><i class="fa-thin fa-bottle-water"></i>Nước uống</span><span class="ap"><i class="fa-thin fa-mug-hot"></i>Trà & cà phê</span><span class="ap"><i class="fa-thin fa-chair"></i>Bàn & ghế</span><span class="ap"><i class="fa-thin fa-box-open"></i>Tủ để đồ</span><span class="ap"><i class="fa-thin fa-table-cells"></i>Rèm 2 lớp</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🚿</span> Phòng Tắm</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-shower"></i>Phòng tắm riêng</span><span class="ap"><i class="fa-thin fa-temperature-high"></i>Nước nóng</span><span class="ap"><i class="fa-thin fa-soap"></i>Khăn tắm</span><span class="ap"><i class="fa-thin fa-pump-soap"></i>Dầu gội</span><span class="ap"><i class="fa-thin fa-tooth"></i>Bàn chải</span><span class="ap"><i class="fa-thin fa-wind"></i>Máy sấy tóc</span></div>
+                                </div>
+                            </div>
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🧺</span> Dịch Vụ</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-broom"></i>Dọn phòng</span><span class="ap"><i class="fa-thin fa-shirt"></i>Thay khăn</span><span class="ap"><i class="fa-thin fa-rotate"></i>Giặt & sấy</span><span class="ap"><i class="fa-thin fa-motorcycle"></i>Thuê xe máy</span><span class="ap"><i class="fa-thin fa-taxi"></i>Hỗ trợ taxi</span><span class="ap"><i class="fa-thin fa-map-location-dot"></i>Tư vấn du lịch</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🌿</span> Tiện Ích Chung</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-car"></i>Chỗ để xe</span><span class="ap"><i class="fa-thin fa-couch"></i>Khu sinh hoạt</span><span class="ap"><i class="fa-thin fa-tree"></i>Sân & vườn</span><span class="ap"><i class="fa-thin fa-clothes-hanger"></i>Khu phơi đồ</span><span class="ap"><i class="fa-thin fa-camera"></i>Camera an ninh</span></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • GA-TRON DETAILS</div>
+            </div>
+
+            <!-- TRANG 18 FULL IMAGE (LEFT PAGE) -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    
+            <div class="rf-placeholder">
+                <i class="fa-solid fa-camera-retro rf-ph-icon"></i>
+                <div class="rf-ph-code">GA-LAC</div>
+                <div class="rf-ph-status">HÌNH ẢNH CHỜ CẬP NHẬT</div>
+            </div>
+            <div class="rf-grad"></div>
+
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">09 • GA-LAC VISUAL SPREAD</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">ROOM 9 — WANDERLUST</div>
+                            <div class="rf-title">GA-LAC</div>
+                            <div class="rf-sub">Lạc — "Lạc vào một nơi mà mình không muốn rời đi."</div>
+                            <div class="rf-badge-price">
+                                <i class="fa-solid fa-compass"></i> Wanderlust Room &bull; 450.000 VNĐ/đêm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 19 CHÚ THÍCH (RIGHT PAGE) -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph">
+                    <span class="ph-tag">09 • GA-LAC DETAILS</span>
+                    <span class="ph-num">19</span>
+                </div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">GA-LAC</div>
+                        <div class="dp-header">
+                            <div class="dp-badges">
+                                <span class="dp-type-badge"><i class="fa-solid fa-compass"></i> Wanderlust Room</span>
+                                <span class="dp-price">450.000<small> VNĐ/đêm</small></span>
+                            </div>
+                            <div class="dp-room-name">GA-LAC</div>
+                            <div class="dp-room-tagline">Lạc — "Lạc vào một nơi mà mình không muốn rời đi."</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="spec-cell"><span class="sc-lbl">Diện tích</span><span class="sc-val">26 m²</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Giường</span><span class="sc-val">Queen</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Sức chứa</span><span class="sc-val">2 Người</span></div>
+                        </div>
+                        
+                        <div class="amenity-section">
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🛏️</span> Trong Phòng</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-wifi"></i>Wi-Fi</span><span class="ap"><i class="fa-thin fa-snowflake"></i>Máy lạnh</span><span class="ap"><i class="fa-thin fa-fan"></i>Quạt</span><span class="ap"><i class="fa-thin fa-tv"></i>Tivi</span><span class="ap"><i class="fa-thin fa-box"></i>Tủ lạnh</span><span class="ap"><i class="fa-thin fa-bottle-water"></i>Nước uống</span><span class="ap"><i class="fa-thin fa-mug-hot"></i>Trà & cà phê</span><span class="ap"><i class="fa-thin fa-chair"></i>Bàn & ghế</span><span class="ap"><i class="fa-thin fa-box-open"></i>Tủ để đồ</span><span class="ap"><i class="fa-thin fa-table-cells"></i>Rèm 2 lớp</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🚿</span> Phòng Tắm</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-shower"></i>Phòng tắm riêng</span><span class="ap"><i class="fa-thin fa-temperature-high"></i>Nước nóng</span><span class="ap"><i class="fa-thin fa-soap"></i>Khăn tắm</span><span class="ap"><i class="fa-thin fa-pump-soap"></i>Dầu gội</span><span class="ap"><i class="fa-thin fa-tooth"></i>Bàn chải</span><span class="ap"><i class="fa-thin fa-wind"></i>Máy sấy tóc</span></div>
+                                </div>
+                            </div>
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🧺</span> Dịch Vụ</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-broom"></i>Dọn phòng</span><span class="ap"><i class="fa-thin fa-shirt"></i>Thay khăn</span><span class="ap"><i class="fa-thin fa-rotate"></i>Giặt & sấy</span><span class="ap"><i class="fa-thin fa-motorcycle"></i>Thuê xe máy</span><span class="ap"><i class="fa-thin fa-taxi"></i>Hỗ trợ taxi</span><span class="ap"><i class="fa-thin fa-map-location-dot"></i>Tư vấn du lịch</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🌿</span> Tiện Ích Chung</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-car"></i>Chỗ để xe</span><span class="ap"><i class="fa-thin fa-couch"></i>Khu sinh hoạt</span><span class="ap"><i class="fa-thin fa-tree"></i>Sân & vườn</span><span class="ap"><i class="fa-thin fa-clothes-hanger"></i>Khu phơi đồ</span><span class="ap"><i class="fa-thin fa-camera"></i>Camera an ninh</span></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • GA-LAC DETAILS</div>
+            </div>
+
+            <!-- TRANG 20 FULL IMAGE (LEFT PAGE) -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    
+            <img class="rf-img" src="images/ga-dinh/Ph%C3%B2ng%20GA-DINH%201.png" alt="GA-DINH" loading="lazy">
+            <div class="rf-grad"></div>
+
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">10 • GA-DINH VISUAL SPREAD</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">ROOM 10 — FAMILY NEST</div>
+                            <div class="rf-title">GA-DINH</div>
+                            <div class="rf-sub">Gia Đình — "Tổ ấm gắn kết yêu thương."</div>
+                            <div class="rf-badge-price">
+                                <i class="fa-solid fa-users"></i> Family Nest &bull; 500.000 VNĐ/đêm
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 21 CHÚ THÍCH (RIGHT PAGE) -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph">
+                    <span class="ph-tag">10 • GA-DINH DETAILS</span>
+                    <span class="ph-num">21</span>
+                </div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">GA-DINH</div>
+                        <div class="dp-header">
+                            <div class="dp-badges">
+                                <span class="dp-type-badge"><i class="fa-solid fa-users"></i> Family Nest</span>
+                                <span class="dp-price">500.000<small> VNĐ/đêm</small></span>
+                            </div>
+                            <div class="dp-room-name">GA-DINH</div>
+                            <div class="dp-room-tagline">Gia Đình — "Tổ ấm gắn kết yêu thương."</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="specs-row">
+                            <div class="spec-cell"><span class="sc-lbl">Diện tích</span><span class="sc-val">35 m²</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Giường</span><span class="sc-val">King</span></div>
+                            <div class="spec-cell"><span class="sc-lbl">Sức chứa</span><span class="sc-val">2-4 Người</span></div>
+                        </div>
+                        
+                        <div class="amenity-section">
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🛏️</span> Trong Phòng</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-wifi"></i>Wi-Fi</span><span class="ap"><i class="fa-thin fa-snowflake"></i>Máy lạnh</span><span class="ap"><i class="fa-thin fa-fan"></i>Quạt</span><span class="ap"><i class="fa-thin fa-tv"></i>Tivi</span><span class="ap"><i class="fa-thin fa-box"></i>Tủ lạnh</span><span class="ap"><i class="fa-thin fa-bottle-water"></i>Nước uống</span><span class="ap"><i class="fa-thin fa-mug-hot"></i>Trà & cà phê</span><span class="ap"><i class="fa-thin fa-chair"></i>Bàn & ghế</span><span class="ap"><i class="fa-thin fa-box-open"></i>Tủ để đồ</span><span class="ap"><i class="fa-thin fa-table-cells"></i>Rèm 2 lớp</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🚿</span> Phòng Tắm</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-shower"></i>Phòng tắm riêng</span><span class="ap"><i class="fa-thin fa-temperature-high"></i>Nước nóng</span><span class="ap"><i class="fa-thin fa-soap"></i>Khăn tắm</span><span class="ap"><i class="fa-thin fa-pump-soap"></i>Dầu gội</span><span class="ap"><i class="fa-thin fa-tooth"></i>Bàn chải</span><span class="ap"><i class="fa-thin fa-wind"></i>Máy sấy tóc</span></div>
+                                </div>
+                            </div>
+                            <div class="am-col">
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🧺</span> Dịch Vụ</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-broom"></i>Dọn phòng</span><span class="ap"><i class="fa-thin fa-shirt"></i>Thay khăn</span><span class="ap"><i class="fa-thin fa-rotate"></i>Giặt & sấy</span><span class="ap"><i class="fa-thin fa-motorcycle"></i>Thuê xe máy</span><span class="ap"><i class="fa-thin fa-taxi"></i>Hỗ trợ taxi</span><span class="ap"><i class="fa-thin fa-map-location-dot"></i>Tư vấn du lịch</span></div>
+                                </div>
+                                <div class="am-cat">
+                                    <div class="am-cat-h"><span class="am-icon">🌿</span> Tiện Ích Chung</div>
+                                    <div class="am-pills"><span class="ap"><i class="fa-thin fa-car"></i>Chỗ để xe</span><span class="ap"><i class="fa-thin fa-couch"></i>Khu sinh hoạt</span><span class="ap"><i class="fa-thin fa-tree"></i>Sân & vườn</span><span class="ap"><i class="fa-thin fa-clothes-hanger"></i>Khu phơi đồ</span><span class="ap"><i class="fa-thin fa-camera"></i>Camera an ninh</span></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • GA-DINH DETAILS</div>
+            </div>
+
+            <!-- TRANG 22: BBQ VISUAL -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    <img class="rf-img" src="images/general/dining-nhagao.jpg" alt="BBQ Tiệm Nướng Nhà Gạo">
+                    <div class="rf-grad"></div>
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">11 • IN-HOUSE DINING SPREAD</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">GAJO'S HOUSE • OUTDOOR DINING</div>
+                            <div class="rf-title">TIỆM NƯỚNG<br>NHÀ GẠO</div>
+                            <div class="rf-sub">Tiệc nướng BBQ ấm cúng ngát hương thơm giữa không gian sân vườn homestay.</div>
+                            <div class="rf-badge-price"><i class="fa-solid fa-fire-burner"></i> Set BBQ từ 350.000 VNĐ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 23: BBQ CHÚ THÍCH -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph"><span class="ph-tag">11 • DỊCH VỤ SÂN VƯỜN</span><span class="ph-num">23</span></div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">BBQ</div>
+                        <div class="dp-header">
+                            <div class="dp-badges"><span class="dp-type-badge"><i class="fa-solid fa-fire-burner"></i> In-House BBQ</span></div>
+                            <div class="dp-room-name" style="font-size:1.3rem">Set BBQ Nhà Gạo</div>
+                            <div class="dp-room-tagline">Thưởng thức bữa tối nướng ngoài trời</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="sdg">
+                            <div class="sdg-item"><i class="fa-solid fa-utensils"></i><div class="sdg-label"><strong>Combo Đôi (2 người)</strong>350.000 VNĐ — Thịt ướp &amp; hải sản tươi</div></div>
+                            <div class="sdg-item"><i class="fa-solid fa-people-group"></i><div class="sdg-label"><strong>Combo Gia Đình (4 người)</strong>650.000 VNĐ — Bếp than hồng giao tận sân</div></div>
+                            <div class="sdg-item"><i class="fa-solid fa-motorcycle"></i><div class="sdg-label"><strong>Cho thuê xe máy</strong>120.000 – 150.000 VNĐ / ngày</div></div>
+                            <div class="sdg-item"><i class="fa-solid fa-shirt"></i><div class="sdg-label"><strong>Giặt sấy lấy nhanh</strong>30.000 VNĐ / kg</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • SERVICES</div>
+            </div>
+
+            <!-- TRANG 24: LOCAL VISUAL -->
+            <div class="page-sheet hard-cover" data-density="soft">
+                <div class="rf-page">
+                    <img class="rf-img" src="images/general/exp-gaocoffee.jpg" alt="Quán A Mãi">
+                    <div class="rf-grad"></div>
+                    <div class="rf-overlay">
+                        <div class="rf-top-tag">12 • LOCAL EXPERIENCE GUIDE</div>
+                        <div class="rf-bottom-box">
+                            <div class="rf-room-num">GAJO'S HOUSE • LOCAL FOOD</div>
+                            <div class="rf-title">QUÁN A MÃI</div>
+                            <div class="rf-sub">Thưởng thức bún phở Gia Lai ngọt thanh hương vị truyền thống độc đáo.</div>
+                            <div class="rf-badge-price"><i class="fa-solid fa-map-pin"></i> Cách homestay 300m</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRANG 25: LOCAL CHÚ THÍCH -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph"><span class="ph-tag">12 • ĐẶC QUYỀN LƯU TRÚ</span><span class="ph-num">25</span></div>
+                <div class="pc">
+                    <div class="dp-right">
+                        <div class="dp-ghost">LOCAL</div>
+                        <div class="dp-header">
+                            <div class="dp-badges"><span class="dp-type-badge"><i class="fa-solid fa-gift"></i> Đặc Quyền Khách Lưu Trú</span></div>
+                            <div class="dp-room-name" style="font-size:1.3rem">Khám Phá Bản Địa</div>
+                            <div class="dp-room-tagline">Bữa sáng bản địa &amp; ưu đãi đặc biệt</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="sdg">
+                            <div class="sdg-item"><i class="fa-solid fa-bowl-food"></i><div class="sdg-label"><strong>Quán A Mãi (Cách 300m)</strong>Bún/phở nước dùng ninh xương ngọt thanh gia truyền</div></div>
+                            <div class="sdg-item"><i class="fa-solid fa-ticket"></i><div class="sdg-label"><strong>Voucher 50.000 VNĐ BBQ</strong>Tặng khi viết nhận xét 5 sao Google Maps</div></div>
+                            <div class="sdg-item"><i class="fa-solid fa-percent"></i><div class="sdg-label"><strong>Giảm 10% đặt phòng tiếp theo</strong>Dành cho đặt trực tiếp không qua OTA</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • PRIVILEGES</div>
+            </div>
+
+            <!-- TRANG 26: NỘI QUY -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph"><span class="ph-tag">13 • SỔ TAY LƯU TRÚ</span><span class="ph-num">26</span></div>
+                <div class="pc">
+                    <div class="rules-wrap">
+                        <div class="dp-ghost">RULES</div>
+                        <div class="dp-header" style="position:relative;z-index:1;">
+                            <div class="dp-room-name" style="font-size:1.35rem">Nội Quy &amp; Hướng Dẫn</div>
+                            <div class="dp-room-tagline">Tôn trọng không gian tĩnh tịnh chung</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="rule-item"><i class="fa-solid fa-clock"></i><span><strong>Nhận/Trả phòng:</strong> Check-in 14:00 | Check-out 12:00</span></div>
+                        <div class="rule-item"><i class="fa-solid fa-volume-xmark"></i><span><strong>Giờ yên tĩnh:</strong> Giữ âm lượng nhẹ nhàng sau 22:00</span></div>
+                        <div class="rule-item"><i class="fa-solid fa-ban-smoking"></i><span><strong>Hút thuốc:</strong> Sử dụng khu vực ban công hoặc sân vườn</span></div>
+                        <div class="rule-item"><i class="fa-solid fa-leaf"></i><span><strong>Tiết kiệm điện:</strong> Tắt điều hòa khi rời khỏi phòng</span></div>
+                        <div class="rule-item"><i class="fa-solid fa-paw"></i><span><strong>Thú cưng:</strong> Vui lòng liên hệ trước để sắp xếp</span></div>
+                        <div class="rule-item"><i class="fa-solid fa-shield-heart"></i><span><strong>An toàn:</strong> Camera an ninh 24/7 toàn khu vực</span></div>
+                        <div class="info-box">
+                            <strong>Thông Tin Kết Nối</strong>
+                            📶 <strong>Wi-Fi:</strong> GAJO_GUEST &nbsp;|&nbsp; <strong>Pass:</strong> gajohouse2026<br>
+                            📞 <strong>Hotline 24/7:</strong> Liên hệ qua Zalo / Facebook GAJO's HOUSE
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • HOUSE RULES</div>
+            </div>
+
+            <!-- TRANG 27: CHECK-OUT -->
+            <div class="page-sheet" data-density="soft">
+                <div class="ph"><span class="ph-tag">13 • HỖ TRỢ &amp; CHECK-OUT</span><span class="ph-num">27</span></div>
+                <div class="pc">
+                    <div class="rules-wrap">
+                        <div class="dp-ghost">BYE</div>
+                        <div class="dp-header" style="position:relative;z-index:1;">
+                            <div class="dp-room-name" style="font-size:1.35rem">Trước Khi Rời Đi</div>
+                            <div class="dp-room-tagline">Hẹn gặp lại tại GAJO's HOUSE</div>
+                            <div class="dp-divider"></div>
+                        </div>
+                        <div class="checkout-box">
+                            <h4><i class="fa-solid fa-clipboard-check"></i> Checklist Check-out</h4>
+                            <li>☑️ <strong>1.</strong> Kiểm tra lại tư trang &amp; ví tiền cá nhân.</li>
+                            <li>☑️ <strong>2.</strong> Tắt thiết bị điện, điều hòa, quạt.</li>
+                            <li>☑️ <strong>3.</strong> Gửi lại chìa khóa / thẻ từ cho Lễ tân.</li>
+                            <li>☑️ <strong>4.</strong> Đánh giá 5 sao Google Maps để nhận Voucher 50K.</li>
+                        </div>
+                        <div class="rule-item" style="margin-top:2px;"><i class="fa-solid fa-star" style="color:var(--gold);"></i><span><strong>Đánh giá 5 sao Google Maps</strong> → Nhận Voucher BBQ 50.000 VNĐ ngay!</span></div>
+                        <div class="rule-item"><i class="fa-solid fa-heart" style="color:#e85d5d;"></i><span><strong>Cảm ơn bạn đã chọn GAJO's HOUSE!</strong> Trốn về thêm lần nữa nhé.</span></div>
+                        <div class="info-box">
+                            <strong>Đặt Phòng Lần Sau</strong>
+                            Liên hệ trực tiếp để được <strong>giảm 10%</strong><br>
+                            Facebook &amp; Zalo: <strong>GAJO's HOUSE</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf">GAJO'S HOUSE • CHECK-OUT</div>
+            </div>
+
+            <!-- TRANG 28: BACK COVER -->
+            <div class="page-sheet hard-cover" data-density="hard">
+                <img class="cover-bg" src="images/general/gajo-interior.jpg" alt="Back Cover">
+                <div class="cover-grad"></div>
+                <div class="back-inner">
+                    <div>
+                        <div class="back-eyebrow">Cảm ơn bạn đã lựa chọn</div>
+                        <div class="back-title">GAJO'S HOUSE</div>
+                        <div class="back-sub">Nơi lưu giữ những khoảnh khắc bình yên</div>
+                    </div>
+                    <div class="back-qr-box">
+                        <div class="back-qr-frame"><img src="images/general/qr-maps.png" alt="QR Google Maps"></div>
+                        <div class="back-qr-title">⭐ ĐÁNH GIÁ 5 SAO GOOGLE MAPS ⭐</div>
+                        <div class="back-qr-desc">Quét mã QR để nhận Voucher 50.000 VNĐ tiệc nướng BBQ!</div>
+                        <div class="back-btns">
+                            <span class="btn-back"><i class="fa-solid fa-location-dot"></i> Hoài Nhơn Đông, Gia Lai</span>
+                        </div>
+                    </div>
+                    <div class="back-footer">WWW.GAJOHOUSE.VN • 2026 EDITION</div>
+                </div>
+            </div>
+
+        </div><!-- /flipbookStage -->
+    </main>
+    <nav class="bottom-toolbar">
+        <button class="btn-tool" id="btnPrevPage" title="Trang trước"><i class="fa-solid fa-chevron-left"></i></button>
+        <span class="pg-txt" id="pageIndicator">Trang 1 / 28</span>
+        <button class="btn-tool" id="btnNextPage" title="Trang sau"><i class="fa-solid fa-chevron-right"></i></button>
+    </nav>
+    <div class="toc-modal" id="tocModal">
+        <div class="toc-card">
+            <button class="toc-close" id="btnTocClose"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="toc-title">Mục Lục Catalogue 3D</h3>
+            <ul class="toc-list">
+                <li class="toc-item" data-page="0"><span>01. Trang Bìa (Front Cover)</span><span>Trang 1</span></li>
+                <li class="toc-item" data-page="1"><span>02. Lời Ngỏ — Bình Yên</span><span>Trang 2 - 3</span></li>
+                <li class="toc-item" data-page="3"><span>03. GA-AN — An Yên</span><span>Trang 4 - 5</span></li>
+                <li class="toc-item" data-page="5"><span>04. GA-MO — Modern</span><span>Trang 6 - 7</span></li>
+                <li class="toc-item" data-page="7"><span>05. GA-GIO — Gió</span><span>Trang 8 - 9</span></li>
+                <li class="toc-item" data-page="9"><span>06. GA-MAY — Mây</span><span>Trang 10 - 11</span></li>
+                <li class="toc-item" data-page="11"><span>07. GA-NANG — Nắng</span><span>Trang 12 - 13</span></li>
+                <li class="toc-item" data-page="13"><span>08. GA-MOC — VIP Signature</span><span>Trang 14 - 15</span></li>
+                <li class="toc-item" data-page="15"><span>09. GA-TRON — Trốn</span><span>Trang 16 - 17</span></li>
+                <li class="toc-item" data-page="17"><span>10. GA-LAC — Lạc</span><span>Trang 18 - 19</span></li>
+                <li class="toc-item" data-page="19"><span>11. GA-DINH — Gia Đình</span><span>Trang 20 - 21</span></li>
+                <li class="toc-item" data-page="21"><span>12. Tiệc Nướng BBQ &amp; Dịch Vụ</span><span>Trang 22 - 23</span></li>
+                <li class="toc-item" data-page="23"><span>13. Local Guide &amp; Ưu Đãi</span><span>Trang 24 - 25</span></li>
+                <li class="toc-item" data-page="25"><span>14. Nội Quy &amp; Check-out</span><span>Trang 26 - 27</span></li>
+                <li class="toc-item" data-page="27"><span>15. Mã QR &amp; Google Maps</span><span>Trang 28</span></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let audioCtx=null, soundEnabled=true;
+            function playPaper(){
+                if(!soundEnabled)return;
+                try{
+                    if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+                    if(audioCtx.state==='suspended')audioCtx.resume();
+                    const sz=audioCtx.sampleRate*0.12, buf=audioCtx.createBuffer(1,sz,audioCtx.sampleRate);
+                    const d=buf.getChannelData(0);
+                    for(let i=0;i<sz;i++)d[i]=Math.random()*2-1;
+                    const src=audioCtx.createBufferSource(); src.buffer=buf;
+                    const flt=audioCtx.createBiquadFilter(); flt.type='lowpass';
+                    flt.frequency.setValueAtTime(400,audioCtx.currentTime);
+                    flt.frequency.exponentialRampToValueAtTime(1600,audioCtx.currentTime+0.08);
+                    flt.frequency.exponentialRampToValueAtTime(300,audioCtx.currentTime+0.12);
+                    const g=audioCtx.createGain();
+                    g.gain.setValueAtTime(0.01,audioCtx.currentTime);
+                    g.gain.linearRampToValueAtTime(0.18,audioCtx.currentTime+0.03);
+                    g.gain.exponentialRampToValueAtTime(0.001,audioCtx.currentTime+0.12);
+                    src.connect(flt);flt.connect(g);g.connect(audioCtx.destination);src.start();
+                }catch(e){}
+            }
+            function toast(msg){
+                const t=document.getElementById('toastNotify');
+                t.textContent=msg;t.classList.add('show');
+                setTimeout(()=>t.classList.remove('show'),2000);
+            }
+            function dims(){
+                const vw=Math.min(window.innerWidth||360,1200), vh=Math.min(window.innerHeight||640,900);
+                const mob=vw<=768;
+                let w,h;
+                if(mob){w=Math.floor(vw*.92);h=Math.floor(w*1.414);const mh=Math.floor(vh*.75);if(h>mh){h=mh;w=Math.floor(h/1.414);}}
+                else{w=Math.floor(vw*.44);if(w>520)w=520;h=Math.floor(w*1.414);const mh=Math.floor(vh*.82);if(h>mh){h=mh;w=Math.floor(h/1.414);}}
+                return{width:Math.max(w,280),height:Math.max(h,400),mob};
+            }
+            const d=dims();
+            const pf=new St.PageFlip(document.getElementById('flipbookStage'),{
+                width:d.width,height:d.height,size:'fixed',
+                minWidth:280,maxWidth:540,minHeight:400,maxHeight:850,
+                drawShadow:true,flippingTime:650,usePortrait:d.mob,
+                startPage:0,useMouseEvents:true,showCover:true,
+                mobileScrollSupport:true,clickEventForward:true
+            });
+            pf.loadFromHTML(document.querySelectorAll('.page-sheet'));
+            pf.on('flip',(e)=>{
+                playPaper();
+                document.getElementById('pageIndicator').textContent=`Trang ${e.data+1} / ${pf.getPageCount()}`;
+            });
+            document.getElementById('btnPrevPage').addEventListener('click',()=>pf.flipPrev());
+            document.getElementById('btnNextPage').addEventListener('click',()=>pf.flipNext());
+            const bi=document.getElementById('btnSoundToggle');
+            bi.addEventListener('click',()=>{
+                soundEnabled=!soundEnabled;
+                document.getElementById('soundIcon').className=soundEnabled?'fa-solid fa-volume-high':'fa-solid fa-volume-xmark';
+                document.getElementById('soundLabel').textContent=soundEnabled?'Âm thanh':'Đã tắt';
+                toast(soundEnabled?'Âm thanh: Đã bật':'Âm thanh: Đã tắt');
+            });
+            const tm=document.getElementById('tocModal');
+            document.getElementById('btnTocToggle').addEventListener('click',()=>tm.classList.add('active'));
+            document.getElementById('btnTocClose').addEventListener('click',()=>tm.classList.remove('active'));
+            document.querySelectorAll('.toc-item').forEach(it=>{
+                it.addEventListener('click',()=>{pf.flip(parseInt(it.getAttribute('data-page'),10));tm.classList.remove('active');});
+            });
+            window.addEventListener('keydown',(e)=>{if(e.key==='ArrowLeft')pf.flipPrev();if(e.key==='ArrowRight')pf.flipNext();});
+            window.addEventListener('resize',()=>pf.updateFromHTML(document.querySelectorAll('.page-sheet')));
+        });
+    </script>
+</body>
+</html>
