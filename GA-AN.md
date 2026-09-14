@@ -43,18 +43,18 @@ Toàn bộ biểu tượng tiện ích tuân thủ quy chuẩn nét vẽ mảnh 
 
 Toàn bộ hình ảnh chụp theo bố cục lưới 50/50, sắc nét, tỉ lệ crop vuông hoặc 3:2, áp dụng `object-fit: cover`:
 
-1. **Góc Giường Ngủ Tĩnh Thức:**
-   - Image Path: `images/ga-an/Phòng GA-AN 1.png`
-   - Description: Drap trải giường màu kem mộc mạc bên cạnh ánh nắng sớm ấm áp.
+1. **Ảnh Toàn Cảnh Phòng (Hero Image):**
+   - Image Path: `images/ga-an/ga-an-hero.jpg`
+   - Description: Góc nhìn toàn diện phòng GA-AN với giường đệm êm ái, đèn lồng giấy ấm cúng, đèn rọi vòm tranh cá koi, rèm cửa và sàn gỗ mộc mạc.
 2. **Góc Đọc Sách & Bàn Trà:**
    - Image Path: `images/ga-an/Phòng GA-AN 2.png`
    - Description: Bàn gỗ nhỏ mộc mạc cùng tách trà nghi ngút khói.
-3. **Phòng Tắm Spotless Sạch Sẽ:**
+3. **Nắng Ban Mai / Phòng Tắm:**
    - Image Path: `images/ga-an/IMG_3072.JPG`
-   - Description: Không gian vệ sinh tối giản, thơm mùi tinh dầu tự nhiên.
-4. **Ảnh Tổng Thể Hạng Phòng:**
-   - Image Path: `images/general/gajo-single-bed.jpg`
-   - Description: Góc nhìn toàn cảnh căn phòng GA-AN tràn ngập ánh sáng.
+   - Description: Không gian đón nắng ban mai ấm áp, thơm mùi tinh dầu tự nhiên.
+4. **Góc Thư Giãn & Bàn Đầu Giường:**
+   - Image Path: `images/ga-an/IMG_3106.jpg`
+   - Description: Bàn đầu giường với cây xanh tự nhiên, gương soi và nước khoáng đón chào.
 
 ---
 

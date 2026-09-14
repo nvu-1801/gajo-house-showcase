@@ -39,15 +39,18 @@
 
 ## 4. KHO HÌNH ẢNH MINH HỌA (VISUAL ASSETS GALLERY)
 
-1. **Góc Cửa Sổ Mộng Mơ:**
-   - Image Path: `images/ga-mo/Phòng GA-MO 1.png`
-   - Description: Khung cửa sổ tràn ngập ánh nắng ban mai dịu nhẹ.
+1. **Ảnh Toàn Cảnh Phòng (Hero Image):**
+   - Image Path: `images/ga-mo/ga-mo-hero.jpg`
+   - Description: Góc nhìn toàn diện phòng GA-MO hiện đại với giường đôi êm ái, tranh nghệ thuật mặt trời, cửa sổ gỗ lớn rợp nắng, tủ mây phong cách Pháp, sàn gỗ xương cá và thảm trải sàn cao cấp.
 2. **Góc Làm Việc & Sáng Tạo:**
    - Image Path: `images/ga-mo/Phòng GA-MO 2.png`
    - Description: Bàn gỗ mộc mạc đặt bên góc cây xanh.
-3. **Ảnh Cận Cảnh Giường Ngủ:**
-   - Image Path: `images/general/gajo-single-bed.jpg`
-   - Description: Giường phủ drap bọc cotton mịn màng màu kem ấm.
+3. **Ảnh Không Gian & Bàn Làm Việc:**
+   - Image Path: `images/general/gajo-interior.jpg`
+   - Description: Toàn cảnh không gian phòng nhìn từ cửa vào với góc làm việc và TV.
+4. **Tiện Nghi Trà & Nước Uống:**
+   - Image Path: `images/ga-mo/IMG_3045.jpg`
+   - Description: Bình siêu tốc, nước suối và ly tách được bài trí trang nhã trên tủ mây.
 
 ---
 
