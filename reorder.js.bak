@@ -1,0 +1,69 @@
+﻿const fs = require('fs');
+
+const ts = fs.readFileSync('src/data/rooms.ts', 'utf8');
+const header = ts.substring(0, ts.indexOf('  {\n'));
+const footer = ts.substring(ts.lastIndexOf('  }\n]'));
+
+let roomsPart = ts.substring(ts.indexOf('  {\n'), ts.lastIndexOf('  }\n]') + 3);
+
+// Split by '  },\n  {\n'
+let roomStrs = roomsPart.split(/  \},\n  \{\n/g);
+roomStrs[0] = roomStrs[0].replace(/^  \{\n/, '');
+roomStrs[roomStrs.length-1] = roomStrs[roomStrs.length-1].replace(/\n  \}$/, '');
+
+let rooms = roomStrs.map(s => {
+  let priceStr = s.match(/"priceFormatted": "([^"]+)"/)[1];
+  let price = parseInt(priceStr.replace(/\./g, ''));
+  let code = s.match(/"code": "([^"]+)"/)[1];
+  return { code, price, str: '  {\n' + s + '\n  }' };
+});
+
+rooms.sort((a,b) => a.price - b.price);
+
+// update indices
+for(let i=0; i<rooms.length; i++){
+  rooms[i].str = rooms[i].str.replace(/"index": \d+,/, '"index": ' + (i+1) + ',');
+}
+
+const newTs = header + rooms.map(r => r.str).join(',\n') + '\n];\n';
+fs.writeFileSync('src/data/rooms.ts', newTs, 'utf8');
+
+// Now update catalogue.ts
+const catTs = fs.readFileSync('src/data/catalogue.ts', 'utf8');
+const catLines = catTs.split('\n');
+let newCatLines = [];
+
+let roomPageIndex = 5; // Room 1 starts at page 5 (index 5)
+// Wait, the TOC pageIndex is 0-indexed. So page 1 = 0, page 2-3 = 1, page 4-5 = 3. Room 1 is 5 (Trang 6-7).
+// The TOC labels are 'Trang 6 - 7'.
+
+let tocRoomIndex = 1;
+for(let line of catLines) {
+  if (line.includes('GA-') || line.includes('VIP Signature')) {
+    let room = rooms[tocRoomIndex - 1];
+    let title = (tocRoomIndex + 2 < 10 ? '0' : '') + (tocRoomIndex + 2) + '. ' + room.code + ' — ' + (room.code === 'GA-MOC' ? 'VIP Signature' : room.str.match(/"personalityVi": "([^"]+)"/)[1]);
+    let pageLabel = 'Trang ' + (roomPageIndex + 1) + ' - ' + (roomPageIndex + 2);
+    newCatLines.push("  { pageIndex: " + roomPageIndex + ", title: '" + title + "', pageLabel: '" + pageLabel + "' },");
+    roomPageIndex += 2;
+    tocRoomIndex++;
+  } else if (line.includes('Tiệc Nướng BBQ')) {
+    newCatLines.push("  { pageIndex: " + roomPageIndex + ", title: '" + (tocRoomIndex + 2) + ". Tiệc Nướng BBQ Sân Vườn', pageLabel: 'Trang " + (roomPageIndex+1) + " - " + (roomPageIndex+2) + "' },");
+    roomPageIndex += 2;
+    tocRoomIndex++;
+  } else if (line.includes('Café Bonjour')) {
+    newCatLines.push("  { pageIndex: " + roomPageIndex + ", title: '" + (tocRoomIndex + 2) + ". Local Guide & Café Bonjour', pageLabel: 'Trang " + (roomPageIndex+1) + " - " + (roomPageIndex+2) + "' },");
+    roomPageIndex += 2;
+    tocRoomIndex++;
+  } else if (line.includes('Your Stay')) {
+    newCatLines.push("  { pageIndex: " + roomPageIndex + ", title: '" + (tocRoomIndex + 2) + ". Your Stay & Before You Leave', pageLabel: 'Trang " + (roomPageIndex+1) + " - " + (roomPageIndex+2) + "' },");
+    roomPageIndex += 2;
+    tocRoomIndex++;
+  } else if (line.includes('Bìa Sau')) {
+    newCatLines.push("  { pageIndex: " + roomPageIndex + ", title: '" + (tocRoomIndex + 2) + ". Bìa Sau & Đặt Phòng', pageLabel: 'Trang " + (roomPageIndex+1) + "' },");
+  } else {
+    newCatLines.push(line);
+  }
+}
+
+fs.writeFileSync('src/data/catalogue.ts', newCatLines.join('\n'), 'utf8');
+console.log('Done');

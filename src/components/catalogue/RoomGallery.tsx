@@ -20,7 +20,7 @@ export const RoomGallery: React.FC<RoomGalleryProps> = ({ galleryTop, gallerySub
               src={galleryTop.src}
               alt={galleryTop.label || 'Toàn cảnh phòng'}
               className="gallery-image"
-              loading="lazy"
+              
               style={{ objectPosition: galleryTop.objectPosition || 'center' }}
             />
             <div className="gallery-gradient-overlay">
@@ -43,7 +43,7 @@ export const RoomGallery: React.FC<RoomGalleryProps> = ({ galleryTop, gallerySub
               src={subItem0.src}
               alt={subItem0.label || 'Chi tiết không gian'}
               className="gallery-image"
-              loading="lazy"
+              
               style={{ objectPosition: subItem0.objectPosition || 'center' }}
             />
             <div className="gallery-gradient-overlay">
@@ -66,7 +66,7 @@ export const RoomGallery: React.FC<RoomGalleryProps> = ({ galleryTop, gallerySub
               src={subItem1.src}
               alt={subItem1.label || 'Chi tiết nội thất'}
               className="gallery-image"
-              loading="lazy"
+              
               style={{ objectPosition: subItem1.objectPosition || 'center' }}
             />
             <div className="gallery-gradient-overlay">

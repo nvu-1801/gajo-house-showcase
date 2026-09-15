@@ -28,7 +28,7 @@ function preparePrintContainer(mode: 'standard' | 'booklet') {
       const blank = document.createElement('div');
       blank.className = 'page-sheet blank-page';
       blank.innerHTML = '<div class="page"><div class="page-content" style="background:#fff;width:100%;height:100%;"></div></div>';
-      sheets.push(blank);
+      sheets.splice(sheets.length - 1, 0, blank);
     }
     
     const totalPages = sheets.length;
@@ -109,6 +109,7 @@ function preparePrintContainer(mode: 'standard' | 'booklet') {
       
       printContainer.appendChild(sheetDiv);
     }
+    
     printRoot.appendChild(printContainer);
   }
   

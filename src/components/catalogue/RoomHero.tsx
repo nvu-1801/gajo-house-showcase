@@ -16,7 +16,7 @@ export const RoomHero: React.FC<RoomHeroProps> = ({ room }) => {
           className="hero-editorial-img"
           src={room.heroImage}
           alt={room.code}
-          loading="lazy"
+          
         />
       ) : (
         <div className="hero-editorial-placeholder">

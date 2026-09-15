@@ -165,9 +165,9 @@ export const rooms: Room[] = [
     "type": "Cloud Double Suite",
     "priceFormatted": "500.000",
     "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-may/IMG_6002.jpg",
+    "heroImage": "images/ga-may/hero-new.png",
     "galleryTop": {
-      "src": "images/ga-may/IMG_5994.jpg",
+      "src": "images/ga-may/gallery-top-new.png",
       "label": "GIƯỜNG MỘC & ĐÈN BẮC ÂU",
       "objectPosition": "center bottom"
     },
@@ -269,9 +269,9 @@ export const rooms: Room[] = [
     "type": "VIP Signature Suite",
     "priceFormatted": "1.000.000",
     "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-moc/IMG_5992.jpg",
+    "heroImage": "images/ga-moc/hero-new.jpg",
     "galleryTop": {
-      "src": "images/ga-moc/IMG_5990.jpg",
+      "src": "images/ga-moc/gallery-top-new.png",
       "label": "BỒN TẮM THẢO MỘC"
     },
     "gallerySub": [
@@ -280,9 +280,9 @@ export const rooms: Room[] = [
         "label": "HÀNH LANG BAN CÔNG"
       },
       {
-        "src": "images/ga-moc/IMG_5915.jpg",
-        "label": "MẶT TIỀN ĐÈN VÀNG"
-      }
+          "src": "images/ga-moc/netflix-new-2.jpg",
+          "label": "NETFLIX & MÁY CHIẾU HD"
+        }
     ],
     "specs": [
       {

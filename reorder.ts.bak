@@ -1,0 +1,20 @@
+﻿import * as fs from 'fs';
+import { rooms } from './src/data/rooms';
+
+// Sort rooms by price
+rooms.sort((a, b) => {
+  const priceA = parseInt(a.priceFormatted.replace(/\./g, ''));
+  const priceB = parseInt(b.priceFormatted.replace(/\./g, ''));
+  return priceA - priceB;
+});
+
+// Update index
+rooms.forEach((r, i) => {
+  r.index = i + 1;
+});
+
+const fileContent = \import { Room } from '@/types/room';\n\nexport const rooms: Room[] = \;\n\;
+fs.writeFileSync('src/data/rooms.ts', fileContent, 'utf8');
+
+console.log("Rooms sorted");
+

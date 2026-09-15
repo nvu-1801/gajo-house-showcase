@@ -12,8 +12,10 @@ import { PrintModal } from './PrintModal';
 
 import { CoverPage } from '@/components/catalogue/CoverPage';
 import { WelcomeSpread } from '@/components/catalogue/WelcomeSpread';
+import { AmenitiesSpread } from '@/components/catalogue/AmenitiesSpread';
 import { RoomSpread } from '@/components/catalogue/RoomSpread';
 import { DiningSpread } from '@/components/catalogue/DiningSpread';
+import { MenuSpread } from '@/components/catalogue/MenuSpread';
 import { LocalGuideSpread } from '@/components/catalogue/LocalGuideSpread';
 import { HouseRules } from '@/components/catalogue/HouseRules';
 import { CheckoutPage } from '@/components/catalogue/CheckoutPage';
@@ -32,6 +34,9 @@ const CataloguePages = React.memo(function CataloguePages({
       {/* TRANG 2-3: WELCOME & PHILOSOPHY */}
       <WelcomeSpread onJump={onJump} />
 
+      {/* TRANG 4-5: AMENITIES & SERVICES */}
+      <AmenitiesSpread />
+
       {/* TRANG 4-21: 9 ROOMS (MAPPED UNIFORMLY) */}
       {rooms.map((room) => (
         <RoomSpread key={room.id} room={room} onJump={onJump} />
@@ -40,7 +45,10 @@ const CataloguePages = React.memo(function CataloguePages({
       {/* TRANG 22-23: IN-HOUSE BBQ DINING */}
       <DiningSpread />
 
-      {/* TRANG 24-25: LOCAL GUIDE */}
+      {/* TRANG 24-25: MENU SPREAD */}
+      <MenuSpread />
+
+      {/* TRANG 26-27: LOCAL GUIDE */}
       <LocalGuideSpread />
 
       {/* TRANG 26: HOUSE RULES */}
@@ -60,7 +68,7 @@ export default function Flipbook() {
   const pageFlipRef = useRef<PageFlip | null>(null);
 
   const [currentPage, setCurrentPage] = useState<number>(0);
-  const [totalPages, setTotalPages] = useState<number>(28);
+  const [totalPages, setTotalPages] = useState<number>(32);
   const [soundEnabled, setSoundEnabled] = useState<boolean>(true);
   const [isTocOpen, setIsTocOpen] = useState<boolean>(false);
   const [isPrintOpen, setIsPrintOpen] = useState<boolean>(false);
@@ -151,7 +159,7 @@ export default function Flipbook() {
         });
 
         pf.loadFromHTML(sheets);
-        setTotalPages(pf.getPageCount() || 28);
+        setTotalPages(pf.getPageCount() || 32);
         pageFlipRef.current = pf;
 
         pf.on('flip', (e) => {

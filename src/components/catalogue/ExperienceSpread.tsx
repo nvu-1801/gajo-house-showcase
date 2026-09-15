@@ -49,7 +49,7 @@ export const diningExperienceData: ExperienceData = {
   heroTagline: '“Hương vị ấm cúng giữa sân vườn cao nguyên thoáng đãng.”',
   heroType: 'Phục vụ khách lưu trú',
   heroPrice: 'Từ 150.000 VNĐ / SET',
-  pageIndexLeft: '12 / 15',
+  pageIndexLeft: '13 / 16',
   serviceTitle: 'TIỆM NƯỚNG NHÀ GẠO',
   emotionalDesc: 'Bữa tối BBQ bên bếp than hồng nghi ngút khói giữa không gian sân vườn thoáng đãng. Tận hưởng trọn vẹn những xiên thịt nướng ướp thảo mộc đậm đà cùng người thân trong tiết trời se lạnh của Gia Lai.',
   gallery: [
@@ -94,13 +94,13 @@ export const localGuideExperienceData: ExperienceData = {
   heroBrandIcon: 'fa-solid fa-map-pin',
   heroBrandTitle: 'LOCAL GUIDE',
   heroBrandSub: 'ẨM THỰC & CẢNH SẮC',
-  heroTitle: 'Quán A Mãi',
-  heroTagline: '“Bún phở ngọt thanh nước dùng ninh xương ống gia truyền.”',
-  heroType: 'Cách homestay 300m',
-  heroPrice: 'Từ 35.000 VNĐ / TÔ',
-  pageIndexLeft: '13 / 15',
+  heroTitle: 'Café Bonjour',
+  heroTagline: '“Không gian cà phê & bánh ngọt thủ công đầy thư thái.”',
+  heroType: 'Tiệm cà phê & Bánh',
+  heroPrice: 'Thức uống & Bánh',
+  pageIndexLeft: '14 / 16',
   serviceTitle: 'ĐIỂM CHẠM BẢN ĐỊA',
-  emotionalDesc: 'Những điểm đến ẩm thực và cung đường cảnh sắc độc đáo được chọn lọc kỹ lưỡng quanh homestay. Từ tô phở gia truyền ấm nóng đến những khúc đèo lộng gió ngắm biển hoang sơ.',
+  emotionalDesc: 'Những điểm đến ẩm thực và cung đường cảnh sắc độc đáo được chọn lọc kỹ lưỡng quanh homestay. Từ ly cà phê ấm nóng góc quán quen đến những khúc đèo lộng gió ngắm biển hoang sơ.',
   gallery: [
     {
       src: 'images/general/cuabien-tamquan.jpg',
@@ -113,10 +113,10 @@ export const localGuideExperienceData: ExperienceData = {
   ],
   highlights: [
     {
-      icon: 'fa-solid fa-bowl-food',
-      title: 'Quán A Mãi',
+      icon: 'fa-solid fa-mug-hot',
+      title: 'Café Bonjour',
       badge: '300m • Đi bộ 3p',
-      desc: 'Bún phở gia truyền với nước dùng thanh ngọt ninh từ xương tươi.',
+      desc: 'Thưởng thức trà Matcha, cà phê đặc sản và bánh ngọt thủ công.',
     },
     {
       icon: 'fa-solid fa-water',
@@ -154,7 +154,7 @@ export const ExperienceSpread: React.FC<ExperienceSpreadProps> = ({
             className="hero-photo"
             src={data.heroImage}
             alt={data.heroTitle}
-            loading="lazy"
+            
           />
           <div className="hero-grad-overlay" />
 
@@ -220,7 +220,7 @@ export const ExperienceSpread: React.FC<ExperienceSpreadProps> = ({
                   src={item.src}
                   alt={item.label}
                   className="exp-gallery-img"
-                  loading="lazy"
+                  
                 />
                 <div className="gallery-gradient-overlay">
                   <span className="gallery-caption">{item.label}</span>

@@ -1,0 +1,31 @@
+﻿const fs = require('fs');
+const content = fs.readFileSync('src/data/rooms.ts', 'utf8');
+
+// Find all objects
+let roomBlocks = content.split('  {\n    "id":');
+let header = roomBlocks[0];
+let roomsList = [];
+
+for (let i=1; i<roomBlocks.length; i++) {
+  let block = '  {\n    "id":' + roomBlocks[i];
+  if (i < roomBlocks.length - 1) {
+    block = block.replace(/,\n$/, ''); // remove trailing comma
+  } else {
+    block = block.replace(/\n];\n?$/, ''); // remove footer
+  }
+  
+  let priceMatch = block.match(/"priceFormatted":\s*"([^"]+)"/);
+  if (!priceMatch) continue;
+  let price = parseInt(priceMatch[1].replace(/\./g, ''));
+  roomsList.push({ price, str: block });
+}
+
+roomsList.sort((a,b) => a.price - b.price);
+
+for(let i=0; i<roomsList.length; i++) {
+  roomsList[i].str = roomsList[i].str.replace(/"index":\s*\d+,/, '"index": ' + (i+1) + ',');
+}
+
+let newTs = header + roomsList.map(r => r.str).join(',\n') + '\n];\n';
+fs.writeFileSync('src/data/rooms.ts', newTs, 'utf8');
+console.log('Successfully reordered rooms.ts');
