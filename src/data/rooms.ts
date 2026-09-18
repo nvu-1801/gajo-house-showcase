@@ -8,21 +8,21 @@ export const rooms: Room[] = [
     "personality": "QUIET & CALM",
     "personalityVi": "An Yên",
     "tagline": "Dừng lại để tìm sự bình yên.",
-    "type": "Phòng Đơn / Single Room",
+    "type": "Phòng Đôi / Double Room",
     "priceFormatted": "400.000",
     "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-an/ga-an-hero.jpg",
+    "heroImage": "/images/ga-an/ga-an-hero.jpg",
     "galleryTop": {
-      "src": "images/ga-an/ga-an-toan-canh.jpg",
+      "src": "/images/ga-an/ga-an-toan-canh.jpg",
       "label": "TOÀN CẢNH"
     },
     "gallerySub": [
       {
-        "src": "images/ga-an/ga-an-nang-ban-mai.jpg",
+        "src": "/images/ga-an/ga-an-nang-ban-mai.jpg",
         "label": "NẮNG BAN MAI"
       },
       {
-        "src": "images/ga-an/IMG_3106.jpg",
+        "src": "/images/ga-an/IMG_3106.jpg",
         "label": "GÓC THƯ GIÃN",
         "objectPosition": "center bottom"
       }
@@ -34,11 +34,11 @@ export const rooms: Room[] = [
       },
       {
         "label": "GIƯỜNG",
-        "value": "01 Đơn"
+        "value": "1 Giường đôi"
       },
       {
         "label": "SỨC CHỨA",
-        "value": "1 Khách"
+        "value": "2 Khách"
       }
     ],
     "curatedAmenities": [
@@ -63,18 +63,18 @@ export const rooms: Room[] = [
     "type": "Phòng Đôi / Modern Double",
     "priceFormatted": "400.000",
     "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-mo/ga-mo-hero.jpg",
+    "heroImage": "/images/ga-mo/ga-mo-hero.jpg",
     "galleryTop": {
-      "src": "images/general/gajo-interior.jpg",
+      "src": "/images/general/gajo-interior.jpg",
       "label": "TOÀN CẢNH"
     },
     "gallerySub": [
       {
-        "src": "images/ga-mo/ga-mo-goc-lam-viec.png",
+        "src": "/images/ga-mo/ga-mo-goc-lam-viec.png",
         "label": "GÓC LÀM VIỆC"
       },
       {
-        "src": "images/ga-mo/ga-mo-tien-nghi.png",
+        "src": "/images/ga-mo/ga-mo-tien-nghi.png",
         "label": "TIỆN NGHI"
       }
     ],
@@ -85,7 +85,7 @@ export const rooms: Room[] = [
       },
       {
         "label": "GIƯỜNG",
-        "value": "01 Đôi"
+        "value": "1 Giường đôi"
       },
       {
         "label": "SỨC CHỨA",
@@ -114,18 +114,18 @@ export const rooms: Room[] = [
     "type": "Breeze Double Room",
     "priceFormatted": "500.000",
     "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-gio/IMG_6030.jpg",
+    "heroImage": "/images/ga-gio/IMG_6030.jpg",
     "galleryTop": {
-      "src": "images/ga-gio/IMG_6026.jpg",
+      "src": "/images/ga-gio/IMG_6026.jpg",
       "label": "TOÀN CẢNH KHÔNG GIAN"
     },
     "gallerySub": [
       {
-        "src": "images/ga-gio/IMG_6031.jpg",
+        "src": "/images/ga-gio/IMG_6031.jpg",
         "label": "GÓC CHỮA LÀNH"
       },
       {
-        "src": "images/ga-gio/IMG_6028.jpg",
+        "src": "/images/ga-gio/IMG_6028.jpg",
         "label": "ĐĨA THAN & ĐÈN TREO"
       }
     ],
@@ -136,7 +136,7 @@ export const rooms: Room[] = [
       },
       {
         "label": "GIƯỜNG",
-        "value": "01 Queen"
+        "value": "1 Giường đôi"
       },
       {
         "label": "SỨC CHỨA",
@@ -165,19 +165,19 @@ export const rooms: Room[] = [
     "type": "Cloud Double Suite",
     "priceFormatted": "500.000",
     "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-may/hero-new.png",
+    "heroImage": "/images/ga-may/ga-may-hero.jpg",
     "galleryTop": {
-      "src": "images/ga-may/gallery-top-new.png",
+      "src": "/images/ga-may/ga-may-gallery-top.jpg",
       "label": "GIƯỜNG MỘC & ĐÈN BẮC ÂU",
       "objectPosition": "center bottom"
     },
     "gallerySub": [
       {
-        "src": "images/ga-may/IMG_6003.jpg",
+        "src": "/images/ga-may/IMG_6003.jpg",
         "label": "PHÒNG TẮM GIẾNG TRỜI"
       },
       {
-        "src": "images/ga-may/IMG_5997.jpg",
+        "src": "/images/ga-may/IMG_5997.jpg",
         "label": "GIÁ TREO ĐỒ & TRANH MÈO"
       }
     ],
@@ -188,7 +188,7 @@ export const rooms: Room[] = [
       },
       {
         "label": "GIƯỜNG",
-        "value": "01 Queen"
+        "value": "1 Giường đôi"
       },
       {
         "label": "SỨC CHỨA",
@@ -217,19 +217,19 @@ export const rooms: Room[] = [
     "type": "Sunshine Suite",
     "priceFormatted": "500.000",
     "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-nang/IMG_5982.jpg",
+    "heroImage": "/images/ga-nang/IMG_5982.jpg",
     "galleryTop": {
-      "src": "images/ga-nang/IMG_6032.jpg",
+      "src": "/images/ga-nang/IMG_6032.jpg",
       "label": "GIƯỜNG NGỦ GỖ ẤM",
       "objectPosition": "center bottom"
     },
     "gallerySub": [
       {
-        "src": "images/ga-nang/IMG_6039.jpg",
+        "src": "/images/ga-nang/IMG_3276.jpg",
         "label": "CỬA SỔ TRĂNG RẰM"
       },
       {
-        "src": "images/ga-nang/IMG_6034.jpg",
+        "src": "/images/ga-nang/IMG_6034.jpg",
         "label": "CHI TIẾT TRANH GỖ"
       }
     ],
@@ -240,7 +240,7 @@ export const rooms: Room[] = [
       },
       {
         "label": "GIƯỜNG",
-        "value": "01 King"
+        "value": "1 Giường đôi"
       },
       {
         "label": "SỨC CHỨA",
@@ -249,7 +249,7 @@ export const rooms: Room[] = [
     ],
     "curatedAmenities": [
       "Ban công ngập tràn ánh nắng",
-      "Giường King cỡ lớn",
+      "Giường đôi cỡ lớn",
       "Wi-Fi tốc độ cao",
       "Máy lạnh Inverter",
       "Smart TV màn hình rộng",
@@ -260,59 +260,8 @@ export const rooms: Room[] = [
     "isVip": false
   },
   {
-    "id": "ga-moc",
-    "index": 6,
-    "code": "GA-MOC",
-    "personality": "SIGNATURE VIP",
-    "personalityVi": "Mộc Thuần Khiết",
-    "tagline": "Gần gũi thiên nhiên, mộc mạc và ấm áp.",
-    "type": "VIP Signature Suite",
-    "priceFormatted": "1.000.000",
-    "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-moc/hero-new.jpg",
-    "galleryTop": {
-      "src": "images/ga-moc/gallery-top-new.png",
-      "label": "BỒN TẮM THẢO MỘC"
-    },
-    "gallerySub": [
-      {
-        "src": "images/ga-moc/IMG_5993.jpg",
-        "label": "HÀNH LANG BAN CÔNG"
-      },
-      {
-          "src": "images/ga-moc/netflix-new-2.jpg",
-          "label": "NETFLIX & MÁY CHIẾU HD"
-        }
-    ],
-    "specs": [
-      {
-        "label": "DIỆN TÍCH",
-        "value": "45 m²"
-      },
-      {
-        "label": "GIƯỜNG",
-        "value": "King + Sofa"
-      },
-      {
-        "label": "SỨC CHỨA",
-        "value": "2–3 Khách"
-      }
-    ],
-    "curatedAmenities": [
-      "Bồn tắm ngâm thảo mộc riêng",
-      "Máy chiếu phim HD rạp tại gia",
-      "Giếng trời tự nhiên ngắm sao",
-      "Sofa thư giãn cao cấp",
-      "Welcome Drink & Trái cây tươi",
-      "Wi-Fi riêng biệt siêu tốc",
-      "Dịch vụ phòng ưu tiên",
-      "Chỗ đỗ xe ô tô riêng"
-    ],
-    "isVip": true
-  },
-  {
     "id": "ga-tron",
-    "index": 7,
+    "index": 6,
     "code": "GA-TRON",
     "personality": "HIDEAWAY COZY",
     "personalityVi": "Trốn Bộn Bề",
@@ -320,18 +269,18 @@ export const rooms: Room[] = [
     "type": "Hideaway Cozy Room",
     "priceFormatted": "450.000",
     "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-tron/IMG_6008.jpg",
+    "heroImage": "/images/ga-tron/IMG_6008.jpg",
     "galleryTop": {
-      "src": "images/ga-tron/IMG_6010.jpg",
+      "src": "/images/ga-tron/IMG_6010.jpg",
       "label": "GIƯỜNG MỘC & TRANH 2001"
     },
     "gallerySub": [
       {
-        "src": "images/ga-tron/IMG_6011.jpg",
-        "label": "GÓC ĐÈN LỒNG & TỦ MÂY"
+        "src": "/images/ga-tron/IMG_6009.jpg",
+        "label": "GÓC THƯ GIÃN"
       },
       {
-        "src": "images/ga-tron/IMG_6005.jpg",
+        "src": "/images/ga-tron/IMG_6005.jpg",
         "label": "LỐI VÀO RIÊNG TƯ"
       }
     ],
@@ -342,7 +291,7 @@ export const rooms: Room[] = [
       },
       {
         "label": "GIƯỜNG",
-        "value": "01 Đôi"
+        "value": "1 Giường đôi"
       },
       {
         "label": "SỨC CHỨA",
@@ -363,7 +312,7 @@ export const rooms: Room[] = [
   },
   {
     "id": "ga-lac",
-    "index": 8,
+    "index": 7,
     "code": "GA-LAC",
     "personality": "WANDERLUST",
     "personalityVi": "Lạc An Nhiên",
@@ -371,19 +320,19 @@ export const rooms: Room[] = [
     "type": "Wanderlust Double Room",
     "priceFormatted": "450.000",
     "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-lac/IMG_6021.jpg",
+    "heroImage": "/images/ga-lac/IMG_6021.jpg",
     "galleryTop": {
-      "src": "images/ga-lac/IMG_toancanh.jpg",
+      "src": "/images/ga-lac/IMG_toancanh.jpg",
       "label": "TOÀN CẢNH PHÒNG"
     },
     "gallerySub": [
       {
-        "src": "images/ga-lac/IMG_6019.jpg",
+        "src": "/images/ga-lac/IMG_6019.jpg",
         "label": "GÓC TRÀ & TỦ MÂY"
       },
       {
-        "src": "images/ga-lac/IMG_6015.jpg",
-        "label": "LỐI VÀO CẦU THANG GỖ"
+        "src": "/images/ga-lac/IMG_6017.jpg",
+        "label": "GÓC THƯ GIÃN"
       }
     ],
     "specs": [
@@ -393,7 +342,7 @@ export const rooms: Room[] = [
       },
       {
         "label": "GIƯỜNG",
-        "value": "01 Queen"
+        "value": "1 Giường đôi"
       },
       {
         "label": "SỨC CHỨA",
@@ -414,7 +363,7 @@ export const rooms: Room[] = [
   },
   {
     "id": "ga-dinh",
-    "index": 9,
+    "index": 8,
     "code": "GA-DINH",
     "personality": "FAMILY & WARMTH",
     "personalityVi": "Gia Đình",
@@ -422,18 +371,18 @@ export const rooms: Room[] = [
     "type": "Family Nest Suite",
     "priceFormatted": "500.000",
     "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "images/ga-dinh/IMG_3093.jpg",
+    "heroImage": "/images/ga-dinh/IMG_3093.jpg",
     "galleryTop": {
-      "src": "images/general/gajo-family-room.jpg",
+      "src": "/images/general/gajo-family-room.jpg",
       "label": "TOÀN CẢNH PHÒNG GIA ĐÌNH"
     },
     "gallerySub": [
       {
-        "src": "images/ga-dinh/IMG_3092.jpg",
+        "src": "/images/ga-dinh/IMG_3092.jpg",
         "label": "GÓC THƯ THÁI"
       },
       {
-        "src": "images/ga-dinh/IMG_3382.jpg",
+        "src": "/images/ga-dinh/IMG_3382.jpg",
         "label": "MẶT TIỀN ĐÁ MỘC"
       }
     ],
@@ -444,16 +393,16 @@ export const rooms: Room[] = [
       },
       {
         "label": "GIƯỜNG",
-        "value": "01 King + 01 Đơn"
+        "value": "2 Giường đôi, 1 Sofa bed đơn"
       },
       {
         "label": "SỨC CHỨA",
-        "value": "2–4 Khách"
+        "value": "4–5 Khách"
       }
     ],
     "curatedAmenities": [
       "Không gian sinh hoạt rộng rãi",
-      "Giường King + Giường phụ",
+      "2 Giường đôi + 1 Sofa bed đơn",
       "Smart TV màn hình lớn",
       "Tủ lạnh dung tích lớn",
       "Phòng tắm gia đình tiện nghi",
@@ -462,5 +411,56 @@ export const rooms: Room[] = [
       "Hỗ trợ đặt tiệc BBQ gia đình"
     ],
     "isVip": false
+  },
+  {
+    "id": "ga-moc",
+    "index": 9,
+    "code": "GA-MOC",
+    "personality": "SIGNATURE VIP",
+    "personalityVi": "Mộc Thuần Khiết",
+    "tagline": "Gần gũi thiên nhiên, mộc mạc và ấm áp.",
+    "type": "VIP Signature Suite",
+    "priceFormatted": "1.000.000",
+    "priceUnit": "VNĐ / ĐÊM",
+    "heroImage": "/images/ga-moc/hero-new.jpg",
+    "galleryTop": {
+      "src": "/images/ga-moc/gallery-top-new.png",
+      "label": "TOÀN CẢNH PHÒNG VIP"
+    },
+    "gallerySub": [
+      {
+        "src": "/images/ga-moc/IMG_5955.jpg",
+        "label": "BỒN TẮM THẢO MỘC"
+      },
+      {
+        "src": "/images/ga-moc/netflix-new-2.jpg",
+        "label": "NETFLIX & MÁY CHIẾU HD"
+      }
+    ],
+    "specs": [
+      {
+        "label": "DIỆN TÍCH",
+        "value": "45 m²"
+      },
+      {
+        "label": "GIƯỜNG",
+        "value": "1 Giường đôi, 1 Sofa đôi"
+      },
+      {
+        "label": "SỨC CHỨA",
+        "value": "2–4 Khách"
+      }
+    ],
+    "curatedAmenities": [
+      "Bồn tắm ngâm thảo mộc riêng",
+      "Máy chiếu phim HD rạp tại gia",
+      "Giếng trời tự nhiên ngắm sao",
+      "Sofa thư giãn cao cấp",
+      "Welcome Drink & Trái cây tươi",
+      "Wi-Fi riêng biệt siêu tốc",
+      "Dịch vụ phòng ưu tiên",
+      "Chỗ đỗ xe ô tô riêng"
+    ],
+    "isVip": true
   }
 ];

@@ -66,6 +66,10 @@ body {
   overflow-x: hidden;
   user-select: none;
   -webkit-font-smoothing: antialiased;
+  font-variant-numeric: lining-nums proportional-nums;
+  -webkit-font-feature-settings: "lnum" 1;
+  -moz-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
 }
 
 /* ==================== APP HEADER & CONTROLS ==================== */
@@ -450,11 +454,12 @@ body {
 }
 
 .ed-room-index-tag {
-  font-family: var(--font-serif);
-  font-size: var(--text-sm);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   color: var(--gold);
+  text-transform: uppercase;
 }
 
 /* ==================== EDITORIAL ROOM GALLERY (CSS GRID) ==================== */
@@ -1486,6 +1491,20 @@ body {
   display: none;
 }
 
+/* Nguồn trang cho in ấn: off-screen (KHÔNG dùng display:none để <img> preload đầy đủ) */
+#print-source {
+  position: fixed;
+  left: -10000px;
+  top: 0;
+  width: 1080px;
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
 @media print {
   *, *::before, *::after {
       -webkit-print-color-adjust: exact !important;
@@ -1506,6 +1525,7 @@ body {
   .bottom-toolbar, 
   .toc-modal, 
   .toast,
+  #print-source,
   .stage-wrapper {
       display: none !important;
       visibility: hidden !important;
@@ -1612,6 +1632,153 @@ body {
       box-shadow: none !important;
       border: none !important;
       background: var(--paper) !important;
+  }
+
+  /* Menu Spread print adjustments */
+  .menu-ed-page {
+      padding: 16px 22px 14px 22px !important;
+  }
+
+  .menu-set-card,
+  .menu-combo-card {
+      break-inside: avoid !important;
+      page-break-inside: avoid !important;
+  }
+
+  /* ===== Print fidelity: khớp UI web (màu sắc, size, khoảng cách) ===== */
+  /* Tắt motion/hover để bản in = trạng thái cuối trên web */
+  .print-root *, .print-root *::before, .print-root *::after {
+      animation: none !important;
+      transition: none !important;
+  }
+  .print-root .gallery-item:hover .gallery-image,
+  .print-root .index-card:hover .index-thumb img,
+  .print-root .exp-gallery-card:hover .exp-gallery-img {
+      transform: none !important;
+  }
+
+  /* Ảnh: đảm bảo render đúng khung, không co về 0 */
+  .print-root img {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+      max-width: 100% !important;
+  }
+  .print-root .hero-editorial-img,
+  .print-root .welcome-bg-img,
+  .print-root .cover-bg,
+  .print-root .hero-photo {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+  }
+  .print-root .gallery-image,
+  .print-root .exp-gallery-img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+  }
+  .print-root .gallery-item-hero,
+  .print-root .gallery-item-sub,
+  .print-root .exp-gallery-card,
+  .print-root .index-thumb,
+  .print-root .menu-visual-box,
+  .print-root .evening-banner-img-box,
+  .print-root .rules-photo-box,
+  .print-root .checkout-photo-box {
+      min-height: 0 !important;
+      flex-shrink: 0 !important;
+  }
+
+  /* backdrop-filter bị Chrome bỏ khi in -> nền solid để chữ vẫn đọc được */
+  .print-root .menu-visual-badge,
+  .print-root .evening-banner-caption,
+  .print-root .rules-photo-tag,
+  .print-root .checkout-photo-tag {
+      background: rgba(26, 23, 20, 0.92) !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+  }
+  .print-root .menu-visual-sublabel {
+      background: rgba(247, 243, 234, 0.96) !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+  }
+  .print-root .hero-floating-card {
+      background: rgba(20, 18, 16, 0.62) !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+  }
+  .print-root .back-qr-box {
+      background: rgba(255, 255, 255, 0.08) !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+  }
+  .print-root .gallery-gradient-overlay {
+      background: linear-gradient(to top, rgba(37, 34, 30, 0.85) 0%, rgba(37, 34, 30, 0.4) 55%, transparent 100%) !important;
+  }
+
+  /* Bỏ bóng đổ khi in để màu sắc nét, tránh lem */
+  .print-root .gallery-item,
+  .print-root .exp-gallery-card {
+      box-shadow: none !important;
+  }
+
+  /* Tờ cuối không ngắt trang thừa -> tránh PDF dư 1 trang trắng cuối */
+  .print-mode-standard .standard-print-sheet:last-child,
+  .print-mode-booklet .booklet-sheet:last-child {
+      page-break-after: auto !important;
+      break-after: auto !important;
+  }
+
+  /* Wrapper scale 1:1 web -> print (width/height/scale set inline từ print.ts).
+     Bọc đúng kích thước px trang web rồi zoom tuyến tính cho vừa nửa tờ A4,
+     nên khoảng trống, xuống dòng, màu sắc giữ nguyên như trên web. */
+  .print-root .print-scale-wrap {
+      position: relative !important;
+      overflow: hidden !important;
+      flex-shrink: 0 !important;
+  }
+  .print-root .spread-half,
+  .print-root .booklet-half {
+      align-items: center !important;
+      justify-content: center !important;
+  }
+
+  /* Trang index: bỏ scroll để in đủ nội dung */
+  .print-root .room-index-page {
+      overflow: visible !important;
+      height: 100% !important;
+  }
+
+  /* Nội dung đã scale 1:1 qua .print-scale-wrap nên giữ nguyên spacing của web,
+     chỉ khóa overflow để không tràn nửa trang. */
+  .print-root .editorial-right-page,
+  .print-root .hero-editorial-page,
+  .print-root .welcome-editorial-page,
+  .print-root .hero-spread,
+  .print-root .rules-editorial-page,
+  .print-root .checkout-editorial-page {
+      overflow: hidden !important;
+  }
+
+  /* Nền giấy + bìa cứng giữ màu chính xác như web */
+  .print-root .page-sheet {
+      background-color: var(--paper) !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+  }
+  .print-root .page-sheet.hard-cover {
+      background-color: #12100E !important;
+  }
+  .print-root .page-sheet.blank-page {
+      background: #fff !important;
+  }
+
+  /* QR luôn nền trắng để quét được sau khi in */
+  .print-root .cta-qr-thumb,
+  .print-root .back-qr-frame img,
+  .print-root .review-qr-frame {
+      background: #fff !important;
   }
 }
 
@@ -1824,153 +1991,937 @@ body {
 }
 
 
-/* ==================== MENU SPREAD ==================== */
-.menu-hero-page {
+/* ==================== 2-PAGE EDITORIAL MENU SPREAD ==================== */
+.menu-ed-page {
   position: relative;
   width: 100%;
   height: 100%;
+  padding: 22px 28px 18px 28px;
+  background: #F7F3EA;
+  background-image: var(--paper-grain);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: var(--space-5);
-  color: var(--paper);
+  justify-content: space-between;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-.menu-hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Common Editorial Page Header Divider */
+.menu-ed-page .ed-page-header,
+.rules-editorial-page .ed-page-header,
+.checkout-editorial-page .ed-page-header {
+  border-bottom: 1px solid rgba(183, 154, 103, 0.25);
+  padding-bottom: 8px;
+  margin-bottom: 6px;
+}
+
+/* Page 1: Hero Dual Images (Editorial Collage) */
+.menu-visual-duo {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 12px;
+  height: 138px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.menu-visual-box {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(183, 154, 103, 0.28);
+  background: #E8E0D2;
+}
+
+.menu-visual-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
+  display: block;
+  transition: transform 0.45s ease;
 }
 
-/* Very subtle overlay just enough for text legibility, as requested */
-.menu-hero-overlay {
+.menu-visual-badge {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(20, 18, 16, 0.4) 0%, rgba(20, 18, 16, 0) 40%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-.menu-hero-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.menu-hero-subtitle {
+  bottom: 8px;
+  left: 8px;
+  background: rgba(26, 23, 20, 0.82);
+  backdrop-filter: blur(4px);
+  color: #F7F3EA;
   font-family: var(--font-sans);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: var(--gold);
-}
-
-.menu-hero-title {
-  font-family: var(--font-serif);
-  font-size: 2.8rem;
+  font-size: 0.56rem;
+  letter-spacing: 1.8px;
   font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: 2px;
-  color: #FFF;
+  padding: 3px 8px;
+  border-radius: 2px;
+  border-left: 2px solid var(--gold);
+  text-transform: uppercase;
 }
 
-.menu-editorial-page {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 20px 24px;
-  background: var(--paper);
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-content-wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 0 16px;
-  margin-top: var(--space-4);
-}
-
-.menu-section {
-  margin-bottom: var(--space-5);
-}
-
-.menu-section-title {
+.menu-visual-sublabel {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(247, 243, 234, 0.88);
+  backdrop-filter: blur(4px);
+  color: #8A684B;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.52rem;
+  letter-spacing: 1.5px;
   font-weight: 700;
-  letter-spacing: 4px;
-  color: var(--charcoal);
-  margin-bottom: var(--space-4);
+  padding: 2px 6px;
+  border-radius: 2px;
+  text-transform: uppercase;
 }
 
-.menu-item {
-  margin-bottom: 18px;
+/* Page 1: Title Block */
+.menu-title-block {
+  margin-bottom: 6px;
 }
 
-.menu-item:last-child {
+.menu-eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  color: #8A684B;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.menu-main-title {
+  font-family: var(--font-serif);
+  font-size: 1.42rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #1E1B18;
+  line-height: 1.16;
+}
+
+.menu-motto {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 0.74rem;
+  color: #736D65;
+  margin-top: 2px;
+}
+
+/* Section Header Bar */
+.menu-sec-bar {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid rgba(183, 154, 103, 0.22);
+  padding-bottom: 4px;
+}
+
+.menu-sec-bar.clean-sec-bar {
+  border-bottom: none;
+  padding-bottom: 0;
   margin-bottom: 0;
 }
 
-.menu-item-header {
+.menu-sec-num {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.menu-sec-title {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  color: #1E1B18;
+  text-transform: uppercase;
+}
+
+/* 01 Morning Breakfast Section */
+.menu-breakfast-box {
+  background: rgba(230, 221, 204, 0.28);
+  border: 1px solid rgba(183, 154, 103, 0.25);
+  border-radius: 4px;
+  padding: 9px 12px 9px 12px;
+  margin-bottom: 8px;
+}
+
+.breakfast-top {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 4px;
 }
 
-.menu-item-name {
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--charcoal);
-  letter-spacing: 1px;
-}
-
-.menu-item-line {
-  flex: 1;
-  border-bottom: 1px solid rgba(37, 34, 30, 0.15);
-}
-
-.menu-item-price {
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--charcoal);
-}
-
-.menu-item-desc {
+.breakfast-badge {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
-  line-height: 1.4;
-  color: var(--text-muted);
-  max-width: 90%;
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #8A684B;
+  background: rgba(183, 154, 103, 0.15);
+  padding: 2px 7px;
+  border-radius: 2px;
+  text-transform: uppercase;
 }
 
-.menu-separator {
-  width: 40px;
-  height: 1px;
-  background: var(--gold);
-  margin: 12px 0 32px 0;
+.breakfast-quote {
+  font-family: var(--font-sans);
+  font-size: 0.67rem;
+  color: #736D65;
+  margin-bottom: 4px;
 }
 
-.menu-footer {
-  margin-top: auto;
-  text-align: center;
+.breakfast-dishes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-serif);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #1E1B18;
+  line-height: 1.35;
+  margin-bottom: 4px;
 }
 
-.menu-footer p {
+.dish-sep {
+  color: var(--gold);
+  font-size: 0.55rem;
+  opacity: 0.75;
+}
+
+.breakfast-hint {
   font-family: var(--font-accent);
   font-style: italic;
-  font-size: 0.7rem;
-  color: var(--wood);
+  font-size: 0.64rem;
+  color: #8A684B;
+  margin: 0;
 }
+
+/* 02 & 03 Drinks Grid */
+.menu-drinks-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 2px;
+}
+
+.drinks-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-price-table {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 2px;
+}
+
+.menu-price-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-item-text {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: #1E1B18;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.menu-item-dots {
+  flex: 1;
+  border-bottom: 1px dotted rgba(183, 154, 103, 0.35);
+  margin: 0 6px;
+  position: relative;
+  top: -3px;
+}
+
+.menu-item-val {
+  font-family: var(--font-sans);
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #8A684B;
+  white-space: nowrap;
+}
+
+/* ==================== PAGE 2: EVENING SPREAD ==================== */
+.menu-evening-header-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.evening-title-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.evening-banner-img-box {
+  position: relative;
+  height: 106px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(183, 154, 103, 0.28);
+  background: #E8E0D2;
+}
+
+.evening-banner-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.evening-banner-caption {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: rgba(26, 23, 20, 0.82);
+  backdrop-filter: blur(4px);
+  color: #F7F3EA;
+  font-family: var(--font-sans);
+  font-size: 0.52rem;
+  letter-spacing: 1.4px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.menu-sec-wrap {
+  margin-bottom: 6px;
+}
+
+/* 04 Sets 2x2 Grid */
+.menu-sets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.menu-set-card {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(183, 154, 103, 0.25);
+  border-radius: 4px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.menu-set-card.highlight-set {
+  background: rgba(246, 241, 231, 0.85);
+  border-color: rgba(183, 154, 103, 0.45);
+}
+
+.set-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(183, 154, 103, 0.15);
+  padding-bottom: 3px;
+}
+
+.set-card-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.set-card-name {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #1E1B18;
+  font-variant-numeric: lining-nums proportional-nums;
+  -webkit-font-feature-settings: "lnum" 1;
+  -moz-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+}
+
+.card-num {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.set-card-serves {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #736D65;
+}
+
+.set-card-serves.highlight-serves {
+  color: #8A684B;
+}
+
+.set-card-price {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #8A684B;
+}
+
+.set-card-items {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: #555047;
+  line-height: 1.38;
+  margin: 0;
+}
+
+/* 05 From the Grill (Combos) */
+.menu-grill-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.menu-combo-card {
+  background: rgba(243, 238, 228, 0.65);
+  border: 1px solid rgba(183, 154, 103, 0.3);
+  border-radius: 4px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.combo-card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(183, 154, 103, 0.18);
+  padding-bottom: 3px;
+}
+
+.combo-card-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.combo-card-name {
+  font-family: var(--font-serif);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #1E1B18;
+  font-variant-numeric: lining-nums proportional-nums;
+  -webkit-font-feature-settings: "lnum" 1;
+  -moz-font-feature-settings: "lnum" 1;
+  font-feature-settings: "lnum" 1;
+}
+
+.combo-card-serves {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #736D65;
+}
+
+.combo-card-price {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #8A684B;
+  white-space: nowrap;
+}
+
+.combo-card-items {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: #555047;
+  line-height: 1.36;
+  margin: 0;
+}
+
+/* Editorial Footer Note */
+.menu-editorial-foot {
+  text-align: center;
+  padding-top: 6px;
+  border-top: 1px solid rgba(183, 154, 103, 0.2);
+}
+
+.foot-ornament {
+  display: block;
+  font-size: 0.52rem;
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-bottom: 2px;
+  opacity: 0.8;
+}
+
+.menu-editorial-foot p {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 0.64rem;
+  color: #8A684B;
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   HOUSE RULES & CHECKOUT SPREAD (LUXURY EDITORIAL UPGRADE)
+   ========================================================================== */
+
+/* Left Page: House Rules */
+.rules-editorial-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px 26px 16px 26px;
+  background: #F7F3EA;
+  background-image: var(--paper-grain);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Header Photo & Title Hero Grid */
+.rules-hero-grid,
+.checkout-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 104px;
+  gap: 12px;
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+.rules-title-col,
+.checkout-title-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.rules-photo-box,
+.checkout-photo-box {
+  position: relative;
+  height: 72px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(183, 154, 103, 0.3);
+  background: #E8E0D2;
+}
+
+.rules-photo-box img,
+.checkout-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rules-photo-tag,
+.checkout-photo-tag {
+  position: absolute;
+  bottom: 4px;
+  right: 5px;
+  background: rgba(26, 23, 20, 0.82);
+  backdrop-filter: blur(4px);
+  color: #F7F3EA;
+  font-family: var(--font-sans);
+  font-size: 0.5rem;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.rules-eyebrow,
+.checkout-eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  color: #8A684B;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.rules-title,
+.checkout-title {
+  font-family: var(--font-serif);
+  font-size: 1.42rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #1E1B18;
+  line-height: 1.15;
+}
+
+.rules-sub,
+.checkout-sub {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 0.72rem;
+  color: #736D65;
+  margin-top: 2px;
+}
+
+/* 4 Rules Cards List */
+.rules-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.rule-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(183, 154, 103, 0.22);
+  border-radius: 4px;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: all 0.2s ease;
+}
+
+.rule-card:hover {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(183, 154, 103, 0.4);
+}
+
+.rule-card-top {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.rule-card-num {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold);
+  min-width: 16px;
+}
+
+.rule-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rule-icon {
+  color: #8A684B;
+  font-size: 0.68rem;
+}
+
+.rule-card-title {
+  font-family: var(--font-sans);
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #1E1B18;
+}
+
+.rule-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: #555047;
+  line-height: 1.36;
+  margin: 0;
+  padding-left: 23px;
+}
+
+.rule-card-desc strong {
+  color: #1E1B18;
+  font-weight: 600;
+}
+
+/* Fast Wi-Fi & Reception Concierge Card */
+.rules-concierge-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.15fr;
+  gap: 8px;
+  background: rgba(230, 221, 204, 0.38);
+  border: 1px solid rgba(183, 154, 103, 0.28);
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin-bottom: 4px;
+  align-items: center;
+}
+
+.concierge-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.concierge-icon {
+  color: var(--gold);
+  font-size: 0.78rem;
+}
+
+.concierge-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.concierge-lbl {
+  font-family: var(--font-sans);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #8A684B;
+  text-transform: uppercase;
+}
+
+.concierge-val {
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: #1E1B18;
+}
+
+.rules-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  border-top: 1px solid rgba(183, 154, 103, 0.25);
+  font-family: var(--font-sans);
+  font-size: 0.54rem;
+  letter-spacing: 1.8px;
+  color: #736D65;
+  text-transform: uppercase;
+}
+
+
+/* Right Page: Checkout & Departure */
+.checkout-editorial-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px 26px 16px 26px;
+  background: #F7F3EA;
+  background-image: var(--paper-grain);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Boutique Review & Gift Voucher Card */
+.checkout-review-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(245, 240, 230, 0.95) 100%);
+  border: 1px solid rgba(183, 154, 103, 0.38);
+  border-radius: 5px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.review-card-left {
+  flex: 1;
+}
+
+.review-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 2px;
+}
+
+.star-icon {
+  color: var(--gold);
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.review-stars-label {
+  font-family: var(--font-sans);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #8A684B;
+  margin-left: 6px;
+  text-transform: uppercase;
+}
+
+.review-prompt {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1E1B18;
+  margin-bottom: 2px;
+}
+
+.review-desc {
+  font-family: var(--font-sans);
+  font-size: 0.64rem;
+  color: #555047;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.review-voucher-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(183, 154, 103, 0.16);
+  border: 1px solid rgba(183, 154, 103, 0.35);
+  border-radius: 3px;
+  padding: 2px 7px;
+  margin-top: 3px;
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #8A684B;
+  letter-spacing: 0.5px;
+}
+
+.voucher-icon {
+  font-size: 0.6rem;
+  color: var(--gold);
+}
+
+.review-card-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.review-qr-frame {
+  width: 50px;
+  height: 50px;
+  background: #FFFFFF;
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid rgba(183, 154, 103, 0.35);
+}
+
+.review-qr-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.review-qr-label {
+  font-family: var(--font-sans);
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #8A684B;
+  white-space: nowrap;
+}
+
+/* 4 Checkout Steps Cards List */
+.checkout-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.checkout-step-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(183, 154, 103, 0.22);
+  border-radius: 4px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.checkout-step-card:hover {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(183, 154, 103, 0.4);
+}
+
+.step-card-num {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold);
+  min-width: 16px;
+  padding-top: 1px;
+}
+
+.step-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+}
+
+.step-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.step-icon {
+  color: #8A684B;
+  font-size: 0.65rem;
+}
+
+.step-card-title {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #1E1B18;
+}
+
+.step-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.64rem;
+  color: #555047;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.checkout-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  border-top: 1px solid rgba(183, 154, 103, 0.25);
+  font-family: var(--font-sans);
+  font-size: 0.54rem;
+  letter-spacing: 1.8px;
+  color: #736D65;
+  text-transform: uppercase;
+}
+
+.farewell-arrow {
+  color: #8A684B;
+  font-weight: 600;
+}
+
+

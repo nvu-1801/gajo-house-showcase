@@ -4,7 +4,7 @@ import { PageSheet } from '@/components/flipbook/PageSheet';
 export const CoverPage: React.FC = () => {
   return (
     <PageSheet density="hard" isHardCover={true}>
-      <img className="cover-bg" src="images/general/gajo-interior.jpg" alt="GAJO'S HOUSE Cover" />
+      <img className="cover-bg" src="/images/general/gajo-interior.jpg" alt="GAJO'S HOUSE Cover" />
       <div className="cover-grad" />
       <div className="cover-content">
         <div className="cover-top">

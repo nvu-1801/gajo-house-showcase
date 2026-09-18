@@ -255,8 +255,10 @@ export default function Flipbook() {
         </div>
       </main>
 
-      {/* Pristine copy of the pages for printing, unaffected by PageFlip */}
-      <div id="print-source" style={{ display: 'none' }}>
+      {/* Pristine copy of the pages for printing, unaffected by PageFlip.
+          NOTE: không dùng display:none vì browser sẽ không tải <img> bên trong,
+          khiến PDF in ra mất ảnh. Để off-screen để ảnh preload đầy đủ. */}
+      <div id="print-source" aria-hidden="true">
         <CataloguePages onJump={handleJumpToPage} />
       </div>
 

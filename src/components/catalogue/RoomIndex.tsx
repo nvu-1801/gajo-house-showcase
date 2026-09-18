@@ -36,7 +36,7 @@ export const RoomIndex: React.FC<RoomIndexProps> = ({ onJump }) => {
               title={`Xem ${r.code} - ${r.type}`}
             >
               <div className="index-thumb">
-                <img src={r.heroImage || 'images/general/gajo-interior.jpg'} alt={r.code} />
+                <img src={r.heroImage || '/images/general/gajo-interior.jpg'} alt={r.code} />
               </div>
               <div className="index-info">
                 <span className="index-room-name">{r.code}</span>

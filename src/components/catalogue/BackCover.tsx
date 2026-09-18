@@ -4,7 +4,7 @@ import { PageSheet } from '@/components/flipbook/PageSheet';
 export const BackCover: React.FC = () => {
   return (
     <PageSheet density="hard" isHardCover={true}>
-      <img className="cover-bg" src="images/general/gajo-interior.jpg" alt="Back Cover" />
+      <img className="cover-bg" src="/images/general/gajo-interior.jpg" alt="Back Cover" />
       <div className="cover-grad" />
       <div className="back-inner">
         <div>
@@ -15,7 +15,7 @@ export const BackCover: React.FC = () => {
 
         <div className="back-qr-box">
           <div className="back-qr-frame">
-            <img src="images/general/qr-maps.png" alt="QR Google Maps" />
+            <img src="/images/general/qr-maps.png" alt="QR Google Maps" />
           </div>
           <div className="back-qr-title">&starf; ĐÁNH GIÁ 5 SAO GOOGLE MAPS &starf;</div>
           <div className="back-qr-desc">Quét mã nhận ngay Voucher 50.000 VNĐ tiệc nướng BBQ</div>

@@ -41,7 +41,7 @@ export const diningExperienceData: ExperienceData = {
   id: 'dining',
   categoryTag: 'IN-HOUSE SERVICES',
   motto: 'Ấm áp bữa tối sân vườn',
-  heroImage: 'images/general/tiem-nuong-nha-gao.jpg',
+  heroImage: '/images/general/tiem-nuong-nha-gao.jpg',
   heroBrandIcon: 'fa-solid fa-fire-burner',
   heroBrandTitle: 'TIỆM NƯỚNG NHÀ GẠO',
   heroBrandSub: 'IN-HOUSE DINING',
@@ -54,11 +54,11 @@ export const diningExperienceData: ExperienceData = {
   emotionalDesc: 'Bữa tối BBQ bên bếp than hồng nghi ngút khói giữa không gian sân vườn thoáng đãng. Tận hưởng trọn vẹn những xiên thịt nướng ướp thảo mộc đậm đà cùng người thân trong tiết trời se lạnh của Gia Lai.',
   gallery: [
     {
-      src: 'images/general/dining-gajothai.jpg',
+      src: '/images/general/dining-gajothai.jpg',
       label: 'MÓN NƯỚNG TƯƠI —',
     },
     {
-      src: 'images/general/nhagao-1.jpg',
+      src: '/images/general/nhagao-1.jpg',
       label: 'BẾP THAN HỒNG —',
     },
   ],
@@ -83,14 +83,14 @@ export const diningExperienceData: ExperienceData = {
   ctaText: 'ĐẶT BÀN BBQ',
   ctaSub: 'Quét mã Zalo để đặt bàn trước 17:00',
   ctaUrl: 'https://zalo.me',
-  ctaQr: 'images/general/qr-maps.png',
+  ctaQr: '/images/general/qr-maps.png',
 };
 
 export const localGuideExperienceData: ExperienceData = {
   id: 'local-guide',
   categoryTag: 'LOCAL PRIVILEGES',
   motto: 'Trải nghiệm Gia Lai mộc mạc',
-  heroImage: 'images/general/bonjour-donuts.jpg',
+  heroImage: '/images/general/bonjour-donuts.jpg',
   heroBrandIcon: 'fa-solid fa-map-pin',
   heroBrandTitle: 'LOCAL GUIDE',
   heroBrandSub: 'ẨM THỰC & CẢNH SẮC',
@@ -103,11 +103,11 @@ export const localGuideExperienceData: ExperienceData = {
   emotionalDesc: 'Những điểm đến ẩm thực và cung đường cảnh sắc độc đáo được chọn lọc kỹ lưỡng quanh homestay. Từ ly cà phê ấm nóng góc quán quen đến những khúc đèo lộng gió ngắm biển hoang sơ.',
   gallery: [
     {
-      src: 'images/general/cuabien-tamquan.jpg',
+      src: '/images/general/cuabien-tamquan.jpg',
       label: 'TAM QUAN (12KM) —',
     },
     {
-      src: 'images/general/deo-lodieu.jpg',
+      src: '/images/general/deo-lodieu.jpg',
       label: 'ĐÈO LỘ DIÊU (18KM) —',
     },
   ],
@@ -135,7 +135,7 @@ export const localGuideExperienceData: ExperienceData = {
   ctaText: 'CHỈ ĐƯỜNG',
   ctaSub: 'Quét mã xem vị trí trên Google Maps',
   ctaUrl: 'https://maps.google.com',
-  ctaQr: 'images/general/qr-maps.png',
+  ctaQr: '/images/general/qr-maps.png',
 };
 
 interface ExperienceSpreadProps {

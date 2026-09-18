@@ -30,7 +30,7 @@ export const BookingCTA: React.FC<BookingCTAProps> = ({
         </a>
 
         <div className="cta-qr-thumb" title="Quét mã Zalo để đặt phòng trực tiếp">
-          <img src="images/general/qr-maps.png" alt="Zalo QR" />
+          <img src="/images/general/qr-maps.png" alt="Zalo QR" />
         </div>
       </div>
     </div>
