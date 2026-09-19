@@ -9,6 +9,12 @@ export interface RoomSpec {
   value: string;
 }
 
+export interface StationStory {
+  meaning: string;
+  story: string;
+  shortTagline: string;
+}
+
 export interface Room {
   id: string;
   index: number;
@@ -25,4 +31,7 @@ export interface Room {
   specs: RoomSpec[];
   curatedAmenities: string[];
   isVip?: boolean;
+  stationStory?: StationStory;
+  heroImageZoom?: number;
+  heroImagePosition?: string;
 }

@@ -28,8 +28,9 @@ export const CheckoutPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Boutique Review & Gift Voucher Card */}
+        {/* Google Review Invitation Card */}
         <div className="checkout-review-card">
+          <span className="review-card-glow" aria-hidden="true" />
           <div className="review-card-left">
             <div className="review-stars-row">
               <span className="star-icon">★</span>
@@ -41,18 +42,18 @@ export const CheckoutPage: React.FC = () => {
             </div>
             <h4 className="review-prompt">Loved your stay at GAJO&apos;S HOUSE?</h4>
             <p className="review-desc">
-              Chia sẻ cảm nghĩ 5★ của bạn trên Google Maps để nhận ngay:
+              Một đánh giá 5★ của bạn là món quà ý nghĩa nhất — giúp GAJO&apos;S HOUSE thêm ấm áp và được nhiều du khách biết đến hơn.
             </p>
-            <div className="review-voucher-pill">
-              <i className="fa-solid fa-gift voucher-icon"></i>
-              <span>VOUCHER 50.000 VNĐ TIỆC NƯỚNG BBQ</span>
+            <div className="review-signature">
+              <i className="fa-solid fa-heart review-heart"></i>
+              <span>Cảm ơn bạn, hẹn gặp lại tại GAJO&apos;S HOUSE!</span>
             </div>
           </div>
           <div className="review-card-qr">
             <div className="review-qr-frame">
               <img src="/images/general/qr-maps.png" alt="Google Maps QR Code" />
             </div>
-            <span className="review-qr-label">Quét mã nhận quà &rarr;</span>
+            <span className="review-qr-label">Quét mã để đánh giá &rarr;</span>
           </div>
         </div>
 
@@ -66,7 +67,7 @@ export const CheckoutPage: React.FC = () => {
                 <i className="fa-solid fa-key step-icon"></i>
                 <strong className="step-card-title">Gửi lại chìa khóa phòng</strong>
               </div>
-              <p className="step-card-desc">Gửi lại chìa khóa tại quầy Lễ tân hoặc gửi vào khay check-out tự động trước 11:00.</p>
+              <p className="step-card-desc">Gửi lại chìa khóa tại quầy Lễ tân hoặc gửi vào khay check-out trước 12:00 AM.</p>
             </div>
           </div>
 

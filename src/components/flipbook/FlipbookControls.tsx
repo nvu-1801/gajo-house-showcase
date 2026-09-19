@@ -36,6 +36,16 @@ export const FlipbookControls: React.FC<FlipbookControlsProps> = ({
           <span className="brand-logo-text">GAJO&apos;S HOUSE &bull; EDITORIAL</span>
         </a>
         <div className="header-actions">
+          <a
+            href="/members-of-gao"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-icon-header btn-member-highlight"
+            title="Mở trang in riêng: Members of GẠO"
+          >
+            <i className="fa-solid fa-crown" style={{ color: '#E0CEAC' }} />
+            <span>Members of GẠO</span>
+          </a>
           <button className="btn-icon-header" onClick={onToggleSound} title="Bật/tắt âm thanh">
             <i className={soundEnabled ? 'fa-solid fa-volume-high' : 'fa-solid fa-volume-xmark'} />
             <span>{soundEnabled ? 'Âm thanh' : 'Đã tắt'}</span>

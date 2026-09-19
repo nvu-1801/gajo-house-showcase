@@ -2,46 +2,39 @@ import { Room } from '@/types/room';
 
 export const rooms: Room[] = [
   {
-    "id": "ga-an",
-    "index": 1,
-    "code": "GA-AN",
-    "personality": "QUIET & CALM",
-    "personalityVi": "An Yên",
-    "tagline": "Dừng lại để tìm sự bình yên.",
-    "type": "Phòng Đôi / Double Room",
-    "priceFormatted": "400.000",
-    "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "/images/ga-an/ga-an-hero.jpg",
-    "galleryTop": {
-      "src": "/images/ga-an/ga-an-toan-canh.jpg",
-      "label": "TOÀN CẢNH"
+    id: "ga-an",
+    index: 1,
+    code: "GA-AN",
+    personality: "QUIET & CALM",
+    personalityVi: "An Yên",
+    tagline: "Dừng lại để tìm sự bình yên vốn có.",
+    type: "Phòng Đôi / Double Room",
+    priceFormatted: "400.000",
+    priceUnit: "VNĐ / ĐÊM",
+    heroImage: "/images/ga-an/ga-an-hero.jpg",
+    heroImageZoom: 1,
+    heroImagePosition: "50% 50%",
+    galleryTop: {
+      src: "/images/ga-an/ga-an-toan-canh.jpg",
+      label: "TOÀN CẢNH KHÔNG GIAN"
     },
-    "gallerySub": [
+    gallerySub: [
       {
-        "src": "/images/ga-an/ga-an-nang-ban-mai.jpg",
-        "label": "NẮNG BAN MAI"
+        src: "/images/ga-an/ga-an-nang-ban-mai.jpg",
+        label: "NẮNG BAN MAI"
       },
       {
-        "src": "/images/ga-an/IMG_3106.jpg",
-        "label": "GÓC THƯ GIÃN",
-        "objectPosition": "center bottom"
+        src: "/images/ga-an/IMG_3106.jpg",
+        label: "GÓC THƯ GIÃN",
+        objectPosition: "center bottom"
       }
     ],
-    "specs": [
-      {
-        "label": "DIỆN TÍCH",
-        "value": "22 m²"
-      },
-      {
-        "label": "GIƯỜNG",
-        "value": "1 Giường đôi"
-      },
-      {
-        "label": "SỨC CHỨA",
-        "value": "2 Khách"
-      }
+    specs: [
+      { label: "DIỆN TÍCH", value: "22 m²" },
+      { label: "GIƯỜNG", value: "1 Giường đôi" },
+      { label: "SỨC CHỨA", value: "2 Khách" }
     ],
-    "curatedAmenities": [
+    curatedAmenities: [
       "Wi-Fi tốc độ cao",
       "Máy lạnh Inverter",
       "Tivi thông minh HD",
@@ -51,48 +44,45 @@ export const rooms: Room[] = [
       "Trà thảo mộc & Cà phê",
       "Bãi đỗ xe an toàn"
     ],
-    "isVip": false
+    isVip: false,
+    stationStory: {
+      meaning: "AN – An yên",
+      shortTagline: "tìm bình yên",
+      story: "Có những chuyến đi không phải để tìm kiếm điều gì mới, mà chỉ để được nghỉ ngơi. Ga-AN là trạm dừng dành cho những ngày muốn chậm lại, bỏ lại phía sau những ồn ào và áp lực. Ở đây, người ta có thể ngủ thật sâu, thở thật nhẹ và tìm lại sự bình yên vốn có."
+    }
   },
   {
-    "id": "ga-mo",
-    "index": 2,
-    "code": "GA-MO",
-    "personality": "MODERN & YOUNG",
-    "personalityVi": "Hiện Đại",
-    "tagline": "Một điểm dừng hiện đại, trẻ trung.",
-    "type": "Phòng Đôi / Modern Double",
-    "priceFormatted": "400.000",
-    "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "/images/ga-mo/ga-mo-hero.jpg",
-    "galleryTop": {
-      "src": "/images/general/gajo-interior.jpg",
-      "label": "TOÀN CẢNH"
+    id: "ga-mo",
+    index: 2,
+    code: "GA-MO",
+    personality: "MODERN & YOUNG",
+    personalityVi: "Mơ Mộng",
+    tagline: "Cho phép bản thân được mơ thêm một chút.",
+    type: "Phòng Đôi / Modern Double",
+    priceFormatted: "400.000",
+    priceUnit: "VNĐ / ĐÊM",
+    heroImage: "/images/ga-mo/ga-mo-hero.jpg",
+    galleryTop: {
+      src: "/images/ga-may/ga-may-gallery-top.jpg",
+      label: "TOÀN CẢNH NỘI THẤT",
+      objectPosition: "center 65%"
     },
-    "gallerySub": [
+    gallerySub: [
       {
-        "src": "/images/ga-mo/ga-mo-goc-lam-viec.png",
-        "label": "GÓC LÀM VIỆC"
+        src: "/images/ga-mo/ga-mo-goc-lam-viec.png",
+        label: "GÓC LÀM VIỆC"
       },
       {
-        "src": "/images/ga-mo/ga-mo-tien-nghi.png",
-        "label": "TIỆN NGHI"
+        src: "/images/ga-mo/ga-mo-tien-nghi.png",
+        label: "TIỆN NGHI CAO CẤP"
       }
     ],
-    "specs": [
-      {
-        "label": "DIỆN TÍCH",
-        "value": "25 m²"
-      },
-      {
-        "label": "GIƯỜNG",
-        "value": "1 Giường đôi"
-      },
-      {
-        "label": "SỨC CHỨA",
-        "value": "1–2 Khách"
-      }
+    specs: [
+      { label: "DIỆN TÍCH", value: "25 m²" },
+      { label: "GIƯỜNG", value: "1 Giường đôi" },
+      { label: "SỨC CHỨA", value: "1–2 Khách" }
     ],
-    "curatedAmenities": [
+    curatedAmenities: [
       "Wi-Fi tốc độ cao",
       "Máy lạnh Inverter",
       "Bàn làm việc yên tĩnh",
@@ -102,48 +92,44 @@ export const rooms: Room[] = [
       "Set khăn tắm cao cấp",
       "Trà & Cà phê mộc"
     ],
-    "isVip": false
+    isVip: false,
+    stationStory: {
+      meaning: "MO – Mơ",
+      shortTagline: "cho phép mình mơ",
+      story: "Mỗi hành trình đều bắt đầu từ một giấc mơ. Ga-MO là nơi dành cho những người vẫn giữ trong mình những điều chưa kịp thực hiện, những nơi muốn đến và những câu chuyện muốn viết. Một trạm dừng để tạm quên thực tại, thả mình vào những suy nghĩ đẹp và cho phép bản thân được mơ thêm một chút."
+    }
   },
   {
-    "id": "ga-gio",
-    "index": 3,
-    "code": "GA-GIO",
-    "personality": "BREEZE & FREEDOM",
-    "personalityVi": "Gió Tự Do",
-    "tagline": "Đón gió mát lành, cảm nhận sự tự do.",
-    "type": "Breeze Double Room",
-    "priceFormatted": "500.000",
-    "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "/images/ga-gio/IMG_6030.jpg",
-    "galleryTop": {
-      "src": "/images/ga-gio/IMG_6026.jpg",
-      "label": "TOÀN CẢNH KHÔNG GIAN"
+    id: "ga-gio",
+    index: 3,
+    code: "GA-GIO",
+    personality: "BREEZE & FREEDOM",
+    personalityVi: "Gió Tự Do",
+    tagline: "Đón lấy tự do, để muộn phiền theo gió bay đi.",
+    type: "Breeze Double Room",
+    priceFormatted: "500.000",
+    priceUnit: "VNĐ / ĐÊM",
+    heroImage: "/images/ga-gio/IMG_6030.jpg",
+    galleryTop: {
+      src: "/images/ga-gio/IMG_6026.jpg",
+      label: "TOÀN CẢNH KHÔNG GIAN"
     },
-    "gallerySub": [
+    gallerySub: [
       {
-        "src": "/images/ga-gio/IMG_6031.jpg",
-        "label": "GÓC CHỮA LÀNH"
+        src: "/images/ga-gio/IMG_6031.jpg",
+        label: "GÓC CHỮA LÀNH"
       },
       {
-        "src": "/images/ga-gio/IMG_6028.jpg",
-        "label": "ĐĨA THAN & ĐÈN TREO"
+        src: "/images/ga-gio/IMG_6028.jpg",
+        label: "ĐĨA THAN & ĐÈN TREO"
       }
     ],
-    "specs": [
-      {
-        "label": "DIỆN TÍCH",
-        "value": "28 m²"
-      },
-      {
-        "label": "GIƯỜNG",
-        "value": "1 Giường đôi"
-      },
-      {
-        "label": "SỨC CHỨA",
-        "value": "2 Khách"
-      }
+    specs: [
+      { label: "DIỆN TÍCH", value: "28 m²" },
+      { label: "GIƯỜNG", value: "1 Giường đôi" },
+      { label: "SỨC CHỨA", value: "2 Khách" }
     ],
-    "curatedAmenities": [
+    curatedAmenities: [
       "Cửa sổ đón gió tự nhiên",
       "Wi-Fi tốc độ cao",
       "Máy lạnh êm dịu",
@@ -153,49 +139,45 @@ export const rooms: Room[] = [
       "Máy sấy tóc & Đồ vệ sinh",
       "Thuê xe máy thuận tiện"
     ],
-    "isVip": false
+    isVip: false,
+    stationStory: {
+      meaning: "GIO – Gió",
+      shortTagline: "đón lấy tự do",
+      story: "Gió không có hình dáng, nhưng luôn khiến người ta cảm nhận được sự tự do. Ga-GIO là trạm dừng mang hơi thở của miền biển, nơi những cơn gió đi qua mang theo vị mặn, sự phóng khoáng và cảm giác rộng mở. Một nơi để mở cửa, hít một hơi thật sâu và để những muộn phiền theo gió bay đi."
+    }
   },
   {
-    "id": "ga-may",
-    "index": 4,
-    "code": "GA-MAY",
-    "personality": "SOFT & GENTLE",
-    "personalityVi": "Mây Bồng Bềnh",
-    "tagline": "Nhẹ nhàng, chậm rãi và thư thái.",
-    "type": "Cloud Double Suite",
-    "priceFormatted": "500.000",
-    "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "/images/ga-may/ga-may-hero.jpg",
-    "galleryTop": {
-      "src": "/images/ga-may/ga-may-gallery-top.jpg",
-      "label": "GIƯỜNG MỘC & ĐÈN BẮC ÂU",
-      "objectPosition": "center bottom"
+    id: "ga-may",
+    index: 4,
+    code: "GA-MAY",
+    personality: "SOFT & GENTLE",
+    personalityVi: "Mây Bồng Bềnh",
+    tagline: "Học cách chậm lại như áng mây trời.",
+    type: "Cloud Double Suite",
+    priceFormatted: "500.000",
+    priceUnit: "VNĐ / ĐÊM",
+    heroImage: "/images/ga-may/ga-may-hero.jpg",
+    galleryTop: {
+      src: "/images/ga-may/ga-may-gallery-top.jpg",
+      label: "GIƯỜNG MỘC & ĐÈN BẮC ÂU",
+      objectPosition: "center 65%"
     },
-    "gallerySub": [
+    gallerySub: [
       {
-        "src": "/images/ga-may/IMG_6003.jpg",
-        "label": "PHÒNG TẮM GIẾNG TRỜI"
+        src: "/images/ga-may/IMG_6003.jpg",
+        label: "PHÒNG TẮM GIẾNG TRỜI"
       },
       {
-        "src": "/images/ga-may/IMG_5997.jpg",
-        "label": "GIÁ TREO ĐỒ & TRANH MÈO"
+        src: "/images/ga-may/IMG_5997.jpg",
+        label: "GIÁ TREO ĐỒ & TRANH MÈO"
       }
     ],
-    "specs": [
-      {
-        "label": "DIỆN TÍCH",
-        "value": "28 m²"
-      },
-      {
-        "label": "GIƯỜNG",
-        "value": "1 Giường đôi"
-      },
-      {
-        "label": "SỨC CHỨA",
-        "value": "2 Khách"
-      }
+    specs: [
+      { label: "DIỆN TÍCH", value: "28 m²" },
+      { label: "GIƯỜNG", value: "1 Giường đôi" },
+      { label: "SỨC CHỨA", value: "2 Khách" }
     ],
-    "curatedAmenities": [
+    curatedAmenities: [
       "Không gian cách âm tĩnh lặng",
       "Nệm foam êm ái thư giãn",
       "Wi-Fi tốc độ cao",
@@ -205,49 +187,45 @@ export const rooms: Room[] = [
       "Giặt sấy lấy nhanh",
       "Trà & Cà phê miễn phí"
     ],
-    "isVip": false
+    isVip: false,
+    stationStory: {
+      meaning: "MAY – Mây",
+      shortTagline: "học cách chậm lại",
+      story: "Mây trôi chậm, chẳng vội vàng đến đâu cả. Ga-MAY dành cho những ai muốn tạm bước ra khỏi nhịp sống luôn thúc giục mình phải nhanh hơn. Ở trạm dừng này, hãy cho bản thân được chậm lại, nằm xuống, nhìn lên và để thời gian trôi qua thật nhẹ — như những đám mây trên bầu trời."
+    }
   },
   {
-    "id": "ga-nang",
-    "index": 5,
-    "code": "GA-NANG",
-    "personality": "SUNNY & VIBRANT",
-    "personalityVi": "Nắng Ban Mai",
-    "tagline": "Ấm áp, rạng ngời đầy năng lượng.",
-    "type": "Sunshine Suite",
-    "priceFormatted": "500.000",
-    "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "/images/ga-nang/IMG_5982.jpg",
-    "galleryTop": {
-      "src": "/images/ga-nang/IMG_6032.jpg",
-      "label": "GIƯỜNG NGỦ GỖ ẤM",
-      "objectPosition": "center bottom"
+    id: "ga-nang",
+    index: 5,
+    code: "GA-NANG",
+    personality: "SUNNY & VIBRANT",
+    personalityVi: "Nắng Ấm",
+    tagline: "Tìm chút ấm áp mang theo trên hành trình.",
+    type: "Sunshine Suite",
+    priceFormatted: "500.000",
+    priceUnit: "VNĐ / ĐÊM",
+    heroImage: "/images/ga-nang/IMG_5982.jpg",
+    galleryTop: {
+      src: "/images/ga-nang/IMG_6032.jpg",
+      label: "GIƯỜNG NGỦ GỖ ẤM",
+      objectPosition: "center bottom"
     },
-    "gallerySub": [
+    gallerySub: [
       {
-        "src": "/images/ga-nang/IMG_3276.jpg",
-        "label": "CỬA SỔ TRĂNG RẰM"
+        src: "/images/ga-nang/IMG_3276.jpg",
+        label: "CỬA SỔ TRĂNG RẰM"
       },
       {
-        "src": "/images/ga-nang/IMG_6034.jpg",
-        "label": "CHI TIẾT TRANH GỖ"
+        src: "/images/ga-nang/IMG_6034.jpg",
+        label: "CHI TIẾT TRANH GỖ"
       }
     ],
-    "specs": [
-      {
-        "label": "DIỆN TÍCH",
-        "value": "30 m²"
-      },
-      {
-        "label": "GIƯỜNG",
-        "value": "1 Giường đôi"
-      },
-      {
-        "label": "SỨC CHỨA",
-        "value": "2 Khách"
-      }
+    specs: [
+      { label: "DIỆN TÍCH", value: "30 m²" },
+      { label: "GIƯỜNG", value: "1 Giường đôi" },
+      { label: "SỨC CHỨA", value: "2 Khách" }
     ],
-    "curatedAmenities": [
+    curatedAmenities: [
       "Ban công ngập tràn ánh nắng",
       "Giường đôi cỡ lớn",
       "Wi-Fi tốc độ cao",
@@ -257,99 +235,92 @@ export const rooms: Room[] = [
       "Khăn tắm organic",
       "Hỗ trợ tour khám phá"
     ],
-    "isVip": false
+    isVip: false,
+    stationStory: {
+      meaning: "NANG – Nắng",
+      shortTagline: "tìm chút ấm áp",
+      story: "Nắng là thứ khiến một ngày bình thường trở nên ấm áp. Ga-NANG mang tinh thần của những buổi sáng mở cửa đón ánh sáng, của một tách cà phê và một ngày không cần vội. Đây là trạm dừng của năng lượng tích cực, nơi người ta tìm thấy một chút ấm áp để mang theo trên hành trình tiếp theo."
+    }
   },
   {
-    "id": "ga-tron",
-    "index": 6,
-    "code": "GA-TRON",
-    "personality": "HIDEAWAY COZY",
-    "personalityVi": "Trốn Bộn Bề",
-    "tagline": "Trốn khỏi những bộn bề, áp lực thường nhật.",
-    "type": "Hideaway Cozy Room",
-    "priceFormatted": "450.000",
-    "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "/images/ga-tron/IMG_6008.jpg",
-    "galleryTop": {
-      "src": "/images/ga-tron/IMG_6010.jpg",
-      "label": "GIƯỜNG MỘC & TRANH 2001"
+    id: "ga-tron",
+    index: 6,
+    code: "GA-TRON",
+    personality: "HIDEAWAY COZY",
+    personalityVi: "Trốn",
+    tagline: "Trốn khỏi những bộn bề, dành trọn thời gian cho mình.",
+    type: "Hideaway Cozy Room",
+    priceFormatted: "450.000",
+    priceUnit: "VNĐ / ĐÊM",
+    heroImage: "/images/ga-tron/IMG_6008.jpg",
+    galleryTop: {
+      src: "/images/ga-tron/IMG_6010.jpg",
+      label: "GIƯỜNG MỘC & TRANH 2001",
+      objectPosition: "center 55%"
     },
-    "gallerySub": [
+    gallerySub: [
       {
-        "src": "/images/ga-tron/IMG_6009.jpg",
-        "label": "GÓC THƯ GIÃN"
+        src: "/images/ga-tron/IMG_6005.jpg",
+        label: "CỬA GỖ & HIÊN XANH"
       },
       {
-        "src": "/images/ga-tron/IMG_6005.jpg",
-        "label": "LỐI VÀO RIÊNG TƯ"
+        src: "/images/ga-tron/IMG_6009.jpg",
+        label: "TỦ MÂY & ĐĨA THAN RETRO"
       }
     ],
-    "specs": [
-      {
-        "label": "DIỆN TÍCH",
-        "value": "24 m²"
-      },
-      {
-        "label": "GIƯỜNG",
-        "value": "1 Giường đôi"
-      },
-      {
-        "label": "SỨC CHỨA",
-        "value": "2 Khách"
-      }
+    specs: [
+      { label: "DIỆN TÍCH", value: "24 m²" },
+      { label: "GIƯỜNG", value: "1 Giường đôi" },
+      { label: "SỨC CHỨA", value: "2 Khách" }
     ],
-    "curatedAmenities": [
-      "Không gian riêng tư 100%",
-      "Hương tinh dầu gỗ ấm áp",
+    curatedAmenities: [
+      "Hiên cây xanh & Cửa gỗ riêng tư",
+      "Smart TV màn hình di động",
+      "Tủ mây & Kệ đĩa than retro",
+      "Tranh nghệ thuật 2001 Odyssey",
       "Wi-Fi tốc độ cao",
-      "Máy lạnh êm ái",
-      "Smart TV giải trí",
-      "Tủ lạnh mini",
-      "Nước nóng ổn định",
-      "Khăn tắm & Máy sấy tóc"
+      "Máy lạnh Inverter êm dịu",
+      "Ấm siêu tốc & Trà miễn phí",
+      "Phòng tắm nước nóng 24/7"
     ],
-    "isVip": false
+    isVip: false,
+    stationStory: {
+      meaning: "TRON – Trốn",
+      shortTagline: "trốn khỏi những bộn bề",
+      story: "Có những lúc người ta đi thật xa chỉ để trốn một chút. Trốn khỏi công việc, những cuộc hẹn, những thông báo và những điều khiến đầu óc không được nghỉ. Ga-TRON là một lời cho phép: hãy tạm biến mất khỏi thế giới vài ngày, đóng cửa lại và dành thời gian cho chính mình."
+    }
   },
   {
-    "id": "ga-lac",
-    "index": 7,
-    "code": "GA-LAC",
-    "personality": "WANDERLUST",
-    "personalityVi": "Lạc An Nhiên",
-    "tagline": "Lạc vào một nơi mà mình không muốn rời đi.",
-    "type": "Wanderlust Double Room",
-    "priceFormatted": "450.000",
-    "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "/images/ga-lac/IMG_6021.jpg",
-    "galleryTop": {
-      "src": "/images/ga-lac/IMG_toancanh.jpg",
-      "label": "TOÀN CẢNH PHÒNG"
+    id: "ga-lac",
+    index: 7,
+    code: "GA-LAC",
+    personality: "WANDERLUST",
+    personalityVi: "Lạc",
+    tagline: "Lạc vào một nơi mà ta muốn ở lại.",
+    type: "Wanderlust Double Room",
+    priceFormatted: "450.000",
+    priceUnit: "VNĐ / ĐÊM",
+    heroImage: "/images/ga-lac/IMG_6887.png",
+    galleryTop: {
+      src: "/images/ga-lac/IMG_toancanh.jpg",
+      label: "TOÀN CẢNH PHÒNG"
     },
-    "gallerySub": [
+    gallerySub: [
       {
-        "src": "/images/ga-lac/IMG_6019.jpg",
-        "label": "GÓC TRÀ & TỦ MÂY"
+        src: "/images/ga-lac/IMG_6019.jpg",
+        label: "GÓC TRÀ & TỦ MÂY"
       },
       {
-        "src": "/images/ga-lac/IMG_6017.jpg",
-        "label": "GÓC THƯ GIÃN"
+        src: "/images/ga-lac/IMG_6017.jpg",
+        label: "GÓC THƯ GIÃN"
       }
     ],
-    "specs": [
-      {
-        "label": "DIỆN TÍCH",
-        "value": "26 m²"
-      },
-      {
-        "label": "GIƯỜNG",
-        "value": "1 Giường đôi"
-      },
-      {
-        "label": "SỨC CHỨA",
-        "value": "2 Khách"
-      }
+    specs: [
+      { label: "DIỆN TÍCH", value: "26 m²" },
+      { label: "GIƯỜNG", value: "1 Giường đôi" },
+      { label: "SỨC CHỨA", value: "2 Khách" }
     ],
-    "curatedAmenities": [
+    curatedAmenities: [
       "Bố cục ấm cúng lãng mạn",
       "Wi-Fi tốc độ cao",
       "Máy lạnh Inverter",
@@ -359,48 +330,46 @@ export const rooms: Room[] = [
       "Trà thơm & Cà phê",
       "Tư vấn điểm đến bản địa"
     ],
-    "isVip": false
+    isVip: false,
+    stationStory: {
+      meaning: "LAC – Lạc",
+      shortTagline: "lạc vào một nơi muốn ở lại",
+      story: "Lạc không nhất thiết là mất phương hướng. Đôi khi, lạc là tình cờ tìm thấy một nơi mình chưa từng biết, một cảm xúc chưa từng có, hay một phiên bản khác của chính mình. Ga-LAC là trạm dừng cuối của hành trình — nơi người ta đến để lạc đi một chút, rồi bất ngờ nhận ra mình muốn ở lại."
+    }
   },
   {
-    "id": "ga-dinh",
-    "index": 8,
-    "code": "GA-DINH",
-    "personality": "FAMILY & WARMTH",
-    "personalityVi": "Gia Đình",
-    "tagline": "Tổ ấm gắn kết những yêu thương trọn vẹn.",
-    "type": "Family Nest Suite",
-    "priceFormatted": "500.000",
-    "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "/images/ga-dinh/IMG_3093.jpg",
-    "galleryTop": {
-      "src": "/images/general/gajo-family-room.jpg",
-      "label": "TOÀN CẢNH PHÒNG GIA ĐÌNH"
+    id: "ga-dinh",
+    index: 8,
+    code: "GA-DINH",
+    personality: "FAMILY & GARDEN",
+    personalityVi: "Gia Đình & Garden",
+    tagline: "Ở bên những người thương giữa vườn xanh mát.",
+    type: "Family Nest Suite",
+    priceFormatted: "500.000",
+    priceUnit: "VNĐ / ĐÊM",
+    heroImage: "/images/ga-dinh/IMG_3093.jpg",
+    heroImageZoom: 1,
+    heroImagePosition: "50% 50%",
+    galleryTop: {
+      src: "/images/general/gajo-family-room.jpg",
+      label: "TOÀN CẢNH PHÒNG GIA ĐÌNH"
     },
-    "gallerySub": [
+    gallerySub: [
       {
-        "src": "/images/ga-dinh/IMG_3092.jpg",
-        "label": "GÓC THƯ THÁI"
+        src: "/images/ga-dinh/IMG_3092.jpg",
+        label: "GÓC THƯ THÁI"
       },
       {
-        "src": "/images/ga-dinh/IMG_3382.jpg",
-        "label": "MẶT TIỀN ĐÁ MỘC"
+        src: "/images/ga-dinh/IMG_3382.jpg",
+        label: "MẶT TIỀN ĐÁ MỘC"
       }
     ],
-    "specs": [
-      {
-        "label": "DIỆN TÍCH",
-        "value": "35 m²"
-      },
-      {
-        "label": "GIƯỜNG",
-        "value": "2 Giường đôi, 1 Sofa bed đơn"
-      },
-      {
-        "label": "SỨC CHỨA",
-        "value": "4–5 Khách"
-      }
+    specs: [
+      { label: "DIỆN TÍCH", value: "35 m²" },
+      { label: "GIƯỜNG", value: "2 Giường đôi, 1 Sofa bed đơn" },
+      { label: "SỨC CHỨA", value: "4–5 Khách" }
     ],
-    "curatedAmenities": [
+    curatedAmenities: [
       "Không gian sinh hoạt rộng rãi",
       "2 Giường đôi + 1 Sofa bed đơn",
       "Smart TV màn hình lớn",
@@ -410,48 +379,44 @@ export const rooms: Room[] = [
       "Bãi đỗ xe ô tô thuận tiện",
       "Hỗ trợ đặt tiệc BBQ gia đình"
     ],
-    "isVip": false
+    isVip: false,
+    stationStory: {
+      meaning: "DINH – Gia đình & Garden",
+      shortTagline: "ở bên những người thương",
+      story: "Ga-DINH được tạo nên từ hai câu chuyện: gia đình – nơi luôn có cảm giác thân thuộc, và garden – khu vườn của sự sống, xanh mát. Đây là trạm dừng dành cho những người đi cùng nhau, nơi một căn phòng không chỉ để nghỉ mà còn để quây quần, trò chuyện và lưu giữ những khoảnh khắc bên nhau."
+    }
   },
   {
-    "id": "ga-moc",
-    "index": 9,
-    "code": "GA-MOC",
-    "personality": "SIGNATURE VIP",
-    "personalityVi": "Mộc Thuần Khiết",
-    "tagline": "Gần gũi thiên nhiên, mộc mạc và ấm áp.",
-    "type": "VIP Signature Suite",
-    "priceFormatted": "1.000.000",
-    "priceUnit": "VNĐ / ĐÊM",
-    "heroImage": "/images/ga-moc/hero-new.jpg",
-    "galleryTop": {
-      "src": "/images/ga-moc/gallery-top-new.png",
-      "label": "TOÀN CẢNH PHÒNG VIP"
+    id: "ga-moc",
+    index: 9,
+    code: "GA-MOC",
+    personality: "SIGNATURE VIP",
+    personalityVi: "Mộc",
+    tagline: "Trở về với những điều đơn giản, là chính mình.",
+    type: "VIP Signature Suite",
+    priceFormatted: "1.000.000",
+    priceUnit: "VNĐ / ĐÊM",
+    heroImage: "/images/ga-moc/hero-new.jpg",
+    galleryTop: {
+      src: "/images/ga-moc/gallery-top-new.png",
+      label: "TOÀN CẢNH PHÒNG VIP"
     },
-    "gallerySub": [
+    gallerySub: [
       {
-        "src": "/images/ga-moc/IMG_5955.jpg",
-        "label": "BỒN TẮM THẢO MỘC"
+        src: "/images/ga-moc/IMG_5955.jpg",
+        label: "BỒN TẮM THẢO MỘC"
       },
       {
-        "src": "/images/ga-moc/netflix-new-2.jpg",
-        "label": "NETFLIX & MÁY CHIẾU HD"
+        src: "/images/ga-moc/netflix-new-2.jpg",
+        label: "NETFLIX & MÁY CHIẾU HD"
       }
     ],
-    "specs": [
-      {
-        "label": "DIỆN TÍCH",
-        "value": "45 m²"
-      },
-      {
-        "label": "GIƯỜNG",
-        "value": "1 Giường đôi, 1 Sofa đôi"
-      },
-      {
-        "label": "SỨC CHỨA",
-        "value": "2–4 Khách"
-      }
+    specs: [
+      { label: "DIỆN TÍCH", value: "45 m²" },
+      { label: "GIƯỜNG", value: "1 Giường đôi, 1 Sofa đôi" },
+      { label: "SỨC CHỨA", value: "2–4 Khách" }
     ],
-    "curatedAmenities": [
+    curatedAmenities: [
       "Bồn tắm ngâm thảo mộc riêng",
       "Máy chiếu phim HD rạp tại gia",
       "Giếng trời tự nhiên ngắm sao",
@@ -461,6 +426,11 @@ export const rooms: Room[] = [
       "Dịch vụ phòng ưu tiên",
       "Chỗ đỗ xe ô tô riêng"
     ],
-    "isVip": true
+    isVip: true,
+    stationStory: {
+      meaning: "MOC – Mộc",
+      shortTagline: "trở về với chính mình",
+      story: "Mộc là sự nguyên bản, giản dị và chân thật. Ga-MOC không cố gắng trở nên cầu kỳ, mà tìm vẻ đẹp trong những điều gần gũi: gỗ, cây xanh, ánh sáng và những chất liệu tự nhiên. Đây là trạm dừng để trở về với những điều đơn giản nhất — khi ta không cần phải là ai khác ngoài chính mình."
+    }
   }
 ];

@@ -51,7 +51,7 @@ export const diningExperienceData: ExperienceData = {
   heroPrice: 'Từ 150.000 VNĐ / SET',
   pageIndexLeft: '13 / 16',
   serviceTitle: 'TIỆM NƯỚNG NHÀ GẠO',
-  emotionalDesc: 'Bữa tối BBQ bên bếp than hồng nghi ngút khói giữa không gian sân vườn thoáng đãng. Tận hưởng trọn vẹn những xiên thịt nướng ướp thảo mộc đậm đà cùng người thân trong tiết trời se lạnh của Gia Lai.',
+  emotionalDesc: 'Bữa tối BBQ bên bếp than hồng nghi ngút khói giữa không gian sân vườn thoáng đãng. Tận hưởng trọn vẹn những xiên thịt nướng ướp thảo mộc đậm đà cùng người thân trong tiết trời lộng gió của Hoài Nhơn.',
   gallery: [
     {
       src: '/images/general/dining-gajothai.jpg',
@@ -89,7 +89,7 @@ export const diningExperienceData: ExperienceData = {
 export const localGuideExperienceData: ExperienceData = {
   id: 'local-guide',
   categoryTag: 'LOCAL PRIVILEGES',
-  motto: 'Trải nghiệm Gia Lai mộc mạc',
+  motto: 'Trải nghiệm Hoài Nhơn mộc mạc',
   heroImage: '/images/general/bonjour-donuts.jpg',
   heroBrandIcon: 'fa-solid fa-map-pin',
   heroBrandTitle: 'LOCAL GUIDE',
@@ -119,10 +119,10 @@ export const localGuideExperienceData: ExperienceData = {
       desc: 'Thưởng thức trà Matcha, cà phê đặc sản và bánh ngọt thủ công.',
     },
     {
-      icon: 'fa-solid fa-water',
-      title: 'Cua Biển Tam Quan',
-      badge: '12km • Xe máy 20p',
-      desc: 'Hải sản tươi sống mua trực tiếp từ thuyền đánh bắt tại cảng cá.',
+      icon: 'fa-solid fa-beer-mug-empty',
+      title: 'Quán Nhậu A Mãi',
+      badge: '300m • Đi bộ 3p',
+      desc: 'Mồi ngon xứ Nẫu đậm đà, bia ướp lạnh sảng khoái — điểm tụ họp ăn tối và lai rai bình dân gần homestay.',
     },
     {
       icon: 'fa-solid fa-mountain-sun',

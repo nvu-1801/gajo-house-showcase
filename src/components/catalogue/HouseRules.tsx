@@ -40,7 +40,7 @@ export const HouseRules: React.FC = () => {
               </div>
             </div>
             <p className="rule-card-desc">
-              Nhận phòng từ <strong>13:00</strong> &bull; Trả phòng trước <strong>11:00</strong> trưa hôm sau (liên hệ lễ tân nếu quý khách cần hỗ trợ nhận sớm hoặc trả muộn).
+              Nhận phòng từ <strong>14:00</strong> &bull; Trả phòng trước <strong>12:00</strong> trưa hôm sau (liên hệ lễ tân nếu quý khách cần hỗ trợ nhận sớm hoặc trả muộn).
             </p>
           </div>
 

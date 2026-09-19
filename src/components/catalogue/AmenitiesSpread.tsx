@@ -11,8 +11,8 @@ export const AmenitiesSpread: React.FC = () => {
           {/* TOP HALF: PHOTO */}
           <div style={{ width: '100%', height: '45%', borderRadius: '8px', overflow: 'hidden', marginBottom: 'var(--space-6)', position: 'relative' }}>
             <img 
-              src="/images/general/gajo-interior.jpg" 
-              alt="Gajo Interior"
+              src="/images/general/gajo-sign-day.jpg" 
+              alt="GAJO'S HOUSE Hotel & Chill"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
             />
           </div>
