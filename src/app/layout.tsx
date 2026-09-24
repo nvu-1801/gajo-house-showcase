@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Montserrat, Lora } from 'next/font/google';
 import './globals.css';
+import './catalogue-ui.css';
 
 const playfair = Playfair_Display({
   subsets: ['latin', 'vietnamese'],

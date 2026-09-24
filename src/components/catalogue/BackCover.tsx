@@ -3,9 +3,10 @@ import { PageSheet } from '@/components/flipbook/PageSheet';
 
 export const BackCover: React.FC = () => {
   return (
-    <PageSheet density="hard" isHardCover={true}>
+    <PageSheet density="hard" isHardCover={true} className="page-cover cover-back">
       <img className="cover-bg" src="/images/general/gajo-interior.jpg" alt="Back Cover" />
       <div className="cover-grad" />
+      <div className="cover-frame" aria-hidden="true" />
       <div className="back-inner">
         <div>
           <div className="back-eyebrow">CẢM ƠN BẠN ĐÃ LỰA CHỌN</div>
@@ -21,7 +22,7 @@ export const BackCover: React.FC = () => {
           <div className="back-qr-desc">Quét mã nhận ngay Voucher 50.000 VNĐ tiệc nướng BBQ</div>
           <div className="back-btns">
             <a href="https://zalo.me" target="_blank" rel="noopener noreferrer" className="btn-back">
-              <i className="fa-solid fa-location-dot" /> Hoài Nhơn Đông, Gia Lai
+              <i className="fa-solid fa-location-dot" /> Hoài Nhơn, Bình Định
             </a>
           </div>
         </div>
