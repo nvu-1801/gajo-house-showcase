@@ -7,8 +7,9 @@ interface FlipbookControlsProps {
   onToggleSound: () => void;
   onOpenToc: () => void;
   onOpenPrint: () => void;
-  onPrintA4?: () => void;
-  onPrintA3?: () => void;
+  onPrintBookletA4: () => void;
+  onPrintBookletA3: () => void;
+  onPrintPreviewUI: () => void;
   onPrevPage: () => void;
   onNextPage: () => void;
   toastMessage: string | null;
@@ -21,8 +22,9 @@ export const FlipbookControls: React.FC<FlipbookControlsProps> = ({
   onToggleSound,
   onOpenToc,
   onOpenPrint,
-  onPrintA4,
-  onPrintA3,
+  onPrintBookletA4,
+  onPrintBookletA3,
+  onPrintPreviewUI,
   onPrevPage,
   onNextPage,
   toastMessage,
@@ -50,13 +52,17 @@ export const FlipbookControls: React.FC<FlipbookControlsProps> = ({
             <i className="fa-solid fa-crown" style={{ color: '#E0CEAC' }} />
             <span>Members of GẠO</span>
           </a>
-          <button className="btn-icon-header" onClick={onPrintA4 || onOpenPrint} title="In Xem Trước Dạng Slide - Khổ A4 Ngang">
-            <i className="fa-solid fa-print" />
-            <span>In A4 Ngang</span>
+          <button className="btn-icon-header" onClick={onPrintBookletA4} title="In Booklet Khổ A4 (3 Tờ In 2 Mặt Gấp Đôi)">
+            <i className="fa-solid fa-book-open" />
+            <span>Booklet A4</span>
           </button>
-          <button className="btn-icon-header" onClick={onPrintA3 || onOpenPrint} title="In Xem Trước Dạng Slide - Khổ A3 Ngang (Khổ Lớn)">
-            <i className="fa-solid fa-file-contract" />
-            <span>In A3 Ngang</span>
+          <button className="btn-icon-header" onClick={onPrintBookletA3} title="In Booklet Khổ A3 (3 Tờ In 2 Mặt Gấp Đôi)">
+            <i className="fa-solid fa-book" />
+            <span>Booklet A3</span>
+          </button>
+          <button className="btn-icon-header" onClick={onPrintPreviewUI} title="In Xem Trước Dạng Slide (Trang Đôi Trải Phẳng)">
+            <i className="fa-solid fa-images" />
+            <span>Preview UI</span>
           </button>
           <button className="btn-icon-header" onClick={onToggleSound} title="Bật/tắt âm thanh">
             <i className={soundEnabled ? 'fa-solid fa-volume-high' : 'fa-solid fa-volume-xmark'} />

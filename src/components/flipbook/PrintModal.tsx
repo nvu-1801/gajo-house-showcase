@@ -1,5 +1,5 @@
 import React from 'react';
-import { triggerPrintA4, triggerPrintA3, triggerPrintBooklet } from '@/lib/print';
+import { triggerPrintBookletA4, triggerPrintBookletA3, triggerPrintPreviewUI } from '@/lib/print';
 
 interface PrintModalProps {
   isOpen: boolean;
@@ -24,7 +24,7 @@ export const PrintModal: React.FC<PrintModalProps> = ({ isOpen, onClose }) => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
           <div 
             onClick={() => {
-              triggerPrintA4();
+              triggerPrintBookletA4();
               onClose();
             }}
             style={{ 
@@ -33,16 +33,16 @@ export const PrintModal: React.FC<PrintModalProps> = ({ isOpen, onClose }) => {
               transition: 'transform 0.2s, box-shadow 0.2s'
             }}
           >
-            <i className="fa-solid fa-print" style={{ fontSize: '1.5rem', color: 'var(--charcoal)' }} />
+            <i className="fa-solid fa-book-open" style={{ fontSize: '1.5rem', color: 'var(--charcoal)' }} />
             <div>
-              <strong style={{ display: 'block', fontSize: '0.95rem', color: 'var(--charcoal)' }}>In A4 Ngang (Trang Đôi Sách)</strong>
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Khổ tiêu chuẩn 297&times;210mm &bull; Hiển thị từng cặp trang liền kề &bull; Phù hợp máy in văn phòng / xem PDF máy tính.</span>
+              <strong style={{ display: 'block', fontSize: '0.95rem', color: 'var(--charcoal)' }}>In Booklet Bản A4 (Sách Gấp Đôi)</strong>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Tự động ghép trang 1-12, 2-11... &bull; In 2 mặt (lật cạnh ngắn), gấp đôi thành cuốn catalogue A5 (148.5&times;210mm).</span>
             </div>
           </div>
 
           <div 
             onClick={() => {
-              triggerPrintA3();
+              triggerPrintBookletA3();
               onClose();
             }}
             style={{ 
@@ -51,16 +51,16 @@ export const PrintModal: React.FC<PrintModalProps> = ({ isOpen, onClose }) => {
               transition: 'transform 0.2s, box-shadow 0.2s'
             }}
           >
-            <i className="fa-solid fa-file-contract" style={{ fontSize: '1.5rem', color: 'var(--charcoal)' }} />
+            <i className="fa-solid fa-book" style={{ fontSize: '1.5rem', color: 'var(--charcoal)' }} />
             <div>
-              <strong style={{ display: 'block', fontSize: '0.95rem', color: 'var(--charcoal)' }}>In A3 Ngang (Trang Đôi Sách Khổ Lớn)</strong>
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Khổ lớn 420&times;297mm &bull; Mỗi trang con đúng bằng 1 tờ A4 dọc (210&times;297mm) &bull; Gấp đôi thành catalogue A4 siêu nét.</span>
+              <strong style={{ display: 'block', fontSize: '0.95rem', color: 'var(--charcoal)' }}>In Booklet Bản A3 (Sách Gấp Đôi Khổ Lớn)</strong>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Tự động ghép trang khổ A3 &bull; In 2 mặt (lật cạnh ngắn), gấp đôi thành catalogue A4 (210&times;297mm) cao cấp.</span>
             </div>
           </div>
 
           <div 
             onClick={() => {
-              triggerPrintBooklet();
+              triggerPrintPreviewUI();
               onClose();
             }}
             style={{ 
@@ -68,10 +68,10 @@ export const PrintModal: React.FC<PrintModalProps> = ({ isOpen, onClose }) => {
               padding: '14px 16px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '16px', textAlign: 'left'
             }}
           >
-            <i className="fa-solid fa-book-open" style={{ fontSize: '1.5rem', color: 'var(--charcoal)' }} />
+            <i className="fa-solid fa-images" style={{ fontSize: '1.5rem', color: 'var(--charcoal)' }} />
             <div>
-              <strong style={{ display: 'block', fontSize: '0.95rem', color: 'var(--charcoal)' }}>In Booklet A4 (Sách Gấp Đôi 2 Mặt)</strong>
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>In 2 mặt xếp chồng &bull; Gấp đôi lại ở giữa thành cuốn Catalogue A5.</span>
+              <strong style={{ display: 'block', fontSize: '0.95rem', color: 'var(--charcoal)' }}>In Preview Như UI Để Xem</strong>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Dàn từng cặp trang đôi trải phẳng y như giao diện lật sách &bull; Phù hợp xem trước hoặc gửi file PDF cho khách hàng.</span>
             </div>
           </div>
         </div>

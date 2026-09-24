@@ -1816,6 +1816,58 @@ body {
       background: var(--paper) !important;
   }
 
+  /* --- BOOKLET A3 (420mm × 297mm) --- */
+  .print-mode-booklet-a3 .booklet-print-container {
+      display: block !important;
+      width: 100% !important;
+  }
+
+  .print-mode-booklet-a3 .booklet-sheet {
+      width: 420mm !important;
+      height: 297mm !important;
+      max-height: 297mm !important;
+      display: flex !important;
+      flex-direction: row !important;
+      page-break-after: always !important;
+      break-after: page !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      box-sizing: border-box !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      background-color: var(--paper) !important;
+      position: relative !important;
+  }
+
+  .print-mode-booklet-a3 .booklet-half {
+      width: 50% !important;
+      height: 100% !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      display: flex !important;
+      flex-direction: column !important;
+      position: relative !important;
+  }
+
+  .print-mode-booklet-a3 .booklet-fold-line {
+      position: absolute !important;
+      top: 0 !important;
+      bottom: 0 !important;
+      left: 50% !important;
+      width: 1px !important;
+      border-right: 1px dashed var(--border-subtle) !important;
+      z-index: 10 !important;
+  }
+
+  .print-mode-booklet-a3 .page {
+      width: 100% !important;
+      height: 100% !important;
+      box-shadow: none !important;
+      border: none !important;
+      padding: 0 !important;
+      background: var(--paper) !important;
+  }
+
   /* --- STANDARD PRINT --- */
   .print-mode-standard .standard-print-container,
   .print-mode-a3 .standard-print-container {

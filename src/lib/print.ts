@@ -43,24 +43,26 @@ function getScreenPageSize(): ScreenPageSize {
   return { w: 520, h: 735 };
 }
 
-export async function triggerPrintStandard() {
-  await prepareAndPrint('standard');
-}
-
-export async function triggerPrintA4() {
-  await prepareAndPrint('standard');
-}
-
-export async function triggerPrintA3() {
-  await prepareAndPrint('a3');
-}
-
-export async function triggerPrintBooklet() {
+export async function triggerPrintBookletA4() {
   await prepareAndPrint('booklet');
 }
 
-async function prepareAndPrint(mode: 'standard' | 'booklet' | 'a3') {
-  const isA3 = mode === 'a3';
+export async function triggerPrintBookletA3() {
+  await prepareAndPrint('booklet-a3');
+}
+
+export async function triggerPrintPreviewUI() {
+  await prepareAndPrint('standard');
+}
+
+// Aliases for compatibility
+export const triggerPrintBooklet = triggerPrintBookletA4;
+export const triggerPrintStandard = triggerPrintPreviewUI;
+export const triggerPrintA4 = triggerPrintPreviewUI;
+export const triggerPrintA3 = () => prepareAndPrint('a3');
+
+async function prepareAndPrint(mode: 'standard' | 'booklet' | 'booklet-a3' | 'a3') {
+  const isA3 = mode === 'a3' || mode === 'booklet-a3';
   const halfW = isA3 ? PRINT_A3_HALF_W_PX : PRINT_HALF_W_PX;
   const halfH = isA3 ? PRINT_A3_HALF_H_PX : PRINT_HALF_H_PX;
 
@@ -177,7 +179,7 @@ function normalizeImageSrc(root: HTMLElement) {
   });
 }
 
-function preparePrintContainer(mode: 'standard' | 'booklet' | 'a3', screen: ScreenPageSize, zoom: number) {
+function preparePrintContainer(mode: 'standard' | 'booklet' | 'booklet-a3' | 'a3', screen: ScreenPageSize, zoom: number) {
   let printRoot = document.getElementById('print-root');
   if (printRoot) {
     printRoot.remove();
@@ -185,7 +187,13 @@ function preparePrintContainer(mode: 'standard' | 'booklet' | 'a3', screen: Scre
 
   printRoot = document.createElement('div');
   printRoot.id = 'print-root';
-  const modeClass = mode === 'booklet' ? 'print-mode-booklet' : mode === 'a3' ? 'print-mode-a3' : 'print-mode-standard';
+  const modeClass = mode === 'booklet'
+    ? 'print-mode-booklet'
+    : mode === 'booklet-a3'
+      ? 'print-mode-booklet-a3'
+      : mode === 'a3'
+        ? 'print-mode-a3'
+        : 'print-mode-standard';
   printRoot.className = `print-root ${modeClass}`;
 
   const stage = document.getElementById('print-source');
@@ -193,7 +201,7 @@ function preparePrintContainer(mode: 'standard' | 'booklet' | 'a3', screen: Scre
 
   const sheets = Array.from(stage.querySelectorAll('.page-sheet'));
 
-  if (mode === 'booklet') {
+  if (mode === 'booklet' || mode === 'booklet-a3') {
     while (sheets.length % 4 !== 0) {
       const blank = document.createElement('div');
       blank.className = 'page-sheet blank-page';

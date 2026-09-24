@@ -9,7 +9,7 @@ import { rooms } from '@/data/rooms';
 import { FlipbookControls } from './FlipbookControls';
 import { TocModal } from './TocModal';
 import { PrintModal } from './PrintModal';
-import { triggerPrintA4, triggerPrintA3 } from '@/lib/print';
+import { triggerPrintBookletA4, triggerPrintBookletA3, triggerPrintPreviewUI } from '@/lib/print';
 
 import { CoverPage } from '@/components/catalogue/CoverPage';
 import { WelcomeSpread } from '@/components/catalogue/WelcomeSpread';
@@ -245,8 +245,9 @@ export default function Flipbook() {
         onToggleSound={handleToggleSound}
         onOpenToc={() => setIsTocOpen(true)}
         onOpenPrint={() => setIsPrintOpen(true)}
-        onPrintA4={triggerPrintA4}
-        onPrintA3={triggerPrintA3}
+        onPrintBookletA4={triggerPrintBookletA4}
+        onPrintBookletA3={triggerPrintBookletA3}
+        onPrintPreviewUI={triggerPrintPreviewUI}
         onPrevPage={handlePrevPage}
         onNextPage={handleNextPage}
         toastMessage={toastMessage}
