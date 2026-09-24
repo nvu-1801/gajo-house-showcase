@@ -24,6 +24,10 @@ import { calculateFlipDimensions } from '@/lib/dims';
 const PRINT_HALF_W_PX = (148.5 * 96) / 25.4;
 const PRINT_HALF_H_PX = (210 * 96) / 25.4;
 
+// Nửa tờ A3 landscape quy ra px CSS (96dpi): 210mm x 297mm (A4 dọc)
+const PRINT_A3_HALF_W_PX = (210 * 96) / 25.4;
+const PRINT_A3_HALF_H_PX = (297 * 96) / 25.4;
+
 interface ScreenPageSize {
   w: number;
   h: number;
@@ -43,15 +47,40 @@ export async function triggerPrintStandard() {
   await prepareAndPrint('standard');
 }
 
+export async function triggerPrintA4() {
+  await prepareAndPrint('standard');
+}
+
+export async function triggerPrintA3() {
+  await prepareAndPrint('a3');
+}
+
 export async function triggerPrintBooklet() {
   await prepareAndPrint('booklet');
 }
 
-async function prepareAndPrint(mode: 'standard' | 'booklet') {
+async function prepareAndPrint(mode: 'standard' | 'booklet' | 'a3') {
+  const isA3 = mode === 'a3';
+  const halfW = isA3 ? PRINT_A3_HALF_W_PX : PRINT_HALF_W_PX;
+  const halfH = isA3 ? PRINT_A3_HALF_H_PX : PRINT_HALF_H_PX;
+
   const screen = getScreenPageSize();
-  const zoom = Math.min(PRINT_HALF_W_PX / screen.w, PRINT_HALF_H_PX / screen.h);
+  const zoom = Math.min(halfW / screen.w, halfH / screen.h);
   // Log để đối chiếu khi kiểm tra bản in (DevTools Console)
   console.info(`[print] mode=${mode} screen=${screen.w}x${screen.h} zoom=${zoom.toFixed(4)}`);
+
+  let pageStyle = document.getElementById('dynamic-print-page-style') as HTMLStyleElement | null;
+  if (!pageStyle) {
+    pageStyle = document.createElement('style');
+    pageStyle.id = 'dynamic-print-page-style';
+    document.head.appendChild(pageStyle);
+  }
+  if (isA3) {
+    pageStyle.textContent = `@page { size: A3 landscape; margin: 0; }`;
+  } else {
+    pageStyle.textContent = `@page { size: A4 landscape; margin: 0; }`;
+  }
+
   preparePrintContainer(mode, screen, zoom);
   try {
     await waitForPrintAssets();
@@ -148,7 +177,7 @@ function normalizeImageSrc(root: HTMLElement) {
   });
 }
 
-function preparePrintContainer(mode: 'standard' | 'booklet', screen: ScreenPageSize, zoom: number) {
+function preparePrintContainer(mode: 'standard' | 'booklet' | 'a3', screen: ScreenPageSize, zoom: number) {
   let printRoot = document.getElementById('print-root');
   if (printRoot) {
     printRoot.remove();
@@ -156,7 +185,8 @@ function preparePrintContainer(mode: 'standard' | 'booklet', screen: ScreenPageS
 
   printRoot = document.createElement('div');
   printRoot.id = 'print-root';
-  printRoot.className = `print-root ${mode === 'booklet' ? 'print-mode-booklet' : 'print-mode-standard'}`;
+  const modeClass = mode === 'booklet' ? 'print-mode-booklet' : mode === 'a3' ? 'print-mode-a3' : 'print-mode-standard';
+  printRoot.className = `print-root ${modeClass}`;
 
   const stage = document.getElementById('print-source');
   if (!stage) return;
@@ -306,6 +336,10 @@ if (typeof window !== 'undefined') {
     const printRoot = document.getElementById('print-root');
     if (printRoot) {
       printRoot.remove();
+    }
+    const pageStyle = document.getElementById('dynamic-print-page-style');
+    if (pageStyle) {
+      pageStyle.remove();
     }
   });
 }

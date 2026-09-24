@@ -1817,7 +1817,8 @@ body {
   }
 
   /* --- STANDARD PRINT --- */
-  .print-mode-standard .standard-print-container {
+  .print-mode-standard .standard-print-container,
+  .print-mode-a3 .standard-print-container {
       display: block !important;
       width: 100% !important;
   }
@@ -1848,7 +1849,35 @@ body {
       position: relative !important;
   }
   
-  .print-mode-standard .page {
+  /* --- A3 NGANG (420mm × 297mm) --- */
+  .print-mode-a3 .standard-print-sheet {
+      width: 420mm !important;
+      height: 297mm !important;
+      max-height: 297mm !important;
+      display: flex !important;
+      flex-direction: row !important;
+      page-break-after: always !important;
+      break-after: page !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      box-sizing: border-box !important;
+      background-color: var(--paper) !important;
+      position: relative !important;
+      overflow: hidden !important;
+  }
+  
+  .print-mode-a3 .spread-half {
+      width: 50% !important;
+      height: 100% !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+      display: flex !important;
+      flex-direction: column !important;
+      position: relative !important;
+  }
+
+  .print-mode-standard .page,
+  .print-mode-a3 .page {
       width: 100% !important;
       height: 100% !important;
       box-shadow: none !important;

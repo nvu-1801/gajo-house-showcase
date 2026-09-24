@@ -7,6 +7,8 @@ interface FlipbookControlsProps {
   onToggleSound: () => void;
   onOpenToc: () => void;
   onOpenPrint: () => void;
+  onPrintA4?: () => void;
+  onPrintA3?: () => void;
   onPrevPage: () => void;
   onNextPage: () => void;
   toastMessage: string | null;
@@ -19,6 +21,8 @@ export const FlipbookControls: React.FC<FlipbookControlsProps> = ({
   onToggleSound,
   onOpenToc,
   onOpenPrint,
+  onPrintA4,
+  onPrintA3,
   onPrevPage,
   onNextPage,
   toastMessage,
@@ -46,13 +50,21 @@ export const FlipbookControls: React.FC<FlipbookControlsProps> = ({
             <i className="fa-solid fa-crown" style={{ color: '#E0CEAC' }} />
             <span>Members of GẠO</span>
           </a>
+          <button className="btn-icon-header" onClick={onPrintA4 || onOpenPrint} title="In Xem Trước Dạng Slide - Khổ A4 Ngang">
+            <i className="fa-solid fa-print" />
+            <span>In A4 Ngang</span>
+          </button>
+          <button className="btn-icon-header" onClick={onPrintA3 || onOpenPrint} title="In Xem Trước Dạng Slide - Khổ A3 Ngang (Khổ Lớn)">
+            <i className="fa-solid fa-file-contract" />
+            <span>In A3 Ngang</span>
+          </button>
           <button className="btn-icon-header" onClick={onToggleSound} title="Bật/tắt âm thanh">
             <i className={soundEnabled ? 'fa-solid fa-volume-high' : 'fa-solid fa-volume-xmark'} />
             <span>{soundEnabled ? 'Âm thanh' : 'Đã tắt'}</span>
           </button>
-          <button className="btn-icon-header" onClick={onOpenPrint} title="In ấn & PDF">
-            <i className="fa-solid fa-print" />
-            <span>In / PDF</span>
+          <button className="btn-icon-header" onClick={onOpenPrint} title="Tùy chọn in ấn &amp; PDF">
+            <i className="fa-solid fa-sliders" />
+            <span>Tùy Chọn In</span>
           </button>
           <button className="btn-icon-header" onClick={onOpenToc} title="Xem mục lục">
             <i className="fa-solid fa-list" />
