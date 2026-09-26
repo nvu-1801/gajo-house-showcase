@@ -1317,28 +1317,6 @@
   box-sizing: border-box;
   overflow: hidden;
   background-color: var(--paper);
-  background-image:
-    radial-gradient(120% 78% at 100% 0%, rgba(183, 154, 103, 0.16) 0%, rgba(183, 154, 103, 0) 46%),
-    radial-gradient(120% 78% at 0% 100%, rgba(138, 104, 75, 0.1) 0%, rgba(138, 104, 75, 0) 48%),
-    var(--paper-grain);
-}
-
-/* Hoa văn hạt gạo lặp + điểm nhấn 4 góc khung */
-.stay-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.55;
-  background-image:
-    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%3E%3Cg%20fill='none'%20stroke='%23b79a67'%20stroke-width='1'%3E%3Cpath%20d='M32%2016c6%208%206%2020%200%2028-6-8-6-20%200-28z'/%3E%3Cpath%20d='M32%2018v24'/%3E%3C/g%3E%3Ccircle%20cx='32'%20cy='32'%20r='1.1'%20fill='%23b79a67'/%3E%3C/svg%3E"),
-    radial-gradient(circle at 15px 15px, var(--gold) 0 2.3px, rgba(183, 154, 103, 0) 2.9px),
-    radial-gradient(circle at calc(100% - 15px) 15px, var(--gold) 0 2.3px, rgba(183, 154, 103, 0) 2.9px),
-    radial-gradient(circle at 15px calc(100% - 15px), var(--gold) 0 2.3px, rgba(183, 154, 103, 0) 2.9px),
-    radial-gradient(circle at calc(100% - 15px) calc(100% - 15px), var(--gold) 0 2.3px, rgba(183, 154, 103, 0) 2.9px);
-  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-size: 68px 68px, auto, auto, auto, auto;
 }
 
 /* Khung kép vàng mảnh */
@@ -1355,23 +1333,7 @@
     inset 0 0 0 5px rgba(183, 154, 103, 0.18);
 }
 
-/* Logo chìm ở góc trang */
-.stay-bg-logo {
-  position: absolute;
-  z-index: 0;
-  width: 250px;
-  height: 250px;
-  object-fit: contain;
-  opacity: 0.05;
-  pointer-events: none;
-  user-select: none;
-}
-.stay-bg-logo--tl { top: -64px; left: -64px; }
-.stay-bg-logo--tr { top: -64px; right: -64px; }
-.stay-bg-logo--bl { bottom: -68px; left: -68px; }
-.stay-bg-logo--br { bottom: -68px; right: -68px; }
-
-/* Nội dung nổi lên trên lớp nền trang trí */
+/* Nội dung nổi lên trên lớp nền */
 .stay-bg .stay-content {
   position: relative;
   z-index: 2;
@@ -1383,7 +1345,6 @@
 
 @media print {
   .stay-bg,
-  .stay-bg::before,
   .stay-bg::after {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;

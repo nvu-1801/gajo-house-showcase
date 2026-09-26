@@ -7,7 +7,6 @@ export const AmenitiesSpread: React.FC = () => {
       {/* LEFT PAGE */}
       <PageSheet density="soft" isHardCover={false}>
         <div className="stay-bg">
-          <img className="stay-bg-logo stay-bg-logo--bl" src="/images/general/logo-mark-gold.png" alt="" aria-hidden="true" />
           <div className="editorial-left-page stay-content" style={{ padding: '24px 32px', height: '100%', display: 'flex', flexDirection: 'column' }}>
           
           {/* TOP HALF: PHOTO */}
@@ -54,7 +53,6 @@ export const AmenitiesSpread: React.FC = () => {
       {/* RIGHT PAGE */}
       <PageSheet density="soft" isHardCover={false}>
         <div className="stay-bg">
-          <img className="stay-bg-logo stay-bg-logo--br" src="/images/general/logo-mark-gold.png" alt="" aria-hidden="true" />
           <div className="editorial-right-page stay-content" style={{ padding: '24px 32px', height: '100%', display: 'flex', flexDirection: 'column' }}>
           
           {/* TOP HALF: INTRO */}
