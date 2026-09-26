@@ -193,7 +193,7 @@
   min-height: 297mm;
   max-height: 297mm;
   box-sizing: border-box;
-  padding: 12mm 13mm 11mm;
+  padding: 10mm 12mm 9mm;
   position: relative;
   overflow: hidden;
   background-color: var(--ibz-paper);
@@ -203,7 +203,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 4mm;
+  gap: 3.5mm;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
@@ -280,21 +280,21 @@
 }
 .introHeading {
   font-family: var(--font-serif);
-  font-size: 16pt;
+  font-size: 18pt;
   font-weight: 700;
-  letter-spacing: 0.004em;
-  line-height: 1.12;
+  letter-spacing: 0.006em;
+  line-height: 1.15;
   color: var(--ibz-ink);
   margin: 0;
 }
 .introQuote {
   font-family: var(--font-accent);
   font-style: italic;
-  font-size: 9pt;
+  font-size: 9.8pt;
   line-height: 1.5;
   color: var(--ibz-wood);
-  max-width: 150mm;
-  margin: 1.6mm auto 0;
+  max-width: 162mm;
+  margin: 1.8mm auto 0;
 }
 
 /* Part label ornament: PHẦN 0X · ... */
@@ -302,13 +302,13 @@
   display: inline-block;
   position: relative;
   font-family: var(--font-sans);
-  font-size: 6pt;
+  font-size: 6.4pt;
   font-weight: 800;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ibz-ink-soft);
   padding: 0 8mm;
-  margin-bottom: 1.8mm;
+  margin-bottom: 2mm;
 }
 .partLabel::before,
 .partLabel::after {
@@ -328,10 +328,10 @@
 
 /* Lead paragraph under the heading */
 .introLead {
-  font-size: 8.6pt;
+  font-size: 9.2pt;
   line-height: 1.55;
   color: var(--ibz-ink-soft);
-  max-width: 156mm;
+  max-width: 165mm;
   margin: 2mm auto 0;
 }
 
@@ -429,8 +429,8 @@
 }
 .ecoStrip {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2.2mm;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2mm;
 }
 .ecoItem {
   position: relative;
@@ -656,7 +656,7 @@
   transform: translateY(-1px);
 }
 .stThumb {
-  width: 14mm;
+  width: 18mm;
   flex-shrink: 0;
   border-radius: 4px;
   overflow: hidden;
@@ -678,7 +678,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.2mm;
+  gap: 1mm;
   padding-right: 1.8mm;
 }
 .stHead {
@@ -686,7 +686,7 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 2mm;
-  padding-bottom: 1.2mm;
+  padding-bottom: 1mm;
   border-bottom: 1px solid var(--ibz-line);
 }
 .stCode {
@@ -716,18 +716,32 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2mm;
+  gap: 1.6mm;
   margin-top: 0.6mm;
-  padding-top: 1.6mm;
+  padding-top: 1.4mm;
   border-top: 1px dashed var(--ibz-line);
 }
 .stType {
+  flex: 1 1 auto;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3mm;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.stTypeName {
   font-size: 4.9pt;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: var(--ibz-muted);
+  white-space: nowrap;
+}
+.stArea {
+  font-size: 4.4pt;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  color: var(--ibz-wood);
   white-space: nowrap;
 }
 .stPrice {
@@ -758,10 +772,473 @@
 .grid2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4mm;
+  gap: 2.8mm;
   flex: 1;
   min-height: 0;
 }
+
+/* ---------- Page 2: 5 branches layout (2 wide top, 3 compact bottom) ---------- */
+.gridBranches {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2.8mm;
+  flex: 1;
+  min-height: 0;
+}
+.gridBranches .card:nth-child(1),
+.gridBranches .card:nth-child(2) {
+  grid-column: span 3;
+}
+.gridBranches .card:nth-child(3),
+.gridBranches .card:nth-child(4),
+.gridBranches .card:nth-child(5) {
+  grid-column: span 2;
+}
+
+.gridBranches .cardImgWrap {
+  height: 28mm;
+}
+.gridBranches .card:nth-child(1) .cardImgWrap,
+.gridBranches .card:nth-child(2) .cardImgWrap {
+  height: 31mm;
+}
+
+.gridBranches .card:nth-child(n+3) .cardTitle {
+  font-size: 9.6pt;
+}
+.gridBranches .card:nth-child(n+3) .cardTagline {
+  font-size: 7.2pt;
+}
+.gridBranches .card:nth-child(n+3) .bulletRow {
+  font-size: 7.2pt;
+  line-height: 1.35;
+}
+.gridBranches .card:nth-child(n+3) .cardFooter {
+  font-size: 6.6pt;
+}
+.gridBranches .card:nth-child(n+3) .badgePrimary {
+  font-size: 5.2pt;
+  padding: 0.8mm 2mm;
+}
+.gridBranches .card:nth-child(n+3) .badgeSecondary {
+  font-size: 5.4pt;
+  padding: 0.7mm 1.8mm;
+}
+
+.cardImgSingle {
+  flex: 1 1 100% !important;
+  width: 100% !important;
+}
+
+/* ---------- Page 2: 2x2 Dining Grid ---------- */
+.gridDining {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.8mm;
+  flex: 1;
+  min-height: 0;
+}
+.gridDining .cardImgWrap {
+  height: 33mm;
+}
+.gridDining .cardBadges {
+  padding: 2.0mm 2.6mm;
+}
+.gridDining .badgePrimary {
+  padding: 0.8mm 2.2mm;
+  font-size: 5.4pt;
+  letter-spacing: 0.08em;
+}
+.gridDining .badgeSecondary {
+  padding: 0.7mm 2.0mm;
+  font-size: 5.6pt;
+}
+.gridDining .cardBody {
+  padding: 2.2mm 3.2mm 2.0mm;
+  gap: 1.2mm;
+}
+.gridDining .cardMain {
+  gap: 1.0mm;
+}
+.gridDining .cardTitleRow {
+  gap: 2mm;
+}
+.gridDining .cardTitle {
+  font-size: 10.8pt;
+}
+.gridDining .cardIndex {
+  font-size: 10.5pt;
+}
+.gridDining .cardTagline {
+  font-size: 7.8pt;
+  margin-top: 0;
+  margin-bottom: 0.8mm;
+}
+.gridDining .cardBullets {
+  gap: 1.0mm;
+  margin-top: 0.8mm;
+}
+.gridDining .bulletRow {
+  font-size: 7.6pt;
+  line-height: 1.35;
+}
+.gridDining .cardFooter {
+  padding-top: 1.6mm;
+  font-size: 7.2pt;
+}
+
+/* ---------- Page 2: Combined Bottom Row (TiLong Mart Left + VIP Promo Right) ---------- */
+.bottomRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.8mm;
+  flex-shrink: 0;
+  height: 44mm;
+  min-height: 44mm;
+  max-height: 44mm;
+}
+
+/* Left Card: TiLong Mart */
+.martCard {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background: var(--ibz-card);
+  border: 1px solid var(--ibz-line);
+  border-left: 2.5px solid var(--ibz-gold);
+  border-radius: var(--ibz-radius);
+  overflow: hidden;
+  box-shadow: var(--ibz-shadow-sm);
+  transition: border-color 0.3s var(--ibz-ease), box-shadow 0.3s var(--ibz-ease);
+}
+.martCard:hover {
+  border-color: var(--ibz-goldline);
+  box-shadow: var(--ibz-shadow-lg);
+}
+.martImgWrap {
+  position: relative;
+  width: 32mm;
+  height: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--ibz-ink);
+}
+.martImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.7s var(--ibz-ease);
+}
+.martCard:hover .martImg {
+  transform: scale(1.06);
+}
+.martBadges {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.8mm 2mm;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 28, 23, 0.48) 0%,
+    rgba(18, 28, 23, 0.05) 45%,
+    rgba(18, 28, 23, 0.82) 100%
+  );
+}
+.martBadges .badgePrimary {
+  font-size: 5.2pt;
+  padding: 0.7mm 1.8mm;
+  letter-spacing: 0.06em;
+}
+.martBadges .badgeWalk {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8mm;
+  padding: 0.6mm 1.6mm;
+  border-radius: 999px;
+  background: rgba(18, 28, 23, 0.92);
+  border: 1px solid var(--ibz-gold);
+  color: var(--ibz-gold-soft);
+  font-size: 5pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+}
+.martBadges .badgeWalk i {
+  font-size: 5.2pt;
+  color: var(--ibz-gold);
+}
+.martBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.2mm 2.8mm 1.8mm;
+  min-width: 0;
+}
+.martMain {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2mm;
+}
+.martBody .cardTitleRow {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  margin-bottom: 0.2mm;
+}
+.martBody .cardIndex {
+  font-family: var(--font-serif);
+  font-size: 10.5pt;
+  font-weight: 700;
+  color: var(--ibz-gold);
+  line-height: 1;
+}
+.martBody .cardTitle {
+  font-family: var(--font-serif);
+  font-size: 10.8pt;
+  font-weight: 700;
+  margin: 0;
+  color: var(--ibz-ink);
+  line-height: 1.15;
+  white-space: nowrap;
+}
+.martTagline {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 7.8pt;
+  color: var(--ibz-wood);
+  line-height: 1.25;
+  margin-bottom: 0.8mm;
+}
+.martBullets {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2mm;
+}
+.martBullets .bulletRow {
+  font-size: 7.8pt;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--ibz-ink-soft);
+}
+.martFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.4mm;
+  border-top: 1px dashed var(--ibz-line);
+  font-size: 7.2pt;
+  color: var(--ibz-muted);
+  white-space: nowrap;
+  gap: 1.5mm;
+}
+.martFooter strong {
+  color: var(--ibz-gold);
+  font-weight: 700;
+}
+
+/* Right Card: VIP Promo Pass */
+.vipCard {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background: linear-gradient(135deg, #FCFBF7 0%, #F8F4EC 100%);
+  border: 1px solid rgba(217, 192, 138, 0.65);
+  border-radius: var(--ibz-radius);
+  overflow: hidden;
+  box-shadow: 0 3px 14px rgba(176, 138, 79, 0.12), inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+  transition: border-color 0.3s var(--ibz-ease), box-shadow 0.3s var(--ibz-ease);
+}
+.vipCard:hover {
+  border-color: var(--ibz-gold);
+  box-shadow: 0 5px 20px rgba(176, 138, 79, 0.22);
+}
+.vipCardBadge {
+  width: 22mm;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8mm;
+  padding: 2mm 1mm;
+  background: linear-gradient(180deg, #182820 0%, #111D17 60%, #0B1410 100%);
+  border-right: 1px dashed rgba(217, 192, 138, 0.6);
+  color: var(--ibz-gold-soft);
+  text-align: center;
+  position: relative;
+}
+.vipCrownRing {
+  width: 6.8mm;
+  height: 6.8mm;
+  border-radius: 50%;
+  background: rgba(217, 192, 138, 0.16);
+  border: 1px solid rgba(217, 192, 138, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ibz-gold-soft);
+  box-shadow: 0 0 8px rgba(217, 192, 138, 0.25);
+  margin-bottom: 0.3mm;
+}
+.vipCrownRing i {
+  font-size: 8pt;
+  color: var(--ibz-gold-soft);
+}
+.vipEyebrow {
+  font-size: 4.8pt;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ibz-gold-soft);
+  opacity: 0.88;
+  line-height: 1;
+}
+.vipMainText {
+  font-family: var(--font-serif);
+  font-size: 7.2pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+.vipPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5.2pt;
+  font-weight: 800;
+  padding: 0.6mm 1.8mm 0.35mm;
+  border-radius: 999px;
+  background: rgba(217, 192, 138, 0.22);
+  border: 1px solid rgba(217, 192, 138, 0.65);
+  color: var(--ibz-gold-soft);
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin-top: 0.3mm;
+}
+
+.vipCardBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.2mm 2.8mm 1.8mm;
+  min-width: 0;
+  gap: 1.0mm;
+}
+.vipCardItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.8mm;
+  padding-bottom: 0.8mm;
+  border-bottom: 1px dashed rgba(217, 192, 138, 0.32);
+}
+.vipCardItem:nth-child(3) {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.vipIconBox {
+  width: 5.8mm;
+  height: 5.8mm;
+  min-width: 5.8mm;
+  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(217, 192, 138, 0.28) 0%, rgba(176, 138, 79, 0.12) 100%);
+  border: 1px solid rgba(194, 155, 74, 0.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ibz-gold);
+  font-size: 6.8pt;
+  flex-shrink: 0;
+  margin-top: 0.2mm;
+}
+.vipItemText {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.vipItemHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.4mm;
+}
+.vipItemHead strong {
+  font-size: 7.2pt;
+  font-weight: 700;
+  color: var(--ibz-ink);
+  line-height: 1.15;
+  white-space: nowrap;
+}
+.vipMiniTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 4.8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--ibz-wood);
+  background: rgba(176, 138, 79, 0.12);
+  border-radius: 3px;
+  padding: 0.5mm 1.4mm 0.25mm;
+  border: 1px solid rgba(176, 138, 79, 0.25);
+  line-height: 1;
+  white-space: nowrap;
+}
+.discountBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 5.0pt;
+  font-weight: 800;
+  background: linear-gradient(135deg, #B82E2E 0%, #8C1C1C 100%);
+  color: #FFFFFF;
+  border-radius: 3px;
+  padding: 0.5mm 1.5mm 0.25mm;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgba(140, 28, 28, 0.3);
+  white-space: nowrap;
+}
+.vipItemText p {
+  font-size: 6.3pt;
+  line-height: 1.25;
+  color: #635D52;
+  margin: 0.2mm 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.vipCardNote {
+  display: flex;
+  align-items: center;
+  gap: 1.2mm;
+  padding-top: 1mm;
+  border-top: 1px solid rgba(217, 192, 138, 0.3);
+  font-size: 5.6pt;
+  font-weight: 600;
+  color: var(--ibz-wood);
+  white-space: nowrap;
+}
+.vipCardNote i {
+  font-size: 5.8pt;
+  color: var(--ibz-gold);
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -778,7 +1255,7 @@
 }
 .cardImgWrap {
   position: relative;
-  height: 50mm;
+  height: 42.4mm;
   flex-shrink: 0;
   overflow: hidden;
   background: var(--ibz-ink);
@@ -812,18 +1289,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 3mm;
+  padding: 2.8mm 3mm;
   background: linear-gradient(
     180deg,
     rgba(18, 28, 23, 0.5) 0%,
     rgba(18, 28, 23, 0) 38%,
     rgba(18, 28, 23, 0.72) 100%
   );
+  pointer-events: none;
 }
 .badgePrimary {
   align-self: flex-start;
   max-width: 100%;
-  padding: 1.2mm 2.8mm;
+  padding: 1mm 2.6mm;
   border-radius: 999px;
   background: rgba(250, 248, 242, 0.16);
   border: 1px solid rgba(217, 192, 138, 0.62);
@@ -837,7 +1315,7 @@
 }
 .badgeSecondary {
   align-self: flex-end;
-  padding: 1mm 2.6mm;
+  padding: 0.8mm 2.2mm;
   border-radius: 999px;
   background: rgba(18, 28, 23, 0.78);
   border: 1px solid rgba(217, 192, 138, 0.35);
@@ -853,8 +1331,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2mm;
-  padding: 3.4mm 3.8mm 3.2mm;
+  gap: 1.8mm;
+  padding: 3.2mm 3.8mm 2.8mm;
+}
+.cardMain {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2mm;
 }
 .cardTitleRow {
   display: flex;
@@ -881,56 +1364,39 @@
 .cardTagline {
   font-family: var(--font-accent);
   font-style: italic;
-  font-size: 8pt;
+  font-size: 8.2pt;
   line-height: 1.35;
   color: var(--ibz-wood);
-  margin-top: 1.2mm;
-}
-.cardDesc {
-  font-size: 8.4pt;
-  line-height: 1.5;
-  color: var(--ibz-muted);
-  margin: 1.8mm 0 0;
+  margin-top: 0.8mm;
+  margin-bottom: 0;
 }
 .cardBullets {
   display: flex;
   flex-direction: column;
   gap: 1.6mm;
-  margin-top: 2.2mm;
+  margin-top: 1.6mm;
 }
 .bulletRow {
-  display: flex;
-  align-items: flex-start;
-  gap: 2mm;
-  font-size: 8.2pt;
-  line-height: 1.4;
+  font-size: 9pt;
+  line-height: 1.42;
   color: var(--ibz-ink-soft);
-}
-.bulletRow i {
-  color: var(--ibz-gold);
-  font-size: 7pt;
-  margin-top: 1.1mm;
-  flex-shrink: 0;
+  margin: 0;
 }
 .cardFooter {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3mm;
-  padding-top: 2.4mm;
+  gap: 2.5mm;
+  padding-top: 2.2mm;
   border-top: 1px solid var(--ibz-line);
-  font-size: 7.4pt;
+  font-size: 7.6pt;
   color: var(--ibz-muted);
 }
 .cardFooter span {
   display: inline-flex;
   align-items: center;
-  gap: 1.6mm;
+  gap: 1.4mm;
   min-width: 0;
-}
-.cardFooter i {
-  color: var(--ibz-gold);
-  flex-shrink: 0;
 }
 .cardFooter strong {
   color: var(--ibz-ink);
@@ -1285,8 +1751,82 @@
     max-height: 300px;
   }
   .grid2,
-  .stationsGrid {
+  .stationsGrid,
+  .gridBranches,
+  .gridDining {
     grid-template-columns: 1fr;
+  }
+  .gridBranches .card:nth-child(n) {
+    grid-column: span 1;
+  }
+  .gridBranches .cardImgWrap,
+  .gridBranches .card:nth-child(1) .cardImgWrap,
+  .gridBranches .card:nth-child(2) .cardImgWrap,
+  .gridDining .cardImgWrap {
+    height: 200px;
+  }
+  .bottomRow {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    gap: 14px;
+  }
+  .martCard,
+  .vipCard {
+    height: auto;
+    min-height: 0;
+  }
+  .martCard {
+    flex-direction: column;
+  }
+  .martImgWrap {
+    width: 100%;
+    height: 180px;
+  }
+  .martBody {
+    padding: 14px;
+    gap: 10px;
+  }
+  .vipCard {
+    flex-direction: column;
+  }
+  .vipCardBadge {
+    width: 100%;
+    height: 46px;
+    flex-direction: row;
+    gap: 10px;
+    border-right: none;
+    border-bottom: 1px dashed rgba(217, 192, 138, 0.6);
+  }
+  .vipCrownRing {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 0;
+  }
+  .vipCrownRing i {
+    font-size: 13px;
+  }
+  .vipCardBody {
+    padding: 14px;
+    gap: 12px;
+  }
+  .vipIconBox {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 13px;
+  }
+  .vipItemHead strong {
+    font-size: 13px;
+  }
+  .vipItemText p {
+    font-size: 12px;
+    white-space: normal;
+  }
+  .vipCardNote {
+    font-size: 11px;
+    padding-top: 8px;
   }
   .stationCard {
     min-height: 0;

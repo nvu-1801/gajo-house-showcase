@@ -6,6 +6,7 @@ export interface ExperienceHighlight {
   title: string;
   badge?: string;
   desc: string;
+  logo?: string;
 }
 
 export interface ExperienceGalleryItem {
@@ -138,6 +139,70 @@ export const localGuideExperienceData: ExperienceData = {
   ctaQr: '/images/general/qr-maps.png',
 };
 
+const renderHighlightIcon = (item: ExperienceHighlight) => {
+  if (item.logo) {
+    return <img src={item.logo} alt={item.title} className="exp-highlight-logo" />;
+  }
+
+  const iconStr = item.icon || '';
+
+  // Flame / BBQ / Fire
+  if (iconStr.includes('fire') || iconStr.includes('grill') || iconStr.includes('flame')) {
+    return (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2c-.67 0-1.28.37-1.58.96C8.82 6.13 6 10.42 6 14.5 6 18.09 8.69 21 12 21s6-2.91 6-6.5c0-4.08-2.82-8.37-4.42-11.54A1.75 1.75 0 0 0 12 2zm0 16.5c-1.93 0-3.5-1.57-3.5-3.5 0-1.78 1.4-3.76 2.38-5.07.56.76 1.12 1.6 1.12 2.57 0 1.1.9 2 2 2 .42 0 .81-.13 1.13-.36-.31 2.51-1.63 4.36-3.13 4.36z" />
+      </svg>
+    );
+  }
+
+  // Wine / Drinks / Bar
+  if (iconStr.includes('wine') || iconStr.includes('glass') || iconStr.includes('drink')) {
+    return (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M6 3h12a1 1 0 0 1 1 1c0 4.42-3.13 8-7 8s-7-3.58-7-8a1 1 0 0 1 1-1zm5 10.93V19H8a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-3v-5.07C16.87 13.43 20 9.87 20 5.5A2.5 2.5 0 0 0 17.5 3H6.5A2.5 2.5 0 0 0 4 5.5c0 4.37 3.13 7.93 7 8.43z" />
+      </svg>
+    );
+  }
+
+  // Acoustic / Guitar / Music
+  if (iconStr.includes('guitar') || iconStr.includes('music')) {
+    return (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M19.99 3.12a1 1 0 0 0-1.28-.77l-9 2.5A1 1 0 0 0 9 5.81v9.42A4.47 4.47 0 0 0 6.5 15C4.015 15 2 16.79 2 19s2.015 4 4.5 4S11 21.21 11 19v-9.69l7-1.94v5.86A4.47 4.47 0 0 0 15.5 13c-2.485 0-4.5 1.79-4.5 4s2.015 4 4.5 4 4.5-1.79 4.5-4V4a1 1 0 0 0-.01-.88z" />
+      </svg>
+    );
+  }
+
+  // Coffee / Tea / Mug
+  if (iconStr.includes('mug') || iconStr.includes('coffee') || iconStr.includes('tea')) {
+    return (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M2 19h18a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2zm16-14h1a4 4 0 0 1 0 8h-1v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5h16zm-2 2H4v7a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V7zm2 2v2h1a2 2 0 1 0 0-4h-1v2z" />
+      </svg>
+    );
+  }
+
+  // Beer
+  if (iconStr.includes('beer')) {
+    return (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M5 2h10a2 2 0 0 1 2 2v14a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V4a2 2 0 0 1 2-2zm12 5h2a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-2v-2h2a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2V7z" />
+      </svg>
+    );
+  }
+
+  // Mountain / Sightseeing / Scenic
+  if (iconStr.includes('mountain') || iconStr.includes('map') || iconStr.includes('pin')) {
+    return (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M14 6a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm-8.5 7.5L9 9l5 6.5h-2.5L14 19H3l2.5-5.5zm8 0l2.5-3.5 5 7H11l2.5-3.5z" />
+      </svg>
+    );
+  }
+
+  return <i className={item.icon} />;
+};
+
 interface ExperienceSpreadProps {
   data?: ExperienceData;
 }
@@ -162,12 +227,11 @@ export const ExperienceSpread: React.FC<ExperienceSpreadProps> = ({
           <div className="hero-top-bar">
             <div className="hero-brand">
               <span className="hb-logo">
-                {data.heroBrandIcon && (
-                  <i
-                    className={data.heroBrandIcon}
-                    style={{ color: 'var(--gold)', marginRight: '6px' }}
-                  />
-                )}
+                <img
+                  src="/images/general/logo-mark-dark.png"
+                  alt="GAJO"
+                  className="hero-brand-logo-mark"
+                />
                 {data.heroBrandTitle}
               </span>
               <span className="hb-sub">{data.heroBrandSub}</span>
@@ -199,6 +263,11 @@ export const ExperienceSpread: React.FC<ExperienceSpreadProps> = ({
           {/* Header */}
           <div className="ed-page-header">
             <div className="ed-brand">
+              <img
+                src="/images/general/logo-mark-dark.png"
+                alt="GAJO"
+                className="ed-brand-logo-mark"
+              />
               <span className="ed-brand-logo">GAJO&apos;S HOUSE</span>
               <span className="ed-brand-dot">•</span>
               <span className="ed-brand-tagline">{data.motto}</span>
@@ -233,7 +302,9 @@ export const ExperienceSpread: React.FC<ExperienceSpreadProps> = ({
           <div className="exp-highlights-list">
             {data.highlights.map((item, idx) => (
               <div key={idx} className="exp-highlight-item">
-                <i className={`${item.icon} exp-highlight-icon`} />
+                <span className="exp-highlight-icon">
+                  {renderHighlightIcon(item)}
+                </span>
                 <div className="exp-highlight-text">
                   <div className="exp-highlight-header">
                     <strong className="exp-highlight-title">{item.title}</strong>

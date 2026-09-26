@@ -43,8 +43,8 @@
   --shadow-book: 0 28px 60px -12px rgba(0, 0, 0, 0.75), 0 0 30px rgba(0, 0, 0, 0.4);
   --ease: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Subtle Organic Paper Grain */
-  --paper-grain: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KPGcgZmlsbD0iIzhCNzM1NSI+CiA8ZWxsaXBzZSBjeD0iMjAiIGN5PSIxNSIgcng9IjEuNSIgcnk9IjQuNSIgdHJhbnNmb3JtPSJyb3RhdGUoMjUgMjAgMTUpIiBvcGFjaXR5PSIwLjE1Ii8+CiA8ZWxsaXBzZSBjeD0iNzUiIGN5PSI0MCIgcng9IjEuNSIgcnk9IjQuNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTQwIDc1IDQwKSIgb3BhY2l0eT0iMC4xMiIvPgogPGVsbGlwc2UgY3g9IjQwIiBjeT0iNzUiIHJ4PSIxLjUiIHJ5PSI0LjUiIHRyYW5zZm9ybT0icm90YXRlKDMwIDQwIDc1KSIgb3BhY2l0eT0iMC4xNSIvPgo8L2c+Cjwvc3ZnPg==');
+  /* Clean Luxury Paper Background (Synchronized) */
+  --paper-grain: none;
 }
 
 /* ==================== RESET & BASE ==================== */

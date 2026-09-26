@@ -13,7 +13,19 @@ interface BranchItem {
   highlights: string[];
   address: string;
   phone: string;
-  images: [string, string];
+  images: string[];
+}
+
+interface SpotlightItem {
+  number: string;
+  name: string;
+  category: string;
+  distance: string;
+  tagline: string;
+  highlights: string[];
+  address: string;
+  phone: string;
+  image: string;
 }
 
 interface CuisineItem {
@@ -21,7 +33,7 @@ interface CuisineItem {
   name: string;
   badge: string;
   tagline: string;
-  desc: string;
+  highlights: string[];
   location: string;
   image: string;
 }
@@ -31,8 +43,8 @@ interface TravelItem {
   name: string;
   badge: string;
   tagline: string;
-  desc: string;
-  bestTime: string;
+  highlights: string[];
+  location: string;
   image: string;
 }
 
@@ -95,7 +107,7 @@ const STATIONS: StationItem[] = [
     tagline: 'học cách chậm lại',
     image: '/images/ga-may/ga-may-hero.jpg',
     type: 'Cloud',
-    area: '28 m²',
+    area: '20 m²',
     price: '500K',
   },
   {
@@ -115,7 +127,7 @@ const STATIONS: StationItem[] = [
     tagline: 'trở về với chính mình',
     image: '/images/ga-moc/hero-new.jpg',
     type: 'VIP Suite',
-    area: '45 m²',
+    area: '35 m²',
     price: '1.000K',
   },
   {
@@ -140,7 +152,7 @@ const STATIONS: StationItem[] = [
   },
 ];
 
-const BRANCHES: BranchItem[] = [
+const DINING_BRANCHES: BranchItem[] = [
   {
     number: '01',
     name: 'TIỆM NƯỚNG NHÀ GẠO',
@@ -148,25 +160,25 @@ const BRANCHES: BranchItem[] = [
     distance: 'Cách ~2.6km',
     tagline: 'Than hồng · Sân vườn · Nhạc mộc',
     highlights: [
-      'Bò tảng sốt phô mai kéo sợi & hải sản tươi Tam Quan',
-      'Đêm nhạc Acoustic cuối tuần, phục vụ set BBQ tận homestay',
+      'Bò tảng sốt phô mai kéo sợi & hải sản Tam Quan nướng than hồng',
+      'Đêm nhạc Acoustic cuối tuần, set BBQ phục vụ tận sân vườn homestay',
     ],
-    address: 'Đ. Trường Sa, Hoài Nhơn',
-    phone: '0902 286 300',
+    address: 'Đ. Trường Sa, Thạnh Xuân Đông',
+    phone: '0987 813 191',
     images: ['/images/general/nhagao-1.jpg', '/images/general/nhagao-2.jpg'],
   },
   {
     number: '02',
-    name: 'GAJO THÁI',
+    name: "GAJO’S THAI",
     category: 'AUTHENTIC THAI CUISINE',
     distance: 'Cách ~2.8km',
     tagline: 'Tom Yum · Pad Thai · Hải sản',
     highlights: [
-      'Lẩu Thái hải sản, Tom Yum, Pad Thai chuẩn vị đầu bếp Thái',
-      'Vị trí sát bờ sông ngắm trọn hoàng hôn buông',
+      'Tom Yum, Pad Thai & gỏi Som Tum chuẩn vị đầu bếp Thái',
+      'Bàn view sát bờ sông, ngắm trọn hoàng hôn buông',
     ],
-    address: '125 Nguyễn Chí Thanh, Hoài Nhơn',
-    phone: '0902 286 300',
+    address: '125 Nguyễn Chí Thanh, Tân Thành',
+    phone: '0965 470 833',
     images: ['/images/general/gajothai-food.jpg', '/images/general/dining-gajothai.jpg'],
   },
   {
@@ -191,13 +203,29 @@ const BRANCHES: BranchItem[] = [
     tagline: 'Coffee · Donuts · Hoài niệm',
     highlights: [
       'Chỉ 300m từ homestay — 3 phút đi bộ thảnh thơi',
-      'Cà phê đặc sản rang mộc & Donuts nướng nóng mỗi sáng',
+      'Cà phê rang mộc & Donuts nướng nóng mỗi sáng',
+      'Không gian gạch nung & gỗ mộc hoài cổ, check-in cảm xúc',
     ],
-    address: '54 - 56 Phan Trọng Tuệ, Hoài Nhơn',
+    address: '56 Đ. Phan Trọng Tuệ, Hoài Nhơn Đông',
     phone: '0965 470 833',
     images: ['/images/general/cafe-bonjour.jpg', '/images/general/bonjour-donuts.jpg'],
   },
 ];
+
+const TILONG_MART: SpotlightItem = {
+  number: '05',
+  name: 'TILONG MART',
+  category: 'SHOPPING & LIFESTYLE',
+  distance: 'Đi bộ 2 phút (100m)',
+  tagline: 'Gia dụng gia đình · Phụ kiện trendy · Quà tặng & Đồ chơi cho bé',
+  highlights: [
+    'Phụ kiện trendy, quà lưu niệm & văn phòng phẩm xinh xắn',
+    'Gia dụng gia đình thông minh & đồ chơi an toàn cho bé',
+  ],
+  address: 'Khu phố trung tâm, TX. Hoài Nhơn (Cách 100m)',
+  phone: '0868 770 096',
+  image: '/images/general/tilong-mart.jpg',
+};
 
 const CUISINES: CuisineItem[] = [
   {
@@ -205,8 +233,11 @@ const CUISINES: CuisineItem[] = [
     name: 'Bún Dây Bồng Sơn',
     badge: 'ĐẶC SẢN ĐỘC BẢN HOÀI NHƠN',
     tagline: 'Sợi bún ngâm tro củi · Dầu hẹ · Mắm chua ngọt',
-    desc: 'Gạo lúa cũ ngâm tro củi tự nhiên, ép thủ công thành vỉ bún vàng óng; thoa dầu hẹ thơm lừng, chấm mắm ớt tỏi chanh đường chua cay đậm vị xứ Nẫu.',
-    location: 'Chợ Bồng Sơn & Chợ Tam Quan (06:00 - 09:30)',
+    highlights: [
+      'Gạo lúa cũ ngâm nước tro củi, ép thủ công thành vỉ bún vàng óng',
+      'Thoa dầu hẹ thơm lừng, chấm mắm ớt tỏi chua ngọt đậm vị xứ Nẫu',
+    ],
+    location: 'Khu ẩm thực & chợ quanh Hoài Nhơn Đông (06:00 - 09:30)',
     image: '/images/dac-san/01_bun_day_bong_son.png',
   },
   {
@@ -214,8 +245,11 @@ const CUISINES: CuisineItem[] = [
     name: 'Bánh Mì Chả Cá',
     badge: 'HẢI SẢN TƯƠI CẢNG TAM QUAN',
     tagline: 'Chả cá quết tay · Bánh mì than hồng giòn rụm',
-    desc: 'Chả cá thu, cá nhồng tươi cảng Tam Quan quết tay giòn sần sật, nướng than giòn rụm; kẹp dưa leo, rau răm và sốt mắm rim cay nồng.',
-    location: 'Đ. Trần Hưng Đạo & Nguyễn Chí Thanh',
+    highlights: [
+      'Chả cá thu, cá nhồng cảng Tam Quan quết tay giòn sần sật',
+      'Bánh mì nướng than giòn rụm, kẹp rau răm & sốt mắm rim cay nồng',
+    ],
+    location: 'Dọc các tuyến đường trung tâm quanh Hoài Nhơn Đông',
     image: '/images/dac-san/02_banh_mi_cha_ca.png',
   },
   {
@@ -223,8 +257,11 @@ const CUISINES: CuisineItem[] = [
     name: 'Bánh Canh Cá Lóc',
     badge: 'MÓN NGON ẤM LÒNG XỨ NẪU',
     tagline: 'Nước dùng ngọt thanh · Củ nén & Nghệ tươi',
-    desc: 'Nước dùng ninh xương cá lóc đồng ngọt thanh, thơm nức củ nén, nghệ tươi và tiêu rừng; sợi bánh canh gạo mềm dai, ăn một tô ấm cả người.',
-    location: 'Trung tâm TX. Hoài Nhơn (Sáng & Chiều tối)',
+    highlights: [
+      'Nước dùng xương cá lóc đồng ngọt thanh, thơm củ nén & nghệ tươi',
+      'Sợi bánh canh gạo mềm dai, ăn một tô ấm cả người',
+    ],
+    location: 'Các quán ăn bình dân quanh Hoài Nhơn Đông (Sáng & Tối)',
     image: '/images/dac-san/03_banh_canh_ca_loc.png',
   },
   {
@@ -232,8 +269,11 @@ const CUISINES: CuisineItem[] = [
     name: 'Phở Bò Bình Định',
     badge: 'ĐI BỘ 3 PHÚT (CÁCH 300M)',
     tagline: 'Nước dùng gừng nướng hoa hồi · Bò tái ngọt mềm',
-    desc: 'Nước dùng bò hầm trong vắt, thơm lừng hoa hồi, thảo quả và gừng nướng than; bò tái mềm ngọt ăn cùng húng quế và ớt xiêm xanh giòn cay.',
-    location: 'Quán Phở A Mãi — Cách GAJO’s HOUSE 300m',
+    highlights: [
+      'Nước dùng bò hầm trong vắt, thơm hoa hồi, thảo quả & gừng nướng',
+      'Bò tái mềm ngọt, ăn cùng húng quế & ớt xiêm xanh giòn cay',
+    ],
+    location: 'Quán ăn sáng địa phương quanh Hoài Nhơn Đông',
     image: '/images/dac-san/04_pho_bo_binh_dinh.png',
   },
 ];
@@ -241,20 +281,26 @@ const CUISINES: CuisineItem[] = [
 const TRAVEL_PLACES: TravelItem[] = [
   {
     number: '01',
-    name: 'Cửa Biển Tam Quan',
-    badge: 'CÁCH 12KM · 20 PHÚT',
-    tagline: 'Toàn cảnh Sông Lại Giang & Cửa biển trù phú',
-    desc: 'Bức tranh phong cảnh ngoạn mục nơi dòng sông Lại Giang bồi đắp cồn cát trù phú trước khi vươn ra biển Đông; dạo thuyền ngắm hoàng hôn và khám phá chợ cá ngừ Tam Quan tấp nập.',
-    bestTime: '05:00 - 07:30 sáng hoặc 16:30 chiều',
-    image: '/images/members-of-gao/travel/tam-quan-sea-gate.jpg',
+    name: 'Cầu Lại Giang & Cồn "Cá Voi"',
+    badge: 'CÁCH 6KM · BỒNG SƠN',
+    tagline: 'Cồn cát hình chú cá voi & Vẻ đẹp sông Lại Giang',
+    highlights: [
+      'Cồn cát giữa dòng Lại Giang tựa chú "cá voi" khổng lồ bơi ra cửa biển',
+      'Điểm ngắm bình minh – hoàng hôn sông nước bình yên',
+    ],
+    location: 'Cầu Lại Giang, Bồng Sơn (Ngắm hoàng hôn & bình minh)',
+    image: '/images/members-of-gao/travel/tam-quan-lai-giang.jpg',
   },
   {
     number: '02',
     name: 'Gành Hoài Hải',
     badge: 'CÁCH 14KM · BIỂN HOÀI HẢI',
     tagline: 'Bãi đá trầm tích · Cung đường đá ven sóng biển',
-    desc: 'Cung đường đi bộ ven rạn đá trầm tích tuyệt đẹp ôm trọn làn nước biển xanh ngọc bích trong vắt; điểm check-in hoang sơ và đón gió biển hùng vĩ bậc nhất Hoài Nhơn.',
-    bestTime: 'Sáng sớm hoặc sau 15:30',
+    highlights: [
+      'Rạn đá trầm tích gồ ghề hình rồng, sư tử & lưỡi câu vươn ra biển',
+      'Nước biển xanh ngọc, làng chài & nghề nước mắm truyền thống',
+    ],
+    location: 'Xã Hoài Hải, TX. Hoài Nhơn (Sáng sớm & Chiều mát)',
     image: '/images/members-of-gao/travel/ganh-hoai-hai.jpg',
   },
   {
@@ -262,8 +308,11 @@ const TRAVEL_PLACES: TravelItem[] = [
     name: 'Đèo Lộ Diêu (ĐT639)',
     badge: 'CUNG ĐƯỜNG VEN BIỂN HÙNG VĨ',
     tagline: 'Men sườn núi đá & Toàn cảnh làng chài',
-    desc: 'Cung đường đèo uốn lượn ngoạn mục, một bên vách núi đá dựng đứng, một bên đại dương bao la; điểm dừng ngắm toàn cảnh làng chài Lộ Diêu.',
-    bestTime: 'Chiều mát ngắm biển lộng gió',
+    highlights: [
+      'Cung đèo ven biển ngoạn mục: một bên vách đá, một bên đại dương',
+      'Ngắm toàn cảnh làng chài Lộ Diêu — "một biển ba đèo"',
+    ],
+    location: 'Tuyến ĐT639, Hoài Mỹ (Chiều mát ngắm biển lộng gió)',
     image: '/images/members-of-gao/travel/deo-hoaihai-lodieu.jpg',
   },
   {
@@ -271,8 +320,11 @@ const TRAVEL_PLACES: TravelItem[] = [
     name: 'Cao Nguyên La Vuông',
     badge: 'CÁCH 25KM · CAO 700M',
     tagline: 'Săn mây 05:30 · Đồi cỏ & Cắm trại',
-    desc: 'Khí hậu se lạnh quanh năm, đồi cỏ xanh ngút ngàn, rừng thông lộng gió và biển mây bồng bềnh — thiên đường săn mây, picnic và cắm trại.',
-    bestTime: '05:30 săn mây hoặc 15:00 cắm trại',
+    highlights: [
+      'Cao 700m se lạnh, đồi cỏ ngút ngàn & rừng thông lộng gió',
+      'Săn mây 05:30, picnic & cắm trại qua đêm',
+    ],
+    location: 'Xã Hoài Sơn, TX. Hoài Nhơn (05:30 săn mây hoặc 15:00)',
     image: '/images/members-of-gao/travel/la-vuong.jpg',
   },
 ];
@@ -321,6 +373,13 @@ const ECOSYSTEM: EcosystemItem[] = [
     meta: '300m · 3 phút đi bộ',
     image: '/images/general/cafe-bonjour.jpg',
   },
+  {
+    no: '06',
+    name: 'TILONG MART',
+    role: 'Shopping & Lifestyle',
+    meta: '100m · 2 phút đi bộ',
+    image: '/images/general/tilong-mart.jpg',
+  },
 ];
 
 const TAB_LABELS: { id: 'all' | 'page1' | 'page2' | 'page3' | 'page4'; label: string }[] = [
@@ -368,6 +427,17 @@ export default function MemberOfGaoMasterBooklet() {
           <div className={styles.tipText}>
             <i className="fa-solid fa-gem" /> Bố cục Editorial chuẩn in A4 (210 × 297 mm)
           </div>
+          <a
+            href="/member-of-gao.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.btnPrint}
+            style={{ textDecoration: 'none', background: 'rgba(255, 255, 255, 0.08)', borderColor: 'rgba(217, 192, 138, 0.35)' }}
+            title="Mở hoặc tải về tệp PDF gốc"
+          >
+            <i className="fa-solid fa-file-pdf" style={{ color: '#E0CEAC' }} />
+            <span>Tải PDF gốc</span>
+          </a>
           <button type="button" className={styles.btnPrint} onClick={handlePrint}>
             <i className="fa-solid fa-print" />
             <span>In trọn bộ 4 trang A4</span>
@@ -414,13 +484,13 @@ export default function MemberOfGaoMasterBooklet() {
                   <span className={styles.eyebrow}>Lời ngỏ · Hệ sinh thái Gạo</span>
                   <p className={styles.manifesto}>
                     Hệ sinh thái GẠO tại Hoài Nhơn là chuỗi không gian trải nghiệm kết hợp hài hòa giữa
-                    lưu trú boutique, ẩm thực nướng BBQ sân vườn, tinh hoa ẩm thực Thái Lan và cà phê
-                    acoustic ven biển. Mỗi cơ sở là một mảnh ghép mang cá tính riêng, cùng chung một
-                    tình yêu với sự mộc mạc và chân thành.
+                    lưu trú boutique, ẩm thực nướng BBQ sân vườn, tinh hoa ẩm thực Thái Lan, cà phê
+                    acoustic ven biển và tổ hợp mua sắm tiện ích. Mỗi cơ sở là một mảnh ghép mang cá tính riêng,
+                    cùng chung một tình yêu với sự mộc mạc và chân thành.
                   </p>
                   <div className={styles.introStats}>
                     <div className={styles.introStat}>
-                      <strong>05</strong>
+                      <strong>06</strong>
                       <span>Cơ sở</span>
                     </div>
                     <div className={styles.introStat}>
@@ -494,7 +564,8 @@ export default function MemberOfGaoMasterBooklet() {
                         <div className={styles.stTagline}>&ldquo;{st.tagline}&rdquo;</div>
                         <div className={styles.stMeta}>
                           <span className={styles.stType}>
-                            {st.type} · {st.area}
+                            <span className={styles.stTypeName}>{st.type}</span>
+                            <span className={styles.stArea}>{st.area}</span>
                           </span>
                           <span className={styles.stPrice}>
                             {st.price}
@@ -535,26 +606,27 @@ export default function MemberOfGaoMasterBooklet() {
                   <span className={styles.headerTag}>Member of Gạo</span>
                 </div>
                 <div className={styles.headerRight}>
-                  <span className={styles.headerTag}>Hệ thống 4 điểm đến ẩm thực &amp; cà phê</span>
+                  <span className={styles.headerTag}>5 điểm đến ẩm thực, cà phê &amp; mua sắm</span>
                   <span className={styles.pagePill}>Trang 02 / 04</span>
                 </div>
               </header>
 
               <section className={styles.intro}>
                 <span className={styles.eyebrow}>Hệ sinh thái Gạo</span>
-                <span className={styles.partLabel}>Phần 02 · Ẩm thực &amp; Cà phê</span>
-                <h1 className={styles.introHeading}>4 ĐIỂM ĐẾN ẨM THỰC &amp; CÀ PHÊ</h1>
+                <span className={styles.partLabel}>Phần 02 · Ẩm thực, Cà phê &amp; Mua sắm</span>
+                <h1 className={styles.introHeading}>5 ĐIỂM ĐẾN TRẢI NGHIỆM &amp; DỊCH VỤ</h1>
                 <p className={styles.introLead}>
-                  Bốn điểm đến trong cùng một hệ sinh thái — mỗi không gian một cá tính, tất cả đều dành
-                  đặc quyền ưu đãi riêng cho khách lưu trú GAJO&apos;S HOUSE.
+                  Năm điểm đến trong cùng một hệ sinh thái — ẩm thực, cà phê cho đến mua sắm tiện ích,
+                  tất cả đều dành đặc quyền ưu đãi riêng cho khách lưu trú GAJO&apos;S HOUSE.
                 </p>
                 <p className={styles.introQuote}>
-                  Từ bàn tiệc BBQ sân vườn đến ly cà phê ven biển — trọn vẹn một Hoài Nhơn mộc mạc.
+                  Từ tiệc BBQ sân vườn, ly cà phê ven sóng đến tổ hợp sắm sửa tiện nghi — trọn vẹn kỳ nghỉ.
                 </p>
               </section>
 
-              <section className={styles.grid2}>
-                {BRANCHES.map((branch) => (
+              {/* 2x2 Grid: 4 Dining & Cafe Destinations */}
+              <section className={styles.gridDining}>
+                {DINING_BRANCHES.map((branch) => (
                   <article key={branch.number} className={styles.card}>
                     <div className={styles.cardImgWrap}>
                       <div className={styles.cardImgPair}>
@@ -574,7 +646,7 @@ export default function MemberOfGaoMasterBooklet() {
                     </div>
 
                     <div className={styles.cardBody}>
-                      <div>
+                      <div className={styles.cardMain}>
                         <div className={styles.cardTitleRow}>
                           <span className={styles.cardIndex}>{branch.number}</span>
                           <h2 className={styles.cardTitle}>{branch.name}</h2>
@@ -582,52 +654,122 @@ export default function MemberOfGaoMasterBooklet() {
                         <div className={styles.cardTagline}>{branch.tagline}</div>
                         <div className={styles.cardBullets}>
                           {branch.highlights.map((h, idx) => (
-                            <div key={idx} className={styles.bulletRow}>
-                              <i className="fa-solid fa-circle-check" />
-                              <span>{h}</span>
-                            </div>
+                            <p key={idx} className={styles.bulletRow}>
+                              {h}
+                            </p>
                           ))}
                         </div>
                       </div>
 
                       <div className={styles.cardFooter}>
-                        <span><i className="fa-solid fa-location-dot" /> {branch.address}</span>
-                        <span><i className="fa-solid fa-phone" /> <strong>{branch.phone}</strong></span>
+                        <span>{branch.address}</span>
+                        <span><strong>{branch.phone}</strong></span>
                       </div>
                     </div>
                   </article>
                 ))}
               </section>
 
-              <section className={`${styles.banner} ${styles.bannerVip}`}>
-                <div className={styles.vipBadge}>
-                  <i className="fa-solid fa-crown" />
-                  <span>ĐẶC QUYỀN VIP</span>
-                </div>
-                <div className={styles.vipItems}>
-                  <div className={styles.vipItem}>
-                    <i className="fa-solid fa-couch" />
-                    <div>
-                      <strong>Ưu tiên bàn view đẹp</strong>
-                      <p>Giữ chỗ sát sông/sát biển tại Nhà Gạo, GAJO Thái &amp; Gạo Coffee.</p>
+              {/* Bottom Row: 05 TiLong Mart (Left) + VIP Privileges (Right) */}
+              <div className={styles.bottomRow}>
+                {/* Left Card: TiLong Mart */}
+                <article className={styles.martCard}>
+                  <div className={styles.martImgWrap}>
+                    <img
+                      src={TILONG_MART.image}
+                      alt={TILONG_MART.name}
+                      className={styles.martImg}
+                    />
+                    <div className={styles.martBadges}>
+                      <span className={styles.badgePrimary}>{TILONG_MART.category}</span>
+                      <span className={styles.badgeWalk}>
+                        <i className="fa-solid fa-person-walking" /> {TILONG_MART.distance}
+                      </span>
                     </div>
                   </div>
-                  <div className={styles.vipItem}>
-                    <i className="fa-solid fa-fire-burner" />
-                    <div>
-                      <strong>Setup BBQ sân vườn</strong>
-                      <p>Giao nguyên liệu &amp; phục vụ bếp than hồng tận homestay.</p>
+
+                  <div className={styles.martBody}>
+                    <div className={styles.martMain}>
+                      <div className={styles.cardTitleRow}>
+                        <span className={styles.cardIndex}>{TILONG_MART.number}</span>
+                        <h2 className={styles.cardTitle}>{TILONG_MART.name}</h2>
+                      </div>
+                      <div className={styles.martTagline}>{TILONG_MART.tagline}</div>
+
+                      <div className={styles.martBullets}>
+                        {TILONG_MART.highlights.map((h, idx) => (
+                          <p key={idx} className={styles.bulletRow}>
+                            {h}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className={styles.martFooter}>
+                      <span>Cách 100m</span>
+                      <span>Hotline: <strong>{TILONG_MART.phone}</strong></span>
                     </div>
                   </div>
-                  <div className={styles.vipItem}>
-                    <i className="fa-solid fa-tag" />
-                    <div>
-                      <strong>Ưu đãi 10% / khai vị</strong>
-                      <p>Giảm 10% hoặc tặng món khi xuất trình chìa khóa phòng.</p>
+                </article>
+
+                {/* Right Card: ĐẶC QUYỀN VIP PASS */}
+                <article className={styles.vipCard}>
+                  <div className={styles.vipCardBadge}>
+                    <div className={styles.vipCrownRing}>
+                      <i className="fa-solid fa-crown" />
+                    </div>
+                    <span className={styles.vipEyebrow}>GUEST PASS</span>
+                    <span className={styles.vipMainText}>ĐẶC QUYỀN</span>
+                    <span className={styles.vipPill}>★ VIP ★</span>
+                  </div>
+
+                  <div className={styles.vipCardBody}>
+                    <div className={styles.vipCardItem}>
+                      <div className={styles.vipIconBox}>
+                        <i className="fa-solid fa-couch" />
+                      </div>
+                      <div className={styles.vipItemText}>
+                        <div className={styles.vipItemHead}>
+                          <strong>Ưu tiên bàn view đẹp</strong>
+                          <span className={styles.vipMiniTag}>Sát sông · Biển</span>
+                        </div>
+                        <p>Giữ chỗ view sát sông &amp; biển các cơ sở Gạo.</p>
+                      </div>
+                    </div>
+
+                    <div className={styles.vipCardItem}>
+                      <div className={styles.vipIconBox}>
+                        <i className="fa-solid fa-fire-burner" />
+                      </div>
+                      <div className={styles.vipItemText}>
+                        <div className={styles.vipItemHead}>
+                          <strong>Setup BBQ sân vườn</strong>
+                          <span className={styles.vipMiniTag}>Tận homestay</span>
+                        </div>
+                        <p>Bếp than hồng &amp; set nướng tận homestay.</p>
+                      </div>
+                    </div>
+
+                    <div className={styles.vipCardItem}>
+                      <div className={styles.vipIconBox}>
+                        <i className="fa-solid fa-gift" />
+                      </div>
+                      <div className={styles.vipItemText}>
+                        <div className={styles.vipItemHead}>
+                          <strong>Ưu đãi 10% &amp; Quà tặng</strong>
+                          <span className={styles.discountBadge}>-10% F&amp;B</span>
+                        </div>
+                        <p>Giảm 10% hóa đơn F&amp;B &amp; quà tặng TiLong Mart.</p>
+                      </div>
+                    </div>
+
+                    <div className={styles.vipCardNote}>
+                      <i className="fa-solid fa-key" />
+                      <span>Xuất trình chìa khóa GAJO&apos;S HOUSE để nhận ưu đãi</span>
                     </div>
                   </div>
-                </div>
-              </section>
+                </article>
+              </div>
 
               <footer className={styles.pageFooter}>
                 <div>
@@ -644,7 +786,7 @@ export default function MemberOfGaoMasterBooklet() {
                   </div>
                   <div className={styles.qrText}>
                     <strong>QUÉT GOOGLE MAPS</strong>
-                    <span>Định vị 5 cơ sở Gạo</span>
+                    <span>Định vị 6 cơ sở Gạo</span>
                   </div>
                   <span className={styles.footerPage}>Trang 02 / 04</span>
                 </div>
@@ -691,17 +833,23 @@ export default function MemberOfGaoMasterBooklet() {
                     </div>
 
                     <div className={styles.cardBody}>
-                      <div>
+                      <div className={styles.cardMain}>
                         <div className={styles.cardTitleRow}>
                           <span className={styles.cardIndex}>{item.number}</span>
                           <h2 className={styles.cardTitle}>{item.name}</h2>
                         </div>
                         <div className={styles.cardTagline}>{item.tagline}</div>
-                        <p className={styles.cardDesc}>{item.desc}</p>
+                        <div className={styles.cardBullets}>
+                          {item.highlights.map((h, idx) => (
+                            <p key={idx} className={styles.bulletRow}>
+                              {h}
+                            </p>
+                          ))}
+                        </div>
                       </div>
 
                       <div className={styles.cardFooter}>
-                        <span><i className="fa-solid fa-map-pin" /> {item.location}</span>
+                        <span>{item.location}</span>
                       </div>
                     </div>
                   </article>
@@ -778,17 +926,23 @@ export default function MemberOfGaoMasterBooklet() {
                     </div>
 
                     <div className={styles.cardBody}>
-                      <div>
+                      <div className={styles.cardMain}>
                         <div className={styles.cardTitleRow}>
                           <span className={styles.cardIndex}>{place.number}</span>
                           <h2 className={styles.cardTitle}>{place.name}</h2>
                         </div>
                         <div className={styles.cardTagline}>{place.tagline}</div>
-                        <p className={styles.cardDesc}>{place.desc}</p>
+                        <div className={styles.cardBullets}>
+                          {place.highlights.map((h, idx) => (
+                            <p key={idx} className={styles.bulletRow}>
+                              {h}
+                            </p>
+                          ))}
+                        </div>
                       </div>
 
                       <div className={styles.cardFooter}>
-                        <span><i className="fa-solid fa-clock" /> Thời điểm đẹp: <strong>{place.bestTime}</strong></span>
+                        <span>{place.location}</span>
                       </div>
                     </div>
                   </article>

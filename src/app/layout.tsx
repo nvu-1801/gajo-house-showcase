@@ -41,7 +41,7 @@ export default function RootLayout({
       <head>
         <link
           rel="stylesheet"
-          href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
       </head>
       <body>{children}</body>
