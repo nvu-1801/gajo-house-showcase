@@ -83,7 +83,7 @@ const STATIONS: StationItem[] = [
   {
     id: 'DINH',
     name: 'GA-DINH',
-    meaning: 'Gia đình & Garden',
+    meaning: 'Gia đình',
     tagline: 'ở bên người thương',
     image: '/images/ga-dinh/IMG_3093.jpg',
     type: 'Family',
