@@ -160,8 +160,8 @@ const DINING_BRANCHES: BranchItem[] = [
     distance: 'Cách ~2.6km',
     tagline: 'Than hồng · Sân vườn · Nhạc mộc',
     highlights: [
-      'Bò tảng sốt phô mai kéo sợi & hải sản Tam Quan nướng than hồng',
-      'Đêm nhạc Acoustic cuối tuần, set BBQ phục vụ tận sân vườn homestay',
+      'Bò tảng sốt phô mai kéo sợi & hải sản nướng than hồng',
+      'Đêm nhạc Acoustic cuối tuần, BBQ phục vụ tại homestay',
     ],
     address: 'Đ. Trường Sa, Thạnh Xuân Đông',
     phone: '0987 813 191',
@@ -204,7 +204,7 @@ const DINING_BRANCHES: BranchItem[] = [
     highlights: [
       'Chỉ 300m từ homestay — 3 phút đi bộ thảnh thơi',
       'Cà phê rang mộc & Donuts nướng nóng mỗi sáng',
-      'Không gian gạch nung & gỗ mộc hoài cổ, check-in cảm xúc',
+      'Không gian gạch nung hoài cổ, nhiều góc check-in xinh',
     ],
     address: '56 Đ. Phan Trọng Tuệ, Hoài Nhơn Đông',
     phone: '0965 470 833',
@@ -614,7 +614,7 @@ export default function MemberOfGaoMasterBooklet() {
               <section className={styles.intro}>
                 <span className={styles.eyebrow}>Hệ sinh thái Gạo</span>
                 <span className={styles.partLabel}>Phần 02 · Ẩm thực, Cà phê &amp; Mua sắm</span>
-                <h1 className={styles.introHeading}>5 ĐIỂM ĐẾN TRẢI NGHIỆM &amp; DỊCH VỤ</h1>
+                <h1 className={styles.introHeading}>05 MẢNH GHÉP HỆ SINH THÁI GẠO</h1>
                 <p className={styles.introLead}>
                   Năm điểm đến trong cùng một hệ sinh thái — ẩm thực, cà phê cho đến mua sắm tiện ích,
                   tất cả đều dành đặc quyền ưu đãi riêng cho khách lưu trú GAJO&apos;S HOUSE.

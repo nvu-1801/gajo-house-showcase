@@ -95,7 +95,9 @@ export const WelcomeSpread: React.FC<WelcomeSpreadProps> = ({ onJump }) => {
 
       {/* PAGE 3: CONTENTS / MỤC LỤC */}
       <PageSheet density="soft" isHardCover={false}>
-        <div style={{ padding: '32px 40px', height: '100%', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--paper)' }}>
+        <div className="stay-bg">
+          <img className="stay-bg-logo stay-bg-logo--br" src="/images/general/logo-mark-gold.png" alt="" aria-hidden="true" />
+          <div className="stay-content" style={{ padding: '32px 40px', height: '100%', display: 'flex', flexDirection: 'column' }}>
           
           {/* HEADER */}
           <div style={{ marginBottom: '40px', marginTop: '20px' }}>
@@ -156,6 +158,7 @@ export const WelcomeSpread: React.FC<WelcomeSpreadProps> = ({ onJump }) => {
             </span>
           </div>
           
+          </div>
         </div>
       </PageSheet>
     </>

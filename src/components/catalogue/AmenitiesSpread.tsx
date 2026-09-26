@@ -6,7 +6,9 @@ export const AmenitiesSpread: React.FC = () => {
     <>
       {/* LEFT PAGE */}
       <PageSheet density="soft" isHardCover={false}>
-        <div className="editorial-left-page" style={{ padding: '24px 32px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <div className="stay-bg">
+          <img className="stay-bg-logo stay-bg-logo--bl" src="/images/general/logo-mark-gold.png" alt="" aria-hidden="true" />
+          <div className="editorial-left-page stay-content" style={{ padding: '24px 32px', height: '100%', display: 'flex', flexDirection: 'column' }}>
           
           {/* TOP HALF: PHOTO */}
           <div style={{ width: '100%', height: '45%', borderRadius: '8px', overflow: 'hidden', marginBottom: 'var(--space-6)', position: 'relative' }}>
@@ -45,12 +47,15 @@ export const AmenitiesSpread: React.FC = () => {
             </div>
 
           </div>
+          </div>
         </div>
       </PageSheet>
 
       {/* RIGHT PAGE */}
       <PageSheet density="soft" isHardCover={false}>
-        <div className="editorial-right-page" style={{ padding: '24px 32px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <div className="stay-bg">
+          <img className="stay-bg-logo stay-bg-logo--br" src="/images/general/logo-mark-gold.png" alt="" aria-hidden="true" />
+          <div className="editorial-right-page stay-content" style={{ padding: '24px 32px', height: '100%', display: 'flex', flexDirection: 'column' }}>
           
           {/* TOP HALF: INTRO */}
           <div style={{ height: '45%', marginBottom: 'var(--space-6)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -92,6 +97,7 @@ export const AmenitiesSpread: React.FC = () => {
               </p>
             </div>
 
+          </div>
           </div>
         </div>
       </PageSheet>

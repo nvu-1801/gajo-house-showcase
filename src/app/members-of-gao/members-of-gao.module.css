@@ -839,51 +839,51 @@
   min-height: 0;
 }
 .gridDining .cardImgWrap {
-  height: 33mm;
+  height: 29mm;
 }
 .gridDining .cardBadges {
-  padding: 2.0mm 2.6mm;
+  padding: 1.8mm 2.4mm;
 }
 .gridDining .badgePrimary {
-  padding: 0.8mm 2.2mm;
-  font-size: 5.4pt;
+  padding: 0.7mm 2.0mm;
+  font-size: 5.2pt;
   letter-spacing: 0.08em;
 }
 .gridDining .badgeSecondary {
-  padding: 0.7mm 2.0mm;
-  font-size: 5.6pt;
+  padding: 0.6mm 1.8mm;
+  font-size: 5.4pt;
 }
 .gridDining .cardBody {
-  padding: 2.2mm 3.2mm 2.0mm;
-  gap: 1.2mm;
+  padding: 1.8mm 3.2mm 1.8mm;
+  gap: 1.0mm;
 }
 .gridDining .cardMain {
-  gap: 1.0mm;
+  gap: 0.8mm;
 }
 .gridDining .cardTitleRow {
-  gap: 2mm;
+  gap: 1.8mm;
 }
 .gridDining .cardTitle {
-  font-size: 10.8pt;
-}
-.gridDining .cardIndex {
   font-size: 10.5pt;
 }
+.gridDining .cardIndex {
+  font-size: 10.2pt;
+}
 .gridDining .cardTagline {
-  font-size: 7.8pt;
+  font-size: 7.6pt;
   margin-top: 0;
-  margin-bottom: 0.8mm;
+  margin-bottom: 0.6mm;
 }
 .gridDining .cardBullets {
-  gap: 1.0mm;
-  margin-top: 0.8mm;
+  gap: 0.8mm;
+  margin-top: 0.6mm;
 }
 .gridDining .bulletRow {
-  font-size: 7.6pt;
-  line-height: 1.35;
+  font-size: 7.4pt;
+  line-height: 1.32;
 }
 .gridDining .cardFooter {
-  padding-top: 1.6mm;
+  padding-top: 1.5mm;
   font-size: 7.2pt;
 }
 
