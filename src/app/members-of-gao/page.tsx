@@ -606,18 +606,18 @@ export default function MemberOfGaoMasterBooklet() {
                   <span className={styles.headerTag}>Member of Gạo</span>
                 </div>
                 <div className={styles.headerRight}>
-                  <span className={styles.headerTag}>5 điểm đến ẩm thực, cà phê &amp; mua sắm</span>
+                  <span className={styles.headerTag}>05 điểm chạm vị giác &amp; nếp sống</span>
                   <span className={styles.pagePill}>Trang 02 / 04</span>
                 </div>
               </header>
 
               <section className={styles.intro}>
                 <span className={styles.eyebrow}>Hệ sinh thái Gạo</span>
-                <span className={styles.partLabel}>Phần 02 · Ẩm thực, Cà phê &amp; Mua sắm</span>
-                <h1 className={styles.introHeading}>05 MẢNH GHÉP HỆ SINH THÁI GẠO</h1>
+                <span className={styles.partLabel}>Phần 02 · Nếm hương vị Nẫu · Tận hưởng nhịp sống chậm</span>
+                <h1 className={styles.introHeading}>05 ĐIỂM CHẠM VỊ GIÁC &amp; NẾP SỐNG</h1>
                 <p className={styles.introLead}>
-                  Năm điểm đến trong cùng một hệ sinh thái — ẩm thực, cà phê cho đến mua sắm tiện ích,
-                  tất cả đều dành đặc quyền ưu đãi riêng cho khách lưu trú GAJO&apos;S HOUSE.
+                  Song hành cùng 09 Trạm dừng cảm xúc của phòng nghỉ, đây là 05 Điểm chạm kết nối
+                  quý khách với ẩm thực và đời sống thường nhật — trọn vẹn đặc quyền GAJO&apos;S HOUSE.
                 </p>
                 <p className={styles.introQuote}>
                   Từ tiệc BBQ sân vườn, ly cà phê ven sóng đến tổ hợp sắm sửa tiện nghi — trọn vẹn kỳ nghỉ.
