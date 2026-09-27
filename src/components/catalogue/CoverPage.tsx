@@ -15,6 +15,8 @@ export const CoverPage: React.FC = () => {
           </h1>
           <div className="cover-divider" />
           <div className="cover-sub">Editorial Room Catalogue 2026</div>
+        </div>
+        <div className="cover-bottom">
           <div className="cover-quote">
             &ldquo;Một trạm dừng cho những tâm hồn mỏi mệt tìm về an yên.&rdquo;
           </div>

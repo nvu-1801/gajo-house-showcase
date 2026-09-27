@@ -67,7 +67,7 @@ const STATIONS: StationItem[] = [
     tagline: 'tìm bình yên',
     image: '/images/ga-an/ga-an-hero.jpg',
     type: 'Double',
-    area: '22 m²',
+    area: '25 m²',
     price: '400K',
   },
   {
@@ -87,7 +87,7 @@ const STATIONS: StationItem[] = [
     tagline: 'ở bên người thương',
     image: '/images/ga-dinh/IMG_3093.jpg',
     type: 'Family',
-    area: '35 m²',
+    area: '30 m²',
     price: '500K',
   },
   {
@@ -97,7 +97,7 @@ const STATIONS: StationItem[] = [
     tagline: 'đón lấy tự do',
     image: '/images/ga-gio/IMG_6030.jpg',
     type: 'Breeze',
-    area: '28 m²',
+    area: '25 m²',
     price: '500K',
   },
   {
@@ -107,7 +107,7 @@ const STATIONS: StationItem[] = [
     tagline: 'học cách chậm lại',
     image: '/images/ga-may/ga-may-hero.jpg',
     type: 'Cloud',
-    area: '20 m²',
+    area: '25 m²',
     price: '500K',
   },
   {
@@ -117,7 +117,7 @@ const STATIONS: StationItem[] = [
     tagline: 'tìm chút ấm áp',
     image: '/images/ga-nang/IMG_5982.jpg',
     type: 'Sunshine',
-    area: '30 m²',
+    area: '25 m²',
     price: '500K',
   },
   {
@@ -137,7 +137,7 @@ const STATIONS: StationItem[] = [
     tagline: 'trốn khỏi bộn bề',
     image: '/images/ga-tron/IMG_6008.jpg',
     type: 'Cozy',
-    area: '24 m²',
+    area: '20 m²',
     price: '450K',
   },
   {
@@ -147,7 +147,7 @@ const STATIONS: StationItem[] = [
     tagline: 'lạc vào nơi muốn ở lại',
     image: '/images/ga-lac/IMG_6887.png',
     type: 'Wanderlust',
-    area: '26 m²',
+    area: '25 m²',
     price: '450K',
   },
 ];

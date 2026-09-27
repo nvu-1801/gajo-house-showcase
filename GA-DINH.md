@@ -16,7 +16,7 @@
 
 | Hạng mục | Chi tiết đặc tả |
 | :--- | :--- |
-| **Diện tích phòng** | 35 m² |
+| **Diện tích phòng** | 30 m² |
 | **Loại giường** | 01 Giường đôi King-size cỡ lớn (Kích thước 1m8 x 2m) |
 | **Sức chứa tiêu chuẩn** | 02 - 04 Người (Có thể kê thêm nệm phụ organic) |
 | **Hướng tầm nhìn (View)** | Ban công rộng mở nhìn ra toàn cảnh sân vườn & núi đồi Gia Lai |

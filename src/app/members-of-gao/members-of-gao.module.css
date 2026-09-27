@@ -524,6 +524,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
   padding: 7mm 8mm;
   color: #ffffff;
   background: linear-gradient(
@@ -557,7 +559,7 @@
   font-size: 9.5pt;
   color: rgba(250, 248, 242, 0.94);
   margin: 0;
-  max-width: 150mm;
+  max-width: 118mm;
 }
 
 /* Full-bleed hero variant for page 1 */
@@ -568,7 +570,7 @@
 .heroSeal {
   position: absolute;
   top: 5mm;
-  right: 5mm;
+  left: 5mm;
   z-index: 3;
   display: inline-flex;
   align-items: center;
@@ -853,46 +855,46 @@
   padding: 1.8mm 2.4mm;
 }
 .gridDining .badgePrimary {
-  padding: 0.7mm 2.0mm;
-  font-size: 5.2pt;
+  padding: 1mm 2.6mm;
+  font-size: 5.8pt;
   letter-spacing: 0.08em;
 }
 .gridDining .badgeSecondary {
-  padding: 0.6mm 1.8mm;
-  font-size: 5.4pt;
+  padding: 0.8mm 2.2mm;
+  font-size: 6pt;
 }
 .gridDining .cardBody {
-  padding: 1.8mm 3.2mm 1.8mm;
-  gap: 1.0mm;
+  padding: 2.4mm 3.4mm 2.4mm;
+  gap: 1.4mm;
 }
 .gridDining .cardMain {
-  gap: 0.8mm;
+  gap: 1.0mm;
 }
 .gridDining .cardTitleRow {
-  gap: 1.8mm;
+  gap: 2.2mm;
 }
 .gridDining .cardTitle {
-  font-size: 10.5pt;
+  font-size: 12pt;
 }
 .gridDining .cardIndex {
-  font-size: 10.2pt;
+  font-size: 11pt;
 }
 .gridDining .cardTagline {
-  font-size: 7.6pt;
+  font-size: 8.2pt;
   margin-top: 0;
   margin-bottom: 0.6mm;
 }
 .gridDining .cardBullets {
-  gap: 0.8mm;
-  margin-top: 0.6mm;
+  gap: 1.2mm;
+  margin-top: 1.0mm;
 }
 .gridDining .bulletRow {
-  font-size: 7.4pt;
-  line-height: 1.32;
+  font-size: 9pt;
+  line-height: 1.4;
 }
 .gridDining .cardFooter {
-  padding-top: 1.5mm;
-  font-size: 7.2pt;
+  padding-top: 2mm;
+  font-size: 7.6pt;
 }
 
 /* ---------- Page 2: Combined Bottom Row (TiLong Mart Left + VIP Promo Right) ---------- */

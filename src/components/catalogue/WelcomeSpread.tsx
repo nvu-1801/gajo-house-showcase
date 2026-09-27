@@ -153,7 +153,7 @@ export const WelcomeSpread: React.FC<WelcomeSpreadProps> = ({ onJump }) => {
           {/* FOOTER */}
           <div style={{ marginTop: 'auto', textAlign: 'right', paddingTop: '20px' }}>
             <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.7rem', color: 'var(--wood)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
-              GA MỘC / GAJO
+              GAJO&apos;S HOUSE &bull; HOÀI NHƠN, BÌNH ĐỊNH
             </span>
           </div>
           

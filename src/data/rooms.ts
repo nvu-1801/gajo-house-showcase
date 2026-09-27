@@ -30,7 +30,7 @@ export const rooms: Room[] = [
       }
     ],
     specs: [
-      { label: "DIỆN TÍCH", value: "22 m²" },
+      { label: "DIỆN TÍCH", value: "25 m²" },
       { label: "GIƯỜNG", value: "1 Giường đôi" },
       { label: "SỨC CHỨA", value: "2 Khách" }
     ],
@@ -125,7 +125,7 @@ export const rooms: Room[] = [
       }
     ],
     specs: [
-      { label: "DIỆN TÍCH", value: "28 m²" },
+      { label: "DIỆN TÍCH", value: "25 m²" },
       { label: "GIƯỜNG", value: "1 Giường đôi" },
       { label: "SỨC CHỨA", value: "2 Khách" }
     ],
@@ -173,7 +173,7 @@ export const rooms: Room[] = [
       }
     ],
     specs: [
-      { label: "DIỆN TÍCH", value: "20 m²" },
+      { label: "DIỆN TÍCH", value: "25 m²" },
       { label: "GIƯỜNG", value: "1 Giường đôi" },
       { label: "SỨC CHỨA", value: "2 Khách" }
     ],
@@ -221,7 +221,7 @@ export const rooms: Room[] = [
       }
     ],
     specs: [
-      { label: "DIỆN TÍCH", value: "30 m²" },
+      { label: "DIỆN TÍCH", value: "25 m²" },
       { label: "GIƯỜNG", value: "1 Giường đôi" },
       { label: "SỨC CHỨA", value: "2 Khách" }
     ],
@@ -269,7 +269,7 @@ export const rooms: Room[] = [
       }
     ],
     specs: [
-      { label: "DIỆN TÍCH", value: "24 m²" },
+      { label: "DIỆN TÍCH", value: "20 m²" },
       { label: "GIƯỜNG", value: "1 Giường đôi" },
       { label: "SỨC CHỨA", value: "2 Khách" }
     ],
@@ -365,7 +365,7 @@ export const rooms: Room[] = [
       }
     ],
     specs: [
-      { label: "DIỆN TÍCH", value: "35 m²" },
+      { label: "DIỆN TÍCH", value: "30 m²" },
       { label: "GIƯỜNG", value: "2 Giường đôi, 1 Sofa bed đơn" },
       { label: "SỨC CHỨA", value: "4–5 Khách" }
     ],

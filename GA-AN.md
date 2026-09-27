@@ -16,7 +16,7 @@
 
 | Hạng mục | Chi tiết đặc tả |
 | :--- | :--- |
-| **Diện tích phòng** | 22 m² |
+| **Diện tích phòng** | 25 m² |
 | **Loại giường** | 01 Giường đơn (Kích thước 1m6 x 2m) |
 | **Sức chứa tiêu chuẩn** | 01 Người lớn (Có thể kèm 01 trẻ em dưới 6 tuổi) |
 | **Hướng tầm nhìn (View)** | Hướng cửa sổ nhìn ra lối đi rợp bóng mát & nắng sớm |

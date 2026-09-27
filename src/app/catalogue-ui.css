@@ -155,14 +155,26 @@
   box-sizing: border-box;
 }
 
+.cover-grad {
+  background:
+    radial-gradient(120% 58% at 50% 24%, rgba(18, 16, 14, 0.52) 0%, rgba(18, 16, 14, 0) 62%),
+    linear-gradient(
+      180deg,
+      rgba(18, 16, 14, 0.6) 0%,
+      rgba(18, 16, 14, 0.18) 36%,
+      rgba(18, 16, 14, 0.5) 66%,
+      rgba(18, 16, 14, 0.94) 100%
+    );
+}
+
 .cover-content {
   position: relative;
   z-index: 4;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 46px 40px 38px;
+  justify-content: flex-start;
+  padding: 44px 40px 34px;
   color: var(--paper);
 }
 
@@ -171,7 +183,16 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 12px;
+  margin-top: 6px;
+}
+
+.cover-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 .cover-eyebrow {
@@ -244,13 +265,23 @@
   font-family: var(--font-accent);
   font-style: italic;
   font-size: var(--text-body);
-  color: rgba(250, 248, 243, 0.88);
-  border-left: 2px solid var(--gold);
-  padding-left: var(--space-3);
-  margin-top: var(--space-4);
+  color: rgba(250, 248, 243, 0.9);
+  border-left: none;
+  padding-left: 0;
+  margin: 0 auto;
   line-height: 1.6;
-  text-align: left;
-  max-width: 320px;
+  text-align: center;
+  max-width: 340px;
+  position: relative;
+}
+
+.cover-quote::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  margin: 0 auto 14px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
 .cover-loc {
@@ -1175,31 +1206,66 @@
   border-left: 2px solid var(--gold);
 }
 
+/* ==========================================================================
+   TRANG ĐẶC QUYỀN LƯU TRÚ — lưới đồng bộ 2 trang, canh hàng tuyệt đối
+   ========================================================================== */
+.amenity-page-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 45% 1fr;
+  row-gap: 24px;
+  box-sizing: border-box;
+}
+
+.amenity-top-media {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.amenity-top-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
 .amenities-groups {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
   flex: 1;
 }
 
 .amenity-group-title {
   font-family: var(--font-serif);
   color: var(--charcoal);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin: 0 0 12px;
 }
 
 .amenity-group-sub {
   display: block;
   font-family: var(--font-sans);
-  font-size: 0.56rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: var(--wood);
   letter-spacing: 2px;
   margin-top: 2px;
+}
+
+.amenity-group-lines {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.9;
 }
 
 .amenity-lines {
