@@ -15,7 +15,7 @@ Hệ sinh thái **GẠO** tại Hoài Nhơn (Bình Định) là chuỗi không g
 * **Tiện ích:** Wi-Fi tốc độ cao, bãi đỗ xe an toàn, dịch vụ tiệc nướng BBQ sân vườn, cho thuê xe máy du lịch, tư vấn lịch trình khám phá bản địa.
 * **Địa chỉ:** Hoài Nhơn, Bình Định.
 * **Hotline / Zalo đặt phòng:** `0902 286 300` / `0965 470 833`
-* **Wi-Fi:** `GAJO_GUEST` | **Password:** `gajohouse2026`
+* **Wi-Fi:** `GAJO_GUEST` | **Password:** `gajoshouse`
 
 ---
 

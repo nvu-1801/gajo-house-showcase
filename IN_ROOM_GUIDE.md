@@ -33,7 +33,7 @@ Kính chào Quý khách đến với **GAJO's HOUSE**! Chúng tôi vô cùng tr�
 
 ## 3. THÔNG TIN TIỆN ÍCH KỸ THUẬT (TECHNICAL UTILITIES)
 
-* **Mạng Wi-Fi:** `GAJO_GUEST` | **Password:** `gajohouse2026`
+* **Mạng Wi-Fi:** `GAJO_GUEST` | **Password:** `gajoshouse`
 * **Hệ thống Nước nóng:** Bật công tắc nước nóng (đèn đỏ sáng) trước khi sử dụng 5-10 phút.
 * **Remote Điều hòa:** Sử dụng nút `MODE` để chọn `COOL` (Làm mát) hoặc `DRY` (Hút ẩm).
 

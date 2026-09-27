@@ -63,9 +63,9 @@ export const rooms: Room[] = [
     priceUnit: "VNĐ / ĐÊM",
     heroImage: "/images/ga-mo/ga-mo-hero.jpg",
     galleryTop: {
-      src: "/images/ga-may/ga-may-gallery-top.jpg",
+      src: "/images/ga-mo/IMG_2999.png",
       label: "TOÀN CẢNH NỘI THẤT",
-      objectPosition: "center 65%"
+      objectPosition: "center 69%"
     },
     gallerySub: [
       {
@@ -254,7 +254,7 @@ export const rooms: Room[] = [
     priceUnit: "VNĐ / ĐÊM",
     heroImage: "/images/ga-tron/IMG_6008.jpg",
     galleryTop: {
-      src: "/images/ga-tron/IMG_6010.jpg",
+      src: "/images/ga-tron/IMG_20013.jpg",
       label: "GIƯỜNG MỘC & TRANH 2001",
       objectPosition: "center 55%"
     },

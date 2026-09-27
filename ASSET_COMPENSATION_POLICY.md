@@ -5,7 +5,7 @@
 ---
 
 ### THÔNG TIN LƯU TRÚ QUAN TRỌNG DÀNH CHO KHÁCH
-* 📶 **Mạng Wi-Fi:** `GAJO_GUEST` | **Mật khẩu (Password):** `gajohouse2026`
+* 📶 **Mạng Wi-Fi:** `GAJO_GUEST` | **Mật khẩu (Password):** `gajoshouse`
 * 🔑 **Gửi lại chìa khóa / Thẻ phòng:** Quý khách vui lòng gửi lại chìa khóa tại quầy Lễ tân hoặc gửi vào khay nhận chìa trước **11:00** ngày trả phòng (Check-out).
 * ⏰ **Giờ nhận phòng (Check-in):** Từ 14:00 | **Giờ trả phòng (Check-out):** Trước 11:00 - 12:00.
 

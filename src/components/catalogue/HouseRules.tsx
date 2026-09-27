@@ -100,7 +100,7 @@ export const HouseRules: React.FC = () => {
             <i className="fa-solid fa-key concierge-icon"></i>
             <div className="concierge-info">
               <span className="concierge-lbl">MẬT KHẨU</span>
-              <strong className="concierge-val">gajohouse2026</strong>
+              <strong className="concierge-val">gajoshouse</strong>
             </div>
           </div>
           <div className="concierge-item">

@@ -12,6 +12,7 @@ interface BranchItem {
   tagline: string;
   highlights: string[];
   address: string;
+  subAddress?: string;
   phone: string;
   images: string[];
 }
@@ -26,6 +27,8 @@ interface SpotlightItem {
   address: string;
   phone: string;
   image: string;
+  qrCode?: string;
+  qrLabel?: string;
 }
 
 interface CuisineItem {
@@ -183,15 +186,16 @@ const DINING_BRANCHES: BranchItem[] = [
   },
   {
     number: '03',
-    name: 'GẠO COFFEE',
+    name: 'TIỆM GẠO',
     category: 'SEASIDE ACOUSTIC',
     distance: 'Cách ~2.5km',
     tagline: 'Coffee · Hoàng hôn · Sóng biển',
     highlights: [
-      'Uji Matcha Latte đánh bọt Chasen & Cold Brew cam sảng khoái',
-      'Bàn ghế bãi cát ngắm hoàng hôn, nhạc acoustic ven sóng',
+      'Matcha Latte Chasen & Cold Brew cam',
+      'Bãi cát ngắm hoàng hôn, nhạc acoustic',
     ],
-    address: 'Đ. Trường Sa, Thạnh Xuân Đông',
+    address: 'CN1: Đ. Trường Sa, Thạnh Xuân Đông',
+    subAddress: 'CN2: 230 Nguyễn Chí Thanh, Hoài Nhơn Bắc',
     phone: '0902 286 300',
     images: ['/images/general/cafe-gaocoffee.jpg', '/images/general/gaocoffee-matcha.jpg'],
   },
@@ -215,16 +219,17 @@ const DINING_BRANCHES: BranchItem[] = [
 const TILONG_MART: SpotlightItem = {
   number: '05',
   name: 'TILONG MART',
-  category: 'SHOPPING & LIFESTYLE',
+  category: 'LIFESTYLE SHOP',
   distance: 'Đi bộ 2 phút (100m)',
-  tagline: 'Gia dụng gia đình · Phụ kiện trendy · Quà tặng & Đồ chơi cho bé',
+  tagline: 'Gia dụng · Phụ kiện · Quà tặng & Đồ chơi',
   highlights: [
-    'Phụ kiện trendy, quà lưu niệm & văn phòng phẩm xinh xắn',
-    'Gia dụng gia đình thông minh & đồ chơi an toàn cho bé',
+    'Văn phòng phẩm xinh xắn, tiện ích smart-home & món đồ an toàn cho bé',
   ],
-  address: 'Khu phố trung tâm, TX. Hoài Nhơn (Cách 100m)',
+  address: '12 Đ. Phan Trọng Tuệ, Hoài Nhơn Đông',
   phone: '0868 770 096',
-  image: '/images/general/tilong-mart.jpg',
+  image: '/images/general/tilong-mart2.png',
+  qrCode: '/images/general/qr-tilong.png',
+  qrLabel: 'Chỉ đường',
 };
 
 const CUISINES: CuisineItem[] = [
@@ -361,7 +366,7 @@ const ECOSYSTEM: EcosystemItem[] = [
   },
   {
     no: '04',
-    name: 'GẠO COFFEE',
+    name: 'TIỆM GẠO',
     role: 'Seaside Acoustic',
     meta: 'Cách ~2.5km',
     image: '/images/general/cafe-gaocoffee.jpg',
@@ -662,8 +667,19 @@ export default function MemberOfGaoMasterBooklet() {
                       </div>
 
                       <div className={styles.cardFooter}>
-                        <span>{branch.address}</span>
+                        <span className={styles.cardAddr}>
+                          {branch.subAddress && (
+                            <i className={styles.cardAddrArrow} aria-hidden="true">▸</i>
+                          )}
+                          {branch.address}
+                        </span>
                         <span><strong>{branch.phone}</strong></span>
+                        {branch.subAddress && (
+                          <span className={`${styles.cardAddr} ${styles.cardAddrLine}`}>
+                            <i className={styles.cardAddrArrow} aria-hidden="true">▸</i>
+                            {branch.subAddress}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </article>
@@ -688,28 +704,35 @@ export default function MemberOfGaoMasterBooklet() {
                     </div>
                   </div>
 
-                  <div className={styles.martBody}>
-                    <div className={styles.martMain}>
-                      <div className={styles.cardTitleRow}>
-                        <span className={styles.cardIndex}>{TILONG_MART.number}</span>
-                        <h2 className={styles.cardTitle}>{TILONG_MART.name}</h2>
-                      </div>
-                      <div className={styles.martTagline}>{TILONG_MART.tagline}</div>
+                    <div className={styles.martBody}>
+                      <div className={styles.martMain}>
+                        <div className={styles.cardTitleRow}>
+                          <span className={styles.cardIndex}>{TILONG_MART.number}</span>
+                          <h2 className={styles.cardTitle}>{TILONG_MART.name}</h2>
+                        </div>
 
-                      <div className={styles.martBullets}>
-                        {TILONG_MART.highlights.map((h, idx) => (
-                          <p key={idx} className={styles.bulletRow}>
-                            {h}
-                          </p>
-                        ))}
+                        {TILONG_MART.qrCode && (
+                          <div className={styles.martQr}>
+                            <img src={TILONG_MART.qrCode} alt={`Google Maps ${TILONG_MART.name}`} />
+                          </div>
+                        )}
+
+                        <div className={styles.martTagline}>{TILONG_MART.tagline}</div>
+
+                        <div className={styles.martBullets}>
+                          {TILONG_MART.highlights.map((h, idx) => (
+                            <p key={idx} className={styles.bulletRow}>
+                              {h}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className={styles.martFooter}>
+                        <span className={styles.martAddr}>{TILONG_MART.address}</span>
+                        <span><strong>{TILONG_MART.phone}</strong></span>
                       </div>
                     </div>
-
-                    <div className={styles.martFooter}>
-                      <span>Cách 100m</span>
-                      <span>Hotline: <strong>{TILONG_MART.phone}</strong></span>
-                    </div>
-                  </div>
                 </article>
 
                 {/* Right Card: ĐẶC QUYỀN VIP PASS */}

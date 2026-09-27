@@ -69,6 +69,6 @@ Toàn bộ hình ảnh chụp theo bố cục lưới 50/50, sắc nét, tỉ l�
 
 ## 6. HƯỚNG DẪN DÀNH CHO KHÁCH LƯU TRÚ PHÒNG GA-AN
 
-1. **Wifi:** Network `GAJO_GUEST` | Password: `gajohouse2026`
+1. **Wifi:** Network `GAJO_GUEST` | Password: `gajoshouse`
 2. **Điều hòa:** Bấm nút `Power` trên remote, chọn chế độ `Cool` (24°C) để tạo không khí thoải mái nhất.
 3. **Giữ gìn không gian chung:** Vui lòng giữ yên tĩnh sau 22:00 để đảm bảo sự tĩnh tịnh cho các phòng xung quanh.

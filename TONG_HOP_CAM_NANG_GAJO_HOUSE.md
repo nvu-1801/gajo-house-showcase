@@ -24,7 +24,7 @@ Hệ sinh thái **GẠO** tại Hoài Nhơn (Bình Định) là chuỗi thương
 * **Phong cách:** Mộc mạc, tĩnh tại, chuẩn mực Kinfolk & Japandi với sân vườn hoa lá xanh mát và ánh đèn vàng ấm cúng.
 * **Hệ thống phòng:** 09 phòng nghỉ dưỡng mang tên 09 trạm dừng (*Ga-AN, Ga-MO, Ga-DINH, Ga-GIO, Ga-MAY, Ga-NANG, Ga-MOC, Ga-TRON, Ga-LAC*).
 * **Hotline:** `0902 286 300` / `0965 470 833`
-* **Wi-Fi:** `GAJO_GUEST` | **Password:** `gajohouse2026`
+* **Wi-Fi:** `GAJO_GUEST` | **Password:** `gajoshouse`
 
 ### 2. Tiệm Nướng Nhà Gạo (Vintage Garden BBQ)
 * **Vị trí:** Đường Trường Sa, Hoài Nhơn (~cách homestay 2.6 km).
@@ -131,7 +131,7 @@ Lạc không nhất thiết là mất phương hướng. Đôi khi, lạc là t�
 
 ## PHẦN 5: TIỆN ÍCH LƯU TRÚ & NỘI QUY CẦN BIẾT
 
-* 📶 **Mạng Wi-Fi:** `GAJO_GUEST` | **Password:** `gajohouse2026`
+* 📶 **Mạng Wi-Fi:** `GAJO_GUEST` | **Password:** `gajoshouse`
 * ⏰ **Giờ Check-in:** Từ `14:00` | **Giờ Check-out:** Trước `11:00 - 12:00` trưa.
 * 🔑 **Gửi lại chìa khóa:** Quý khách vui lòng gửi lại chìa khóa/thẻ phòng tại quầy Lễ tân hoặc thả vào khay nhận chìa trước `11:00` khi trả phòng.
 * 🌿 **Giữ gìn không gian chung:** Homestay tôn trọng sự yên tĩnh từ `22:00` đến `07:00` sáng hôm sau. Không hút thuốc trong phòng kín (vui lòng sử dụng khu vực sân vườn).
